@@ -1,4 +1,4 @@
-import { ThemeContext } from "@/../components/ThemeContext.jsx"
+import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useContext, useEffect } from "react"
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
