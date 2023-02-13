@@ -1,0 +1,195 @@
+{
+    "projects": {
+        "section_title": "Projekte",
+        "content": [
+            {
+                "img_url": "/images/Screencast_PH_320.gif",
+                "title": "Portfolio Homepage",
+                "description": "Eine Single-Page-Anwendung, auf der du dich gerade befindest, hauptsächlich aus Frontend-Code, aber auch einer Backend-Komponente zur Handhabung des Kontaktformulars.",
+                "techstack_front": [
+                    "React",
+                    "Tailwind CSS",
+                    "Daisy UI",
+                    "Netlify"
+                ],
+                "techstack_back": [
+                    "Node.js",
+                    "Express.js",
+                    "Railway"
+                ],
+                "page_url": "",
+                "repo_url": "https://github.com/JensMatthiaschk/portfolio-homepage"
+            }
+        ]
+    },
+    "project_button_more": "mehr",
+    "project_button_less": "weniger",
+    "otherProjects_disclaimer": "Da ich mich noch in einer sehr frühen Phase meiner neuen Karriere befinde, ist mein Portfolio noch klein. Dennoch wollte ich einige der neuen Fähigkeiten demonstrieren, die ich bei der Zusammenarbeit mit anderen großartigen neuen Entwicklern im Coding-Bootcamp gelernt und eingesetzt habe.",
+    "otherProjects_button_open": "zeige Sonstige",
+    "otherProjects_button_close": "schließe Sonstige",
+    "otherProjects": {
+        "section_title": "Andere Projekte",
+        "content": [
+            {
+                "img_url": "/images/Bici_go.png",
+                "title": "Bici Go!",
+                "description": "Abschließendes Gruppenprojekt der WBS Coding School: Eine Full-Stack-Anwendung für Radfahrer. Nutzer können sich registrieren, Profilbilder hochladen und vor allem fahrradbezogene Orte auf der zentralen Komponente – der Karte – anpinnen. Andere Radfahrer können so vorhandene Pins für Feedback und ein Gemeinschaftsgefühl kommentieren und bewerten.",
+                "techstack_front": [
+                    "React",
+                    "Tailwind CSS",
+                    "Daisy UI",
+                    "Netlify"
+                ],
+                "techstack_back": [
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "AWS S3",
+                    "Railway"
+                ],
+                "page_url": "https://superlative-dieffenbachia-8c430f.netlify.app/",
+                "repo_url": "",
+                "contributors": [
+                    {
+                        "name": "Fabian Eichelbrönner",
+                        "github_url": "https://github.com/fab-elmar"
+                    },
+                    {
+                        "name": "Victor Fernandez",
+                        "github_url": "https://github.com/Victorfernandezsaez"
+                    }
+                ]
+            },
+            {
+                "img_url": "",
+                "title": "Poke Fight",
+                "description": "Der Pokemon-API bietet eine ständig wachsende Sammlung aller Pokemon. Die Speicherung der Daten in einer eigenen Datenbank mit eigenen Backend-Server sowie die Gestaltung einer Benutzeroberfläche mit eigener Spiellogik für das Frontend, war eine gute erste Full-Stack-Herausforderung.",
+                "techstack_front": [
+                    "React",
+                    "Tailwind CSS"
+                ],
+                "techstack_back": [
+                    "Node.js",
+                    "Express.js"
+                ],
+                "page_url": "",
+                "repo_url": "https://github.com/kaybee24/Pokefight-React-Frontend",
+                "contributors": [
+                    {
+                        "name": "Katrin Baier",
+                        "github_url": "https://github.com/kaybee24"
+                    },
+                    {
+                        "name": "Samin Fateh",
+                        "github_url": "https://github.com/Saminf90"
+                    },
+                    {
+                        "name": "Micheál Fiachra Mac Cóil",
+                        "github_url": "https://github.com/Tuffisoft"
+                    }
+                ]
+            },
+            {
+                "img_url": "",
+                "title": "Travel Blog",
+                "description": "In diesem Projekt lernten wir das Contenful Content Management Systeme (Headless CMS) kennen. Wir erstellten Content für Reiseziele auf der Platform und luden diesen in unserem Frontend mittels der vom CMS bereitgestellten API. Später haben wir die Contentful-Daten in unserer eigenen PostgreSQL-Datenbank gespeichert. Hierzu nutzten wir React Router und fortgeschrittenere React Hooks wie useParams und useContext.",
+                "techstack_front": [
+                    "React",
+                    "Tailwind CSS",
+                    "Daisy UI"
+                ],
+                "techstack_back": [
+                    "Headless CMS",
+                    "Node.js",
+                    "Express.js",
+                    "PostgreSQL"
+                ],
+                "page_url": "",
+                "repo_url": "https://github.com/JensMatthiaschk/react-travel-blog",
+                "contributors": [
+                    {
+                        "name": "Simachew Mengiste",
+                        "github_url": "https://github.com/absima"
+                    },
+                    {
+                        "name": "Bruno Silveira",
+                        "github_url": "https://github.com/brunonline02"
+                    }
+                ]
+            },
+            {
+                "img_url": "",
+                "title": "Hacker News",
+                "description": "Der Hacker-News-API lieferte die Daten für dieses Gruppenprojekt. Glücklicherweise bietet die ursprüngliche Hacker-News-Seite viel Raum für Designverbesserungen, was uns motivierte, eine ansprechendere Benutzeroberfläche zu erstellen. Es war eine großartige Übung, tiefer in React Hooks (UseState, UseEffect), Props und Fetch einzutauchen.",
+                "techstack_front": [
+                    "React",
+                    "JavaScript",
+                    "Bulma"
+                ],
+                "techstack_back": [],
+                "page_url": "",
+                "repo_url": "https://github.com/Saminf90/hacker-news",
+                "contributors": [
+                    {
+                        "name": "Samin Fateh",
+                        "github_url": "https://github.com/Saminf90"
+                    },
+                    {
+                        "name": "Bruno Silveira",
+                        "github_url": "https://github.com/brunonline02"
+                    },
+                    {
+                        "name": "Marina Ilyushina",
+                        "github_url": "https://github.com/aquamarineru"
+                    }
+                ]
+            },
+            {
+                "img_url": "",
+                "title": "Memory Lane",
+                "description": "Die Idee hinter unserem ersten React-Gruppenprojekt war es, eine Platform zu erstellen, auf der Menschen ihre Erinnerungen und Erfahrungen für nachfolgende Generationen bewahren und mit Fotos aus der entsprechenden Zeit visualisieren können.",
+                "techstack_front": [
+                    "React",
+                    "JavaScript",
+                    "Bootstrap"
+                ],
+                "techstack_back": [],
+                "page_url": "",
+                "repo_url": "https://github.com/JensMatthiaschk/Memory-lane-wReact",
+                "contributors": [
+                    {
+                        "name": "Fabian Eichelbrönner",
+                        "github_url": "https://github.com/fab-elmar"
+                    },
+                    {
+                        "name": "Malaiz Daud",
+                        "github_url": "https://github.com/Malaiz"
+                    }
+                ]
+            },
+            {
+                "img_url": "",
+                "title": "Cook Book",
+                "description": "Eine einfache Webanwendung zur Darstellung von Kochrezepten. Unsere erste Übung, um sich mit HTML-Architektur und CSS vertraut zu machen.",
+                "techstack_front": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "techstack_back": [],
+                "page_url": "",
+                "repo_url": "https://github.com/JensMatthiaschk/Cook_Book",
+                "contributors": [
+                    {
+                        "name": "Luben Stoyanov",
+                        "github_url": "https://github.com/LubenStoyanov"
+                    },
+                    {
+                        "name": "Micheál Fiachra Mac Cóil",
+                        "github_url": "https://github.com/Tuffisoft"
+                    }
+                ]
+            }
+        ]
+    }
+}

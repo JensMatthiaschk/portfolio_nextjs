@@ -1,0 +1,53 @@
+{
+    "section_title": "Erfahrung",
+    "content": {
+        "professionalExperience": {
+            "title": "Berufserfahrung",
+            "content": [
+                {
+                    "position": "Junior Production Manager, Production Coordinator, Assistant - / Shipping Coordinator",
+                    "company": "Diverse",
+                    "location": "Berlin & Potsdam",
+                    "time_period": "09/2010 - 01/2022",
+                    "description": "Bei meiner langjährigen Tätigkeit beim Film koordinierte ich gemeinsam im Team im Produktionsbüro verschiedene internationale Film- und Serienproduktionen und spezialisierte mich auf die Logistik bei Dreharbeiten im In- und Ausland.",
+                    "follow_link_part1": "Für eine vollständige Auflistung meiner Projekte schau gern auf",
+                    "follow_link_part2": "oder",
+                    "follow_link_part3": "vorbei."
+                }
+            ]
+        },
+        "educationAndTraining": {
+            "title": "Aus- und Weiterbildung",
+            "content": [
+                {
+                    "title": "Full-Stack Web & App Developer",
+                    "school": "WBS Coding School",
+                    "location": "Berlin",
+                    "time_period": "08/2022 - 12/2022",
+                    "description": "15-wöchiges intensives, projektbasiertes, praxisorientiertes, kollaboratives Vollzeit-Coding-Training, einschließlich der Vermittlung von HTML5, CSS3 und Responsive Webdesign, Frontend-Programmierung mit JavaScript / React, Backend-Programmierung mit Node.js (Express), Versionskontrollsysteme (Git & GitHub ), Datenbanken (SQL, NoSQL), Restful APIs, DevOps (Hosting, Bereitstellung, Überwachung), Softwaretests (TDD), agile Tools und Methoden."
+                },
+                {
+                    "title": "Digital Job Compass",
+                    "school": "StartSteps Digital Education GmbH",
+                    "location": "Berlin",
+                    "time_period": "07/2022 – 08/2022",
+                    "description": "Praktischer & theoretischer Orientierungskurs in Webentwicklung, Datenanalyse, UI/ UX Design, Online Marketing, Projektmanagement und Agile Tools und Methoden."
+                },
+                {
+                    "title": "Produktionsleiter Film & Fernsehen (IHK)",
+                    "school": "Institut für Schauspiel, Film-, Fernsehberufe an der VHS Berlin Mitte & Chamber of Commerce Berlin",
+                    "location": "Berlin",
+                    "time_period": "11/2017 – 02/2018",
+                    "description": "Berufliche Weiterbildung mit umfassenden Einblicken in die Aufgabenbereiche Projektplanung, Finanzierung, Organisation, Durchführung von Dreharbeiten, Postproduktion, Verleih und Vertrieb mit abschließender IHK-Prüfung. Darüber hinaus behandelte der Kurs Themen wie internationale Filmfinanzierung, Vertriebsstrategien und Koproduktionen, aktuelle Entwicklungen auf dem Medienmarkt, technische Innovationen und neue Medienangebote sowie moderne Verhandlungsführung und Kommunikation."
+                },
+                {
+                    "title": "B.A. Medien und Kommunikation",
+                    "school": "Universität Passau",
+                    "location": "",
+                    "time_period": "10/2006 – 06/2010",
+                    "description": "Das Curriculum umfasste die Vermittlung medienwissenschaftlicher Kernkompetenzen, darunter Film- und Fernsehforschung, Medienpsychologie, Medienpädagogik, Medieninformatik und Kommunikationswissenschaft sowie Einblicke in die praktische Medienproduktion (z. B. Print-, audiovisuelle und Online-Medien, transmediales Storytelling)."
+                }
+            ]
+        }
+    }
+}

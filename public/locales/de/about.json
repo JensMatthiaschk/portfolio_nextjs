@@ -1,0 +1,8 @@
+{
+        "section_title": "Über mich",
+        "intro": "Hi, Ich bin",
+        "profession": "Webentwickler",
+        "description": "Nach über 10 Jahren in der Filmbranche habe ich mich umorientiert und suche nun nach neuen Herausforderungen und spannenden Projekten in der IT-Branche. Mit Code kann ich nun meine eigenen Drehbücher schreiben, die hoffentlich sowohl eine positive Wirkung haben als auch den Menschen helfen. Ich strebe immer nach dem Gleichgewicht zwischen intuitiv und attraktiv designten Benutzeroberflächen bei gleichzeitiger Maximierung der Performance und Skalierbarkeit meiner Anwendungen. Ich bin von Natur aus neugierig und arbeite kontinuierlich daran mich zu verbessern, um ein besserer Entwickler zu werden, auf den sich Menschen und Unternehmen verlassen können.",
+        "button_projects": "Meine Projekte",
+        "button_contact": "Kontakt"
+}
