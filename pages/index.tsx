@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import 'styles/Home.module.css'
 import Navbar from '../components/Navbar.jsx'
 import Experience from './Experience.jsx'
 import About from './About.jsx'
@@ -8,7 +6,6 @@ import Projects from './Projects.jsx'
 import Contact from './Contact.jsx'
 import ClientOnly from '../components/ClientOnly.jsx'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({props}:{ props:any }) {
   return (
