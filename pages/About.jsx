@@ -26,7 +26,8 @@ export default function About(props) {
 
 
     useEffect(() => {
-        if (aboutIsVisible === true) setSectionActive(t('about:section_title'))
+        const sectionIdentifyer = t('about:section_title')
+        if (aboutIsVisible === true) setSectionActive(sectionIdentifyer)
     }, [aboutIsVisible])
 
     return (

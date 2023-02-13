@@ -9,17 +9,12 @@ export default function NavButtons() {
     let i = '';
     const { t } = useTranslation();
 
-
-    const [menuDots, setMenuDots] = useState([])
-
-    useEffect(() => {
-        setMenuDots([
-            { section: t("about:section_title", { returnObjects: true }) },
-            { section: t("experience:section_title", { returnObjects: true }) },
-            { section: t("projects:projects.section_title", { returnObjects: true }) },
-            { section: t("contact:section_title", { returnObjects: true }) }
-        ])
-    }, [])
+    const menuDots = [
+        { section: t("about:section_title", { returnObjects: true }) },
+        { section: t("experience:section_title", { returnObjects: true }) },
+        { section: t("projects:projects.section_title", { returnObjects: true }) },
+        { section: t("contact:section_title", { returnObjects: true }) }
+    ];
 
     console.log("CurrentSection", sectionActive)
 
