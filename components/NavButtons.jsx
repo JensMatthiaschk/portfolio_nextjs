@@ -7,12 +7,13 @@ export default function NavButtons() {
 
     const { currentTheme, sectionActive, setSectionActive } = useContext(ThemeContext);
     let i = '';
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
 
     const [menuDots, setMenuDots] = useState([])
 
     useEffect(() => {
+        const { t } = useTranslation();
         setMenuDots([
             { section: t("about:section_title", { returnObjects: true }) },
             { section: t("experience:section_title", { returnObjects: true }) },

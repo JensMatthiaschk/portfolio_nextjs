@@ -26,6 +26,7 @@ export default function About(props) {
 
 
     useEffect(() => {
+        const { t } = useTranslation();
         if (aboutIsVisible === true) setSectionActive(t('about:section_title'))
     }, [aboutIsVisible])
 
