@@ -26,12 +26,28 @@ export default function Experience(props) {
     const { t } = useTranslation('experience');
     const educationAndTraining = t('content.educationAndTraining', { returnObjects: true }) || [];
     const professionalExperience = t('content.professionalExperience', { returnObjects: true }) || [];
+    const dots = useRef(null)
+    const [multiplier, setMultiplier] = useState(20)
 
     console.log({ educationAndTraining, professionalExperience })
 
     useEffect(() => {
         if (experienceIsVisible === true) setSectionActive(t('experience:section_title'))
     }, [experienceIsVisible])
+
+    // useEffect(() => {
+    //     const height = dots.current.offsetHeight
+    //     const width = dots.current.offsetWidth
+    //     console.log({ height, width })
+    //     if (experienceIsVisible === true && width < 5 && height >= 5) {
+    //         const multiplierCalc = Math.round(height / 8)
+    //         setMultiplier(multiplierCalc)
+    //     }
+    //     else if (experienceIsVisible === true && height < 5 && width >= 5) {
+    //         const multiplierCalc = Math.round(width / 8)
+    //         setMultiplier(multiplierCalc)
+    //     }
+    // }, [educationTrainingIsVisible])
 
     return (
         <>
@@ -108,42 +124,23 @@ export default function Experience(props) {
                         </div>
                     </div>
                     <div ref={educationTrainingRef} className={educationTrainingIsVisible ? "fade-in flex flex-col text-center mx-auto lg:w-[80%] mt-16" : "flex flex-col mx-auto lg:w-[80%] mt-16 invisible"} >
-                        <h3 className={currentTheme === 'dark' ? "text-3xl  md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] mb-10"
-                            : "text-3xl  md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] mb-10"}>{educationAndTraining.title}</h3>
+                        <h3 className={currentTheme === 'dark' ? "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] mb-10"
+                            : "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] mb-10"}>{educationAndTraining.title}</h3>
                         {educationAndTraining.content?.map((e, i) => {
-
-                            const dots = useRef(null)
-                            const [multiplier, setMultiplier] = useState(20)
-
-                            useEffect(() => {
-
-                                const height = dots.current.offsetHeight
-                                const width = dots.current.offsetWidth
-                                console.log({ height, width })
-                                if (experienceIsVisible === true && width < 5 && height >= 5) {
-                                    const multiplierCalc = Math.round(height / 8)
-                                    setMultiplier(multiplierCalc)
-                                }
-                                else if (experienceIsVisible === true && height < 5 && width >= 5) {
-                                    const multiplierCalc = Math.round(width / 8)
-                                    setMultiplier(multiplierCalc)
-                                }
-                            }, [educationTrainingIsVisible])
-
                             return (
-                                <div key={`ed-${i}`} className={currentTheme === "dark" ? "h-fit border-cyan-900 border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200 mt-6 text-left p-6 flex flex-col sm:flex-row justify-evenly"
-                                    : "w-full h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] rounded-md ease-in-out delay-50 duration-200 mt-6 text-left p-6 flex flex-col sm:flex-row justify-evenly"}>
-                                    <div className="flex flex-col gap-y-3 sm:w-4/12 w-full justify-center sm:mr-8 sm:mb-0 mb-8">
-                                        <h3 className="font-extrabold text-xl">{e.title}</h3>
-                                        {e.location ? <h4 className={currentTheme === 'dark' ? "" : "drop-shadow-[2px_2px_0_var(--lm-third-color)]"}>@ {e.school}, {e.location}</h4> : <h4 className={currentTheme === 'dark' ? "" : "drop-shadow-[2px_2px_0_var(--lm-third-color)]"}>@ {e.school}</h4>}
+                                <div key={`ed-${i}`} className={currentTheme === "dark" ? "h-fit border-cyan-900 border-solid overflow-hidden border-2 hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200 mt-6 text-left flex flex-col sm:flex-row justify-evenly"
+                                    : "w-full h-fit hover:shadow-[0_2px_10px_1px_DimGrey] overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 text-left flex flex-col sm:flex-row justify-evenly"}>
+                                    <div className={currentTheme === "dark" ? "text-[var(--dm-glow-color)] bg-[var(--dm-secondary-color)] flex flex-col gap-y-3 sm:w-4/12 w-full justify-center p-6" : "text-stone-200 bg-[var(--lm-secondary-color)] flex flex-col gap-y-3 sm:w-4/12 w-full justify-center p-6"}>
+                                        <h3 className={currentTheme === "dark" ? "font-extrabold text-2xl sm:text-xl" : "text-[var(--lm-third-color)] font-extrabold text-2xl sm:text-xl"}>{e.title}</h3>
+                                        <h4>{e.location ? `@ ${e.school}, ${e.location}` : `${e.school}`}</h4>
                                         <p>{e.time_period}</p>
                                     </div>
-                                    <div ref={dots} className="flex sm:flex-col sm:gap-y-1 gap-x-1 justify-center items-center">
+                                    {/* <div ref={dots} className="flex sm:flex-col sm:gap-y-1 gap-x-1 justify-center items-center">
                                         {[...Array(multiplier)].map((e, i) =>
-                                            <div id={`dot-ed-${i}`} className={currentTheme === 'dark' ? "rounded-full w-1 h-1 bg-[var(--dm-secondary-color)]" : "rounded-full w-1 h-1 bg-[var(--lm-secondary-color)]"}></div>
+                                            <div id={`dot-ed-${i}`} key={`dot-ed-${i}`} className={currentTheme === 'dark' ? "rounded-full w-1 h-1 bg-[var(--dm-secondary-color)]" : "rounded-full w-1 h-1 bg-[var(--lm-secondary-color)]"}></div>
                                         )}
-                                    </div>
-                                    <div className={currentTheme === 'dark' ? "mt-8 sm:mt-0 sm:ml-8 flex flex-col sm:w-8/12 w-full justify-evenly" : "mt-8 sm:mt-0 sm:ml-8 flex flex-col sm:w-8/12 w-full justify-evenly"}>
+                                    </div> */}
+                                    <div className={currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6" : "bg-stone-200 text-[var(--lm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6"}>
                                         <p >{e.description}</p>
                                     </div>
                                 </div>)
@@ -156,40 +153,20 @@ export default function Experience(props) {
                         <h3 className={currentTheme === 'dark' ? "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] mb-10"
                             : "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] mb-10"}>{professionalExperience.title}</h3>
                         {professionalExperience?.content?.map((e, i) => {
-
-                            const dots = useRef(null)
-                            const [multiplier, setMultiplier] = useState(20)
-
-                            useEffect(() => {
-
-                                const height = dots.current.offsetHeight
-                                const width = dots.current.offsetWidth
-                                if (experienceIsVisible === true && width < 5 && height >= 5) {
-                                    const multiplierCalc = Math.round(height / 8)
-                                    setMultiplier(multiplierCalc)
-                                }
-                                else if (experienceIsVisible === true && height < 5 && width >= 5) {
-                                    const multiplierCalc = Math.round(width / 8)
-                                    setMultiplier(multiplierCalc)
-                                }
-                            }, [professionalExperienceIsVisible])
-
-                            console.log("MULTIPLIER SET", multiplier)
-
                             return (
-                                <div key={`ex-${i}`} className={currentTheme === "dark" ? "info-container w-full h-fit border-cyan-900 border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200 mt-6 text-left p-6 flex flex-col sm:flex-row justify-evenly"
-                                    : "w-full h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] rounded-md ease-in-out delay-50 duration-200 mt-6 text-left p-6 flex flex-col sm:flex-row justify-evenly"}>
-                                    <div className="flex flex-col gap-y-3 sm:w-4/12 w-full justify-center sm:mr-8 sm:mb-0 mb-8">
-                                        <h3 className="font-extrabold text-xl">{e.position}</h3>
-                                        {e.location ? <h4 className={currentTheme === 'dark' ? "" : "drop-shadow-[2px_2px_0_var(--lm-third-color)]"}>@ {e.company}, {e.location}</h4> : <h4 className={currentTheme === 'dark' ? "" : "drop-shadow-[2px_2px_0_var(--lm-third-color)]"}>{e.company}</h4>}
+                                <div key={`ex-${i}`} className={currentTheme === "dark" ? "info-container w-full h-fit border-cyan-900 overflow-hidden border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200 mt-6 text-left flex flex-col sm:flex-row justify-evenly"
+                                    : "w-full h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 text-left flex flex-col sm:flex-row justify-evenly"}>
+                                    <div className={currentTheme === "dark" ? "text-[var(--dm-glow-color)] bg-[var(--dm-secondary-color)] flex flex-col gap-y-3 sm:w-4/12 w-full justify-center p-6" : "text-stone-200 bg-[var(--lm-secondary-color)] flex flex-col gap-y-3 sm:w-4/12 w-full justify-center p-6"}>
+                                        <h3 className={currentTheme === "dark" ? "font-extrabold text-2xl sm:text-xl" : "text-[var(--lm-third-color)] font-extrabold text-2xl sm:text-xl"}>{e.position}</h3>
+                                        <h4>{e.location ? `@ ${e.company}, ${e.location}` : `${e.company}`}</h4>
                                         <p>{e.time_period}</p>
                                     </div>
-                                    <div ref={dots} className="flex flex-row sm:flex-col sm:gap-y-1 gap-x-1 justify-center items-center">
+                                    {/* <div ref={dots} className="flex flex-row sm:flex-col sm:gap-y-1 gap-x-1 justify-center items-center">
                                         {[...Array(multiplier)].map((e, i) =>
-                                            <div id={`dot-ex-${i}`} className={currentTheme === 'dark' ? "rounded-full w-1 h-1 bg-[var(--dm-secondary-color)]" : "rounded-full w-1 h-1 bg-[var(--lm-secondary-color)]"}></div>
+                                            <div id={`dot-ex-${i}`} key={`dot-ex-${i}`} className={currentTheme === 'dark' ? "rounded-full w-1 h-1 bg-[var(--dm-secondary-color)]" : "rounded-full w-1 h-1 bg-[var(--lm-secondary-color)]"}></div>
                                         )}
-                                    </div>
-                                    <div className={currentTheme === 'dark' ? "mt-8 sm:mt-0 sm:ml-8 flex flex-col sm:w-8/12 w-full justify-center" : "mt-8 sm:mt-0 sm:ml-8 flex flex-col sm:w-8/12 w-full justify-center"}>
+                                    </div> */}
+                                    <div className={currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6" : "bg-stone-200 text-[var(--lm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6"}>
                                         <div className="py-2 align-middle">{e.description}</div>
                                         {i === 0 ? <span className="py-2 align-middle"><span className="text-4xl align-middle leading-[1rem]">☞ </span> {professionalExperience.content[0].follow_link_part1} <a href="http://www.linkedin.com/in/jensmatthiaschk"
                                             target="_newBrowserTab"
