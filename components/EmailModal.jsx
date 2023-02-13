@@ -122,17 +122,16 @@ export default function EmailModal() {
                             onClick={handleChange}
                             required
                         />
-                        <button className="emailFormButton btn btn-sm" type='submit'>Submit</ button >
-                        {loading === true ? <TailSpin
-                            height="1rem"
-                            width="1rem"
+                        <button className="emailFormButton btn btn-sm" type='submit'>{loading === true ? <TailSpin
+                            height="1.5rem"
+                            width="1.5rem"
                             color="currentColor"
                             ariaLabel="tail-spin-loading"
                             radius="1"
                             wrapperStyle={{}}
                             wrapperclassName=""
                             visible={true}
-                        /> : ''}
+                        /> : 'Submit'}</ button >
                         {postEmailResponse.ok === true && <p className="text-green-600">Email sent successfully!</p>}
                         {postEmailResponse.ok === false && <p className="text-red-600">An Error occurred! Email was not sent🥺</p>}
                     </form>

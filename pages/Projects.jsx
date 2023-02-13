@@ -3,7 +3,6 @@ import { useContext, useEffect, useState, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Loader from "@/components/Loader.jsx"
 
 export async function getStaticProps({ locale }) {
     return {
@@ -22,18 +21,12 @@ export default function Projects(props) {
     const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0 });
     const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
     const { t } = useTranslation('projects');
-
     const projects = (t('projects', { returnObjects: true }));
     const otherProjects = (t('otherProjects', { returnObjects: true }))
-
-    // const [projects, setProjects] = useState([]);
-    // const [otherProjects, setOtherProjects] = useState([]);
 
     useEffect(() => {
         if (projectsIsVisible === true) {
             setSectionActive(t('projects:projects.section_title'));
-            // setProjects(t('projects', { returnObjects: true }));
-            // setOtherProjects(t('otherProjects', { returnObjects: true }))
         }
     }, [projectsIsVisible, cardIsVisible])
 

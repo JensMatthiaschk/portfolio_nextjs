@@ -1,8 +1,10 @@
+
 export const postEmail = async (data) => {
-    const res = await fetch(import.meta.env.VITE_EMAIL_API + "/email", {
+    const res = await fetch("/api/email", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            Accept: "application/json;"
         },
         body: JSON.stringify(data),
         mode: "cors"

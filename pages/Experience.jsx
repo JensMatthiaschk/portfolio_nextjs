@@ -3,7 +3,6 @@ import { useContext, useEffect, useRef, useState } from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Loader from '../components/Loader.jsx'
 
 
 export async function getStaticProps({ locale }) {
