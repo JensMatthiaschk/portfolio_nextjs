@@ -16,8 +16,6 @@ export default function NavButtons() {
         { section: t("contact:section_title", { returnObjects: true }) }
     ];
 
-    console.log("CurrentSection", sectionActive)
-
     return (
         <>
             {currentTheme === 'dark' ?

@@ -10,11 +10,9 @@ export const postEmail = async (data) => {
         mode: "cors"
     })
     if (!res.ok) {
-        console.log("Sending email failed", res.json())
         return res
 
     } else {
-        console.log("Sent email successfully", res)
         return res
     }
 };

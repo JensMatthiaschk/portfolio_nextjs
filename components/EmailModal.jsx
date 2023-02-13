@@ -31,7 +31,7 @@ export default function EmailModal() {
                 "message": toSend.message
             }
             const sendEmail = await postEmail(data)
-            console.log("FORMDATA", data)
+
             setPostEmailResponse(sendEmail)
             setToSend({
                 from_name: '',

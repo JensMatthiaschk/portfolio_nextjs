@@ -53,7 +53,6 @@ export default function Projects(props) {
                         {projects?.content?.map((p, i) => {
 
                             function toggleMoreText() {
-                                console.log("click")
                                 document.querySelector(`.card-text-body-${i}`).classList.toggle("card-text-cutoff")
                                 document.querySelector(`.more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.less-button-${i}`).classList.toggle("hidden")
@@ -146,7 +145,6 @@ export default function Projects(props) {
                         {otherProjects?.content?.map((p, i) => {
 
                             function toggleMoreText(p) {
-                                console.log("click")
                                 document.querySelector(`.op-card-text-body-${i}`).classList.toggle("card-text-cutoff")
                                 document.querySelector(`.op-more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.op-less-button-${i}`).classList.toggle("hidden")

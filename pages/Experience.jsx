@@ -29,25 +29,11 @@ export default function Experience(props) {
     const dots = useRef(null)
     const [multiplier, setMultiplier] = useState(20)
 
-    console.log({ educationAndTraining, professionalExperience })
+
 
     useEffect(() => {
         if (experienceIsVisible === true) setSectionActive(t('experience:section_title'))
     }, [experienceIsVisible])
-
-    // useEffect(() => {
-    //     const height = dots.current.offsetHeight
-    //     const width = dots.current.offsetWidth
-    //     console.log({ height, width })
-    //     if (experienceIsVisible === true && width < 5 && height >= 5) {
-    //         const multiplierCalc = Math.round(height / 8)
-    //         setMultiplier(multiplierCalc)
-    //     }
-    //     else if (experienceIsVisible === true && height < 5 && width >= 5) {
-    //         const multiplierCalc = Math.round(width / 8)
-    //         setMultiplier(multiplierCalc)
-    //     }
-    // }, [educationTrainingIsVisible])
 
     return (
         <>

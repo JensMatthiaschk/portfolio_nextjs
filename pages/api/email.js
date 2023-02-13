@@ -2,7 +2,6 @@ import { transporter } from "../../config/nodemailer"
 
 
 const handler = async (req, res) => {
-    console.log("EMAIL", req.body)
     if (req.method === "POST") {
         const name = req.body.from_name
         const email = req.body.reply_to

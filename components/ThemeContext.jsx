@@ -22,7 +22,6 @@ export const ThemeContextProvider = (props) => {
     }, [])
 
     console.log(`${currentTheme}` + "-theme")
-    console.log('prefersDarkScheme', prefersDarkScheme)
 
 
     return (

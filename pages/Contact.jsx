@@ -27,10 +27,6 @@ export default function Contact(props) {
     const year = new Date().getFullYear()
     const { t } = useTranslation('contact')
 
-    // console.log("drawingIsVisible", drawingIsVisible)
-    console.log("COUNTERLIGHT", counterLight)
-    console.log("COUNTERDARK", counterDark)
-
     useEffect(() => {
         setDrawingSource('')
         if (currentTheme === 'dark' && drawingIsVisible === true) {
@@ -56,9 +52,6 @@ export default function Contact(props) {
             setContactVisitedLight(1)
         }
     }, [contactIsVisible])
-
-    console.log("contactVisitedDark", contactVisitedDark)
-    console.log("contactVisitedLight", contactVisitedLight)
 
     return (
         <>
