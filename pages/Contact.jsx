@@ -2,18 +2,19 @@ import { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Image from "next/image.js";
 
-export async function getStaticProps({ locale }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, [
-                'contact',
-            ])),
-            // Will be passed to the page component as props
-        },
-    }
-}
+// export async function getStaticProps({ locale }) {
+//     return {
+//         props: {
+//             ...(await serverSideTranslations(locale, [
+//                 'contact',
+//             ])),
+//             // Will be passed to the page component as props
+//         },
+//     }
+// }
 
 export default function Contact(props) {
 
@@ -31,14 +32,14 @@ export default function Contact(props) {
         setDrawingSource('')
         if (currentTheme === 'dark' && drawingIsVisible === true) {
             setSectionActive(t('contact:section_title'))
-            setDrawingSource('images/Drawing_dark.gif');
-            setPortraitSource('images/PortraitDarkmode.png')
+            setDrawingSource('/images/Drawing_dark.gif');
+            setPortraitSource('/images/PortraitDarkmode.png')
             setCounterDark(prev => prev + 1)
         }
         else if (currentTheme === 'light' && drawingIsVisible === true) {
             setSectionActive(t('contact:section_title'))
-            setDrawingSource('images/Drawing_light.gif');
-            setPortraitSource('images/PortraitLightmode.png')
+            setDrawingSource('/images/Drawing_light.gif');
+            setPortraitSource('/images/PortraitLightmode.png')
             setCounterLight(prev => prev + 1)
         }
         else setDrawingSource('')
@@ -153,8 +154,8 @@ export default function Contact(props) {
                                     className={currentTheme === 'dark' ? 'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
                                         'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[7rem] sm:right-[12rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--lm-glow-color)] sm:shadow-[0_0_140px_130px_var(--lm-glow-color)] shadow-[0_0_90px_70px_var(--lm-glow-color)] transform-gpu'}
                                 ></div>
-                                <img className={currentTheme === 'dark' ? "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 " : "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 "}
-                                    src={portraitSource} alt="PortraitDarkmode" />
+                                <Image width="945" height="800" priority={true} className={currentTheme === 'dark' ? "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 " : "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 "}
+                                    src={portraitSource} alt="Portrait-image" />
                             </>
                             : drawingIsVisible &&
                             <>
@@ -162,12 +163,12 @@ export default function Contact(props) {
                                     className={currentTheme === 'dark' ? 'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
                                         'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[7rem] sm:right-[12rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--lm-glow-color)] sm:shadow-[0_0_140px_130px_var(--lm-glow-color)] shadow-[0_0_90px_70px_var(--lm-glow-color)] transform-gpu'}
                                 ></div>
-                                <img className={currentTheme === 'dark' ? "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2" : "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"}
-                                    src={portraitSource} alt="PortraitDarkmode" />
+                                <Image width="945" height="800" priority={true} className={currentTheme === 'dark' ? "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2" : "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"}
+                                    src={portraitSource} alt="Portrait-image" />
                             </>
                         }
-                        {currentTheme === 'dark' ? <img className={drawingIsVisible && contactVisitedDark === 0 ? "drawing-animation sm:h-[24.2rem] h-[12.2rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]" : "hidden sm:h-[24.2rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={`${drawingIsVisible ? drawingSource : ""}`} />
-                            : <img className={drawingIsVisible && contactVisitedLight === 0 ? "drawing-animation sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]" : "hidden sm:h-[24.4rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={`${drawingIsVisible ? drawingSource : ""}`} />}
+                        {currentTheme === 'dark' ? <Image width="551" height="510" priority={true} className={drawingIsVisible && contactVisitedDark === 0 ? "drawing-animation sm:h-[24.2rem] h-[12.2rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]" : "hidden sm:h-[24.2rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={`${drawingIsVisible ? drawingSource : ""}`} alt="Drawing-Animation" />
+                            : <Image width="599" height="510" priority={true} className={drawingIsVisible && contactVisitedLight === 0 ? "drawing-animation sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]" : "hidden sm:h-[24.4rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={`${drawingIsVisible ? drawingSource : ""}`} alt="Drawing-Animation" />}
                     </div>
                 </div>
             </section>

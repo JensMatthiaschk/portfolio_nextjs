@@ -152,7 +152,7 @@ Add gif as div background, put text layer on top and add these css attributes to
   }
 }  
 
-  .portrait-animation {
+.portrait-animation {
     animation-name: portrait-fade-in;
     animation-delay: 5.5s;
     animation-duration: 3s;
@@ -172,14 +172,14 @@ Add gif as div background, put text layer on top and add these css attributes to
   }
 }  
 
-  .linkButton-fade-out-animation {
+.linkButton-fade-out-animation {
     animation-name: fade-out;
     animation-delay: 7s;
     animation-duration: 3s;
     animation-fill-mode: both;
   }
 
-  .fade-out {
+.fade-out {
     animation-name: fade-out;
     animation-duration: 2s;
     animation-fill-mode: both;
@@ -198,14 +198,14 @@ Add gif as div background, put text layer on top and add these css attributes to
 } 
 
 
-  .linkButton-fade-in-animation {
+.linkButton-fade-in-animation {
     animation-name: fade-in;
     animation-delay: 8.5s;
     animation-duration: 4s;
     animation-fill-mode: both;
   }
 
-  .fade-in {
+.fade-in {
     animation-name: fade-in;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -222,7 +222,7 @@ Add gif as div background, put text layer on top and add these css attributes to
 	}
 }
 
- .glow-fade-in {
+.glow-fade-in {
     animation-name: glow-fade-in;
     animation-delay: 1s;
     animation-duration: 2s;
@@ -248,7 +248,7 @@ Add gif as div background, put text layer on top and add these css attributes to
 
   @media (width < 639px) {
 a.profile-link-dark::after, a.profile-link-light::after {
-    width: 18px;
+  width: 18px;
   display: inline-block;
   z-index: 2;
   position: relative;
@@ -258,11 +258,11 @@ a.profile-link-dark::after, a.profile-link-light::after {
   left: 2px;
 }
 
-   a.profile-link-dark::after {
+a.profile-link-dark::after {
   content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='%23b5a887' ><path strokeLinecap='round' strokeLinejoin='round' d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /></svg> ");
   }
 
-   a.profile-link-dark:hover::after {
+a.profile-link-dark:hover::after {
   content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='%230891b2' ><path strokeLinecap='round' strokeLinejoin='round' d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /></svg> ");
 }
 
@@ -270,15 +270,15 @@ a.profile-link-dark::after, a.profile-link-light::after {
   content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='%23212121' ><path strokeLinecap='round' strokeLinejoin='round' d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /></svg> ");
   }
 
-   a.profile-link-light:hover::after {
-filter: drop-shadow(0.5px 0.5px 1px #DBFE87);  
+  a.profile-link-light:hover::after {
+  filter: drop-shadow(0.5px 0.5px 1px #DBFE87);  
 }
   }
 
   @media (width > 639px) {
 
     a.profile-link-dark::after, a.profile-link-light::after {
-width: 20px;
+  width: 20px;
   display: inline-block;
   z-index: 2;
   position: relative;
@@ -288,19 +288,19 @@ width: 20px;
   left: 3px;
     }
 
-  a.profile-link-dark::after {
+a.profile-link-dark::after {
   content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='%23b5a887' ><path strokeLinecap='round' strokeLinejoin='round' d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /></svg> ");
   }
 
-   a.profile-link-dark:hover::after {
+a.profile-link-dark:hover::after {
   content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='%230891b2' ><path strokeLinecap='round' strokeLinejoin='round' d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /></svg> ");
 }
 
-    a.profile-link-light::after {
+a.profile-link-light::after {
   content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth='1.5' stroke='%23212121' ><path strokeLinecap='round' strokeLinejoin='round' d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25' /></svg> ");
   }
 
-   a.profile-link-light:hover::after {
+a.profile-link-light:hover::after {
 filter: drop-shadow(0.5px 0.5px 1px #DBFE87);  
 }
 }
@@ -308,9 +308,9 @@ filter: drop-shadow(0.5px 0.5px 1px #DBFE87);
 .skill::after {
   content: attr(data-content);
   opacity:0; 
-    transition: 0.3s;
-    position: relative;
-    margin-top: 4px;
+  transition: 0.3s;
+  position: relative;
+  margin-top: 4px;
 }
 
 .skill:hover::after {
@@ -324,24 +324,24 @@ filter: drop-shadow(0.5px 0.5px 1px #DBFE87);
   color:transparent;
   opacity:0; 
   position: relative;
-    right: -25px;
-        bottom: 3px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    transition: ease-out 1s;
-    transition-delay: 1s;
+  right: -25px;
+  bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: ease-out 1s;
+  transition-delay: 1s;
 }
 
 .dot-section:hover::before {
   color: currentColor;
   opacity:1; 
   position: relative;
-    right: 25px;
-    bottom: 3px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  right: 25px;
+  bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .spinner {

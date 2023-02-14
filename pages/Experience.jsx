@@ -1,20 +1,20 @@
 import { ThemeContext } from "../components/ThemeContext.jsx"
-import { useContext, useEffect, useRef, useState } from "react"
+import { useContext, useEffect} from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 
-export async function getStaticProps({ locale }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, [
-                'experience',
-            ])),
-            // Will be passed to the page component as props
-        },
-    }
-}
+// export async function getStaticProps({ locale }) {
+//     return {
+//         props: {
+//             ...(await serverSideTranslations(locale, [
+//                 'experience',
+//             ])),
+//             // Will be passed to the page component as props
+//         },
+//     }
+// }
 
 export default function Experience(props) {
 
@@ -26,8 +26,6 @@ export default function Experience(props) {
     const { t } = useTranslation('experience');
     const educationAndTraining = t('content.educationAndTraining', { returnObjects: true }) || [];
     const professionalExperience = t('content.professionalExperience', { returnObjects: true }) || [];
-    const dots = useRef(null)
-    const [multiplier, setMultiplier] = useState(20)
 
 
 
@@ -45,7 +43,7 @@ export default function Experience(props) {
                     </div>
                     <div ref={skillsRef} id="Skills" className={skillsIsVisible ? "flex flex-col items-center fade-in mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit" : "flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit invisible"}>
                         <h3 className={currentTheme === 'dark' ? "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] mb-6"
-                            : "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] mb-6"}>Skills</h3>
+                            : "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] mb-6"}>Skills.</h3>
                         <div className="flex h-fit sm:gap-x-4 gap-x-2 sm:gap-y-2 items-center justify-center flex-wrap transition-all px-3">
                             <div
                                 data-content="HTML5"
