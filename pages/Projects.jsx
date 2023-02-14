@@ -2,17 +2,7 @@ import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useContext, useEffect, useState, useRef } from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from "next/image.js"
-
-// export async function getStaticProps({ locale }) {
-//     return {
-//         props: {
-//             ...(await serverSideTranslations(locale), ['projects']),
-//             // Will be passed to the page component as props
-//         },
-//     }
-// }
 
 
 export default function Projects(props) {

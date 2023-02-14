@@ -2,19 +2,8 @@ import { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'next-i18next'
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from "next/image.js";
 
-// export async function getStaticProps({ locale }) {
-//     return {
-//         props: {
-//             ...(await serverSideTranslations(locale, [
-//                 'contact',
-//             ])),
-//             // Will be passed to the page component as props
-//         },
-//     }
-// }
 
 export default function Contact(props) {
 

@@ -2,19 +2,7 @@ import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useContext, useEffect} from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-
-// export async function getStaticProps({ locale }) {
-//     return {
-//         props: {
-//             ...(await serverSideTranslations(locale, [
-//                 'experience',
-//             ])),
-//             // Will be passed to the page component as props
-//         },
-//     }
-// }
 
 export default function Experience(props) {
 
