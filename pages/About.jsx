@@ -11,8 +11,6 @@ export default function About(props) {
     const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0.5 });
     const { t } = useTranslation();
 
-
-
     useEffect(() => {
         const sectionIdentifyer = t('about:section_title')
         if (aboutIsVisible === true) setSectionActive(sectionIdentifyer)

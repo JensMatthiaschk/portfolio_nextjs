@@ -7,8 +7,6 @@ import { useTranslation } from 'next-i18next'
 
 export default function Navbar() {
 
-
-    let prefersDarkScheme = null;
     const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
     const { t, i18n } = useTranslation();
 

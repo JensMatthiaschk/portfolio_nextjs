@@ -8,7 +8,7 @@ i18n
     .use(initReactI18next)
     .use(HttpApi)
     .init({
-        debug: true,
+        debug: false,
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false,

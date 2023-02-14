@@ -1,5 +1,5 @@
 import { ThemeContext } from "./ThemeContext.jsx"
-import { useContext, useState, useEffect } from "react"
+import { useContext} from "react"
 import { Link } from "react-scroll"
 import { useTranslation } from 'next-i18next'
 

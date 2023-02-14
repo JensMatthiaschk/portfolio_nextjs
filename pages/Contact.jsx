@@ -137,7 +137,7 @@ export default function Contact(props) {
                             </div>
                         </div>}
                     <div ref={drawingRef} className="flex relative h-[20rem] sm:h-[30rem]">
-                        {(contactVisitedDark === 0 && currentTheme === 'dark' && drawingIsVisible) || (contactVisitedLight === 0 && currentTheme === 'light' && drawingIsVisible) ?
+                        {(contactVisitedDark === 0 && currentTheme === 'dark' && drawingIsVisible && portraitSource) || (contactVisitedLight === 0 && currentTheme === 'light' && drawingIsVisible && portraitSource) ?
                             <>
                                 <div
                                     className={currentTheme === 'dark' ? 'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
@@ -146,7 +146,7 @@ export default function Contact(props) {
                                 <Image width="945" height="800" priority={true} className={currentTheme === 'dark' ? "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 " : "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 "}
                                     src={portraitSource} alt="Portrait-image" />
                             </>
-                            : drawingIsVisible &&
+                            : drawingIsVisible && portraitSource &&
                             <>
                                 <div
                                     className={currentTheme === 'dark' ? 'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
@@ -156,8 +156,8 @@ export default function Contact(props) {
                                     src={portraitSource} alt="Portrait-image" />
                             </>
                         }
-                        {currentTheme === 'dark' ? <Image width="551" height="510" priority={true} className={drawingIsVisible && contactVisitedDark === 0 ? "drawing-animation sm:h-[24.2rem] h-[12.2rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]" : "hidden sm:h-[24.2rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={`${drawingIsVisible ? drawingSource : ""}`} alt="Drawing-Animation" />
-                            : <Image width="599" height="510" priority={true} className={drawingIsVisible && contactVisitedLight === 0 ? "drawing-animation sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]" : "hidden sm:h-[24.4rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={`${drawingIsVisible ? drawingSource : ""}`} alt="Drawing-Animation" />}
+                        {currentTheme === 'dark' && drawingSource ? <Image width="551" height="510" priority={true} className={drawingIsVisible && contactVisitedDark === 0 ? "drawing-animation sm:h-[24.2rem] h-[12.2rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]" : "hidden sm:h-[24.2rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={drawingSource} alt="Drawing-Animation" />
+                            : drawingSource && <Image width="599" height="510" priority={true} className={drawingIsVisible && contactVisitedLight === 0 ? "drawing-animation sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]" : "hidden sm:h-[24.4rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={drawingSource} alt="Drawing-Animation" />}
                     </div>
                 </div>
             </section>

@@ -1,5 +1,5 @@
 import { ThemeContext } from "../components/ThemeContext.jsx"
-import { useContext, useEffect, useState, useRef } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
 import Image from "next/image.js"
@@ -31,7 +31,6 @@ export default function Projects(props) {
     }, [cardIsVisible])
 
 
-
     return (
         <section id={t('projects:projects.section_title')} ref={projectsRef} className="flex flex-col h-fit transition-all items-center sm:mx-20 mx-8 mb-40 md:mb-60 justify-center">
             <div className="h-32 self-start ml-10 md:ml-32">
@@ -53,7 +52,7 @@ export default function Projects(props) {
                                 <div key={`project-${i}`} className={currentTheme === "dark" ? "card max-w-[20rem] h-fit border-cyan-900 border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200 mb-10"
                                     : "card max-w-[20rem] h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] rounded-md ease-in-out delay-50 duration-300 mb-10"}>
                                     <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                        <Image width="200" height="100" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-auto" />
+                                        <Image width="200" height="100" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
                                     </figure>
                                     <div className="card-body flex flex-col justify-between p-5">
                                         <div onClick={toggleMoreText} className={`card-text-body-${i} card-text-cutoff`}>
@@ -144,9 +143,9 @@ export default function Projects(props) {
                             return (
                                 <div key={`otherProject-${i}`} className={currentTheme === "dark" ? "card max-w-[20rem] h-full border-cyan-900 border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200"
                                     : "card max-w-[20rem] h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] rounded-md ease-in-out delay-50 duration-300"}>
-                                    {p.Image_url ?
+                                    {p.img_url ?
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                            <Image width="200" height="100" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-auto h-auto" />
+                                            <Image width="200" height="100" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
                                         </figure>
                                         :
                                         <div className="m-[0.4rem] h-[5rem] p-4">

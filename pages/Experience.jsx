@@ -16,7 +16,6 @@ export default function Experience(props) {
     const professionalExperience = t('content.professionalExperience', { returnObjects: true }) || [];
 
 
-
     useEffect(() => {
         if (experienceIsVisible === true) setSectionActive(t('experience:section_title'))
     }, [experienceIsVisible])
@@ -107,11 +106,6 @@ export default function Experience(props) {
                                         <h4>{e.location ? `@ ${e.school}, ${e.location}` : `${e.school}`}</h4>
                                         <p>{e.time_period}</p>
                                     </div>
-                                    {/* <div ref={dots} className="flex sm:flex-col sm:gap-y-1 gap-x-1 justify-center items-center">
-                                        {[...Array(multiplier)].map((e, i) =>
-                                            <div id={`dot-ed-${i}`} key={`dot-ed-${i}`} className={currentTheme === 'dark' ? "rounded-full w-1 h-1 bg-[var(--dm-secondary-color)]" : "rounded-full w-1 h-1 bg-[var(--lm-secondary-color)]"}></div>
-                                        )}
-                                    </div> */}
                                     <div className={currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6" : "bg-stone-200 text-[var(--lm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6"}>
                                         <p >{e.description}</p>
                                     </div>
@@ -133,11 +127,6 @@ export default function Experience(props) {
                                         <h4>{e.location ? `@ ${e.company}, ${e.location}` : `${e.company}`}</h4>
                                         <p>{e.time_period}</p>
                                     </div>
-                                    {/* <div ref={dots} className="flex flex-row sm:flex-col sm:gap-y-1 gap-x-1 justify-center items-center">
-                                        {[...Array(multiplier)].map((e, i) =>
-                                            <div id={`dot-ex-${i}`} key={`dot-ex-${i}`} className={currentTheme === 'dark' ? "rounded-full w-1 h-1 bg-[var(--dm-secondary-color)]" : "rounded-full w-1 h-1 bg-[var(--lm-secondary-color)]"}></div>
-                                        )}
-                                    </div> */}
                                     <div className={currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6" : "bg-stone-200 text-[var(--lm-secondary-color)] flex flex-col sm:w-8/12 w-full justify-evenly p-6"}>
                                         <div className="py-2 align-middle">{e.description}</div>
                                         {i === 0 ? <span className="py-2 align-middle"><span className="text-4xl align-middle leading-[1rem]">☞ </span> {professionalExperience.content[0].follow_link_part1} <a href="http://www.linkedin.com/in/jensmatthiaschk"
