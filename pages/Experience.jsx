@@ -1,5 +1,5 @@
 import { ThemeContext } from "../components/ThemeContext.jsx"
-import { useContext, useEffect} from "react"
+import { useContext, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { useTranslation } from 'next-i18next'
 
@@ -23,11 +23,27 @@ export default function Experience(props) {
     return (
         <>
             <section id={t('experience:section_title')} ref={experienceRef} className="flex flex-col h-fit items-center mb-40 md:mb-60 sm:mx-16 mx-8">
-                <div className="transition-all">
-                    <div className="h-32 w-fit ml-10 md:ml-32">
-                        <h2 className={currentTheme === 'dark' ? "text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] -skew-y-12 p-2"
-                            : "text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] -skew-y-12 p-2"}>{t('section_title')}</h2>
+                <div className="h-40 w-screen bg-[var(--lm-glow-color)] -skew-y-12 overflow-hidden flex flex-col justify-center uppercase">
+                    <div className="marquee__content flex">
+                        {[...Array(6)].map((e, i) =>
+                            <h2 key={`header-ex-${i}`} className={currentTheme === 'dark' ? "marquee__rtl text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] -skew-y-12 p-2"
+                                : "text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] font-shadow-[0_0_1px_var(--lm-secondary-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] p-1"}>{t('section_title')}</h2>
+                        )}
                     </div>
+                    <div className="marquee__content flex">
+                        {[...Array(6)].map((e, i) =>
+                            <h2 key={`header-ex-${i}`} className={currentTheme === 'dark' ? "marquee__ltr text-2xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] -skew-y-12 p-2"
+                                : "text-2xl md:text-3xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)]"}>{t('section_title')}</h2>
+                        )}
+                    </div>
+                    <div className="marquee__content flex">
+                        {[...Array(6)].map((e, i) =>
+                            <h2 key={`header-ex-${i}`} className={currentTheme === 'dark' ? "marquee__ltr text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] -skew-y-12 p-2"
+                                : "text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] p-1"}>{t('section_title')}</h2>
+                        )}
+                    </div>
+                </div>
+                <div className="transition-all">
                     <div ref={skillsRef} id="Skills" className={skillsIsVisible ? "flex flex-col items-center fade-in mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit" : "flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit invisible"}>
                         <h3 className={currentTheme === 'dark' ? "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] mb-6"
                             : "text-3xl md:text-4xl xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] mb-6"}>Skills.</h3>

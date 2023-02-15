@@ -32,7 +32,7 @@ export default function LinkButtons() {
                         </a>
                     </li>
                     <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300" : "w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
-                        <a href="http://www.linkedin.com/in/jensmatthiaschk"
+                        <a href="https://www.linkedin.com/in/jensmatthiaschk"
                             target="_newBrowserTab"
                             rel="noopener">
                             <svg
