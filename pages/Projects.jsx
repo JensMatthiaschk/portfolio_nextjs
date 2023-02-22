@@ -33,11 +33,30 @@ export default function Projects(props) {
 
     return (
         <section id={t('projects:projects.section_title')} ref={projectsRef} className="flex flex-col h-fit transition-all items-center sm:mx-20 mx-8 mb-40 md:mb-60 justify-center">
-            <div className="h-32 self-start ml-10 md:ml-32">
-                <h2 className={currentTheme === 'dark' ? "text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] -skew-y-12 p-2"
-                    : "text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] -skew-y-12 p-2"}>{t('projects:projects.section_title')}</h2>
+            <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)]" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)]") + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-extrabold font-['Montserrat'] uppercase"}>
+                <div className="flex marquee__content">
+                    {[...Array(10)].map((e, i) =>
+                        <h2 key={`header-ex-${i}`} className="marquee__rtl text-lg md:text-xl xl:text-2xl 2xl:text-3xl -my-2">{t('projects:projects.section_title')}</h2>
+                    )}
+                </div>
+                <div className="flex marquee__content">
+                    {[...Array(6)].map((e, i) =>
+                        <h2 key={`header-ex-${i}`} className="marquee__ltr text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl -my-2">{t('projects:projects.section_title')}</h2>
+                    )}
+                </div>
+                <div className="flex marquee__content">
+                    {[...Array(6)].map((e, i) =>
+                        <h2 key={`header-ex-${i}`} className="marquee__ltr___slow text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl -my-2">{t('projects:projects.section_title')}</h2>
+                    )}
+                </div>
+                <div className="flex marquee__content">
+                    {[...Array(6)].map((e, i) =>
+                        <h2 key={`header-ex-${i}`} className="marquee__rtl text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl -mt-2 -mb-3">{t('projects:projects.section_title')}</h2>
+                    )}
+                </div>
             </div>
-            <div ref={cardRef} className={cardIsVisible ? "fade-in flex flex-col sm:mt-32 mt-3 items-center sm:gap-y-16 h-fit" : "flex flex-col sm:mt-32 mt-3 items-center gap-y-16 h-fit invisible"}>
+            <div ref={cardRef} className={(cardIsVisible ? "fade-in" : "invisible")
+                + " flex flex-col mt-24 sm:mt-40 items-center sm:gap-y-16 h-fit"}>
                 <div className="flex flex-col items-center">
                     <div className="gap-6 flex flex-wrap justify-center">
                         {projects?.content?.map((p, i) => {
@@ -49,8 +68,8 @@ export default function Projects(props) {
                             }
 
                             return (
-                                <div key={`project-${i}`} className={currentTheme === "dark" ? "card max-w-[20rem] h-fit border-cyan-900 border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200 mb-10"
-                                    : "card max-w-[20rem] h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] rounded-md ease-in-out delay-50 duration-300 mb-10"}>
+                                <div key={`project-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
+                                    + " card max-w-[20rem] h-fit rounded-md ease-in-out delay-50 duration-200 mb-10"}>
                                     <figure className="h-[11.1rem] m-[0.4rem] rounded">
                                         <Image unoptimized={true} width="300" height="200" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
                                     </figure>
@@ -66,7 +85,8 @@ export default function Projects(props) {
                                                     Contributors:
                                                     {p.contributors.map((e, i) =>
                                                         <>
-                                                            <a key={`contributor-${i}`} className={currentTheme === 'dark' ? "text-xs font-extralight badge mx-2 hover:bg-cyan-900 text-[var(--dm-secondary-color)] border-[var(--dm-secondary-color)]" : "text-xs font-extralight badge mx-2 hover:text-[var(--lm-third-color)]"} href={e.github_url} target="_newBrowserTab"
+                                                            <a key={`contributor-${i}`} className={(currentTheme === 'dark' ? "hover:bg-cyan-900 text-[var(--dm-secondary-color)] border-[var(--dm-secondary-color)]" : "hover:text-[var(--lm-third-color)]")
+                                                                + " text-xs font-extralight badge mx-2"} href={e.github_url} target="_newBrowserTab"
                                                                 rel="noopener" translate="no">{e.name}
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-3 w-3" fill="currentColor" viewBox="0 0 16 16">
                                                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
@@ -120,11 +140,13 @@ export default function Projects(props) {
                     {otherProjectsVisible ?
                         <button
                             onClick={openOtherProjects}
-                            className={currentTheme === "dark" ? "badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline btn-dark w-fit hover:drop-shadow-[0_0_10px_var(--dm-third-color)] transform-gpu" : "badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline btn-light hover:drop-shadow-[0_0_10px_var(--lm-third-color)] transform-gpu"}>
+                            className={(currentTheme === "dark" ? "btn-dark hover:drop-shadow-[0_0_10px_var(--dm-third-color)]" : "btn-light hover:drop-shadow-[0_0_10px_var(--lm-third-color)]")
+                                + " badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline btn-dark w-fit transform-gpu"}>
                             {t('otherProjects_button_close')}</button> :
                         <button
                             onClick={openOtherProjects}
-                            className={currentTheme === "dark" ? "badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline btn-dark w-fit hover:drop-shadow-[0_0_10px_var(--dm-third-color)] transform-gpu" : "badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline btn-light hover:drop-shadow-[0_0_10px_var(--lm-third-color)] transform-gpu"}>
+                            className={(currentTheme === "dark" ? "btn-dark hover:drop-shadow-[0_0_10px_var(--dm-third-color)]" : "btn-light hover:drop-shadow-[0_0_10px_var(--lm-third-color)]")
+                                + " badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline w-fit transform-gpu"}>
                             {t('otherProjects_button_open')}</button>}
                 </div>
                 {otherProjectsVisible &&
@@ -141,8 +163,8 @@ export default function Projects(props) {
                             }
 
                             return (
-                                <div key={`otherProject-${i}`} className={currentTheme === "dark" ? "card max-w-[20rem] h-full border-cyan-900 border-solid border-2 bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)] rounded-md ease-in-out delay-50 duration-200"
-                                    : "card max-w-[20rem] h-fit bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey] rounded-md ease-in-out delay-50 duration-300"}>
+                                <div key={`otherProject-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
+                                    + " card max-w-[20rem] h-full rounded-md ease-in-out delay-50 duration-200"}>
                                     {p.img_url ?
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
                                             <Image width="300" height="200" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
@@ -167,7 +189,8 @@ export default function Projects(props) {
                                                     <>
                                                         Contributors:
                                                         {p.contributors.map((e, i) =>
-                                                            <a key={`contributor-${i}`} className={currentTheme === 'dark' ? "font-extralight text-xs badge mx-2 hover:bg-cyan-900 text-[var(--dm-secondary-color)] border-[var(--dm-secondary-color)]" : "font-extralight text-xs badge mx-2 hover:text-[var(--lm-third-color)]"} href={e.github_url} target="_newBrowserTab"
+                                                            <a key={`contributor-${i}`} className={(currentTheme === 'dark' ? "hover:bg-cyan-900 text-[var(--dm-secondary-color)] border-[var(--dm-secondary-color)]" : "hover:text-[var(--lm-third-color)]") 
+                                                            + " font-extralight text-xs badge mx-2"} href={e.github_url} target="_newBrowserTab"
                                                                 rel="noopener" translate="no">{e.name}
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-3 w-3" fill="currentColor" viewBox="0 0 16 16">
                                                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />

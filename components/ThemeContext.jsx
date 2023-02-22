@@ -8,6 +8,7 @@ export const ThemeContextProvider = (props) => {
     const [contactVisitedLight, setContactVisitedLight] = useState(0)
     const [contactVisitedDark, setContactVisitedDark] = useState(0)
     const [loading, setLoading] = useState(false)
+    const [currentScreenWidth, setScreenwidth] = useState()
 
     const setCurrentTheme = (value) => {
         rawSetCurrentTheme(value);
@@ -16,6 +17,7 @@ export const ThemeContextProvider = (props) => {
     };
 
     useEffect(() => {
+        setScreenwidth(window.innerWidth)
         let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
         const localTheme = localStorage.getItem("theme");
         if (localTheme === "dark" || localTheme === "light") {
@@ -31,7 +33,8 @@ export const ThemeContextProvider = (props) => {
             sectionActive, setSectionActive,
             contactVisitedLight, setContactVisitedLight,
             contactVisitedDark, setContactVisitedDark,
-            loading, setLoading
+            loading, setLoading,
+            currentScreenWidth, setScreenwidth
         }}>
             {props.children}
         </ThemeContext.Provider>

@@ -50,8 +50,8 @@ export default function Contact(props) {
         <>
             <section id={t('contact:section_title')} className="flex flex-col lg:mx-10 justify-between sm:h-full">
                 <div ref={contactRef} className={contactIsVisible ? "fade-in sm:mt-20 mb-12 sm:ml-10 px-10 lg:text-3xl 2xl:text-4xl sm:text-2xl text-md font-['Montserrat'] text-center font-medium lg:w-[70%] lg:mx-auto" : "sm:mt-20 mt-12 sm:ml-10 px-10 sm:text-2xl text-xl font-['Montserrat'] invisible text-right font-medium"}>
-                    <h1 className={currentTheme === 'dark' ? "text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold font-['Montserrat'] text-[var(--dm-third-color)] drop-shadow-[2px_2px_0_var(--dm-secondary-color)] sm:mb-10 mb-3"
-                        : "text-3xl lg:text-4xl 2xl:text-5xl font-extrabold font-['Montserrat'] text-[var(--lm-third-color)] drop-shadow-[2px_2px_0_var(--lm-secondary-color)] sm:mb-10 mb-3"} translate="no">
+                    <h1 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
+                        + " text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold font-['Montserrat'] sm:mb-10 mb-3"} translate="no">
                         {t('contact:header')}</h1>
                     <span className="mr-2 w-fit">{t('contact:outro-1')}</span>
                     <h2 className={currentTheme === "dark" ? "badge font-extrabold 2xl:text-4xl md:text-2xl text-sm 2xl:p-5 md:p-4 p-2 md:m-2 m-1 sm:badge-lg badge-sm badge-outline w-fit uppercase text-[var(--dm-secondary-color)] hover:text-[var(--dm-third-color)] border-[var(--dm-secondary-color)] hover:border-[var(--dm-third-color)] ease-in-out delay-50 duration-300" : "badge font-extrabold 2xl:text-4xl md:text-2xl text-sm 2xl:p-5 md:p-4 p-2 md:m-2 m-1 sm:badge-lg badge-sm badge-outline w-fit uppercase text-[var(--lm-secondary-color)] hover:text-[var(--lm-third-color)] border-[var(--lm-secondary-color)] hover:border-[var(--lm-third-color)] ease-in-out delay-50 duration-300"} translate="no">Full-Stack Development</h2>
@@ -73,7 +73,9 @@ export default function Contact(props) {
                                         rel="noopener">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             fill="currentColor"
-                                            className={currentTheme === 'dark' ? "bi bi-github w-12 hover:w-14 md:w-14 hover:md:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74] transform-gpu" : "bi bi-github w-12 sm:w-14 hover:sm:w-16 hover:w-14 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
+                                            className={currentTheme === 'dark' ?
+                                                "bi bi-github w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74] transform-gpu" :
+                                                "bi bi-github w-12 sm:w-14 hover:sm:w-16 hover:w-14 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
                                             viewBox="0 0 16 16">
                                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                         </svg>
@@ -83,7 +85,9 @@ export default function Contact(props) {
                                     <a href="https://www.linkedin.com/in/jensmatthiaschk"
                                         target="_newBrowserTab"
                                         rel="noopener">
-                                        <svg className={currentTheme === 'dark' ? "bi bi-linkedin w-12 hover:w-14 md:w-14 hover:md:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74]  transform-gpu" : "bi bi-linkedin w-12 sm:w-14 hover:sm:w-16 hover:w-14 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
+                                        <svg className={currentTheme === 'dark' ?
+                                            "bi bi-linkedin w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74]  transform-gpu" :
+                                            "bi bi-linkedin w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
                                             viewBox="0 0 48 48"
                                             fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +99,9 @@ export default function Contact(props) {
                                     <label htmlFor="emailModal">
                                         <svg version="1.1"
                                             id="Capa_1"
-                                            className={currentTheme === 'dark' ? "bi bi-envelope-fill w-12 hover:w-14 md:w-14 hover:md:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74] transform-gpu" : "bi bi-envelope-fill w-12 sm:w-14 hover:sm:w-16 hover:w-14 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
+                                            className={currentTheme === 'dark' ?
+                                                "bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74] transform-gpu" :
+                                                "bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlnsXlink="http://www.w3.org/1999/xlink"
                                             viewBox="0 0 64 64"
@@ -116,7 +122,9 @@ export default function Contact(props) {
                                         </svg>
                                     </label>
                                 </li>
-                                <li className={currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74] w-12 hover:w-14 md:w-14 hover:md:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)] w-12 sm:w-14 hover:sm:w-16 hover:w-14 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}>
+                                <li className={currentTheme === 'dark' ?
+                                    "hover:drop-shadow-[0_0_10px_#275e74] w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu" :
+                                    "hover:drop-shadow-[0_0_7px_var(--lm-third-color)] w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}>
                                     <a href="https://www.imdb.com/name/nm4456056/" target="_newBrowserTab" rel="noopener">
                                         <svg
 
