@@ -205,10 +205,12 @@ export default function Experience(props) {
                                             target="_newBrowserTab"
                                             rel="noopener"
                                             className={currentTheme === 'dark' ? "hover:text-cyan-600 profile-link-dark" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>linkedIn
+                                            <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                         </a> {professionalExperience.content[0].follow_link_part2} <a href="https://www.imdb.com/name/nm4456056/"
                                             target="_newBrowserTab"
                                             rel="noopener"
                                             className={currentTheme === 'dark' ? "hover:text-cyan-600 profile-link-dark" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>IMDB
+                                                <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                             </a> {professionalExperience.content[0].follow_link_part3}</span> : ""}
                                     </div>
                                 </div>
@@ -248,15 +250,6 @@ export default function Experience(props) {
                                         <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
                                             + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10"}>
                                             <div className="py-2 align-middle">{e.description}</div>
-                                            {i === 0 ? <span className="py-2 align-middle"><span className="text-4xl align-middle leading-[1rem]">☞ </span> {professionalExperience.content[0].follow_link_part1} <a href="https://www.linkedin.com/in/jensmatthiaschk"
-                                                target="_newBrowserTab"
-                                                rel="noopener"
-                                                className={currentTheme === 'dark' ? "hover:text-cyan-600 profile-link-dark" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>linkedIn
-                                            </a> {professionalExperience.content[0].follow_link_part2} <a href="https://www.imdb.com/name/nm4456056/"
-                                                target="_newBrowserTab"
-                                                rel="noopener"
-                                                className={currentTheme === 'dark' ? "hover:text-cyan-600 profile-link-dark" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>IMDB
-                                                </a> {professionalExperience.content[0].follow_link_part3}</span> : ""}
                                         </div>
                                         <div className={(currentTheme === "dark" ? "after:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)]" : "after:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)]")
                                             + " skewed-left -skew-x-6 after:h-full after:w-[2rem] after:skew-x-6 after:absolute after:right-0 flex flex-row items-center sm:w-4/12 w-full"}>
