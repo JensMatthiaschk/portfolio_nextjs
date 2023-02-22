@@ -22,8 +22,8 @@ export default function About(props) {
                 className="flex h-fit sm:h-screen lg:ml-36 lg:pl-4 sm:ml-20 px-8 mb-20 flex-col justify-center overflow-hidden"
             >
                 <h2 className="font-['Montserrat'] md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
-                <h1 className="font-['Montserrat'] md:text-7xl sm:text-5xl text-4xl md:mt-3 mt-2 font-extrabold w-auto" translate="no">Jens Matthiaschk</h1>
-                <h2 className="font-['Montserrat'] md:text-5xl sm:text-4xl text-2xl md:mt-5 mt-2">{t("about:profession")}</h2>
+                <h1 className="font-['Montserrat'] md:text-8xl sm:text-6xl text-4xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk</h1>
+                <h2 className="font-['Montserrat'] md:text-5xl sm:text-4xl text-2xl md:mt-3 mt-1">{t("about:profession")}</h2>
                 <p className="text-sm sm:text-base my-8 font-['Montserrat'] font-medium lg:w-[80%] w-[90%]">{t("about:description")}</p>
                 <div className="md:mt-10 sm:mt-8 mt-5 mb-20 flex sm:flex-row flex-col gap-y-3">
                     <Link to={t('projects:projects.section_title')} spy={true} smooth={true} offset={0} duration={500} className="w-fit">
