@@ -8,6 +8,7 @@
                 "description": "Eine Single-Page-Anwendung, auf der du dich gerade befindest, hauptsächlich aus Frontend-Code, aber auch einer Backend-Komponente zur Handhabung des Kontaktformulars.",
                 "techstack_front": [
                     "React",
+                    "Next.js",
                     "Tailwind CSS",
                     "Daisy UI",
                     "Netlify"
@@ -18,7 +19,7 @@
                     "Railway"
                 ],
                 "page_url": "",
-                "repo_url": "https://github.com/JensMatthiaschk/portfolio-homepage"
+                "repo_url": "https://github.com/JensMatthiaschk/portfolio_nextjs"
             }
         ]
     },
