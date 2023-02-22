@@ -8,6 +8,7 @@
                 "description": "A single-page-application which you're currently viewing. It mostly uses frontend code but also a backend component for handling the contact form.",
                 "techstack_front": [
                     "React",
+                    "Next.js",
                     "Tailwind CSS",
                     "Daisy UI",
                     "Netlify"
@@ -18,7 +19,7 @@
                     "Railway"
                 ],
                 "page_url": "",
-                "repo_url": "https://github.com/JensMatthiaschk/portfolio-homepage"
+                "repo_url": "https://github.com/JensMatthiaschk/portfolio_nextjs"
             }
         ]
     },
