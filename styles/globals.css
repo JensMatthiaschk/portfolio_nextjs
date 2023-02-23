@@ -327,28 +327,37 @@ Add gif as div background, put text layer on top and add these css attributes to
 /* MARQUEE ANIMATION */
 
 .marquee__content{
-  --gap: 1.5rem;
+  --gap: 2rem;
   gap: var(--gap); 
 }
 
 
 .marquee__rtl {
-  animation: move-sideways 80000ms linear infinite;
+  animation: move-sideways-left 80000ms linear infinite;
 }
 
 .marquee__ltr {
-  animation: move-sideways 40000ms linear infinite reverse;
+  animation: move-sideways-right 40000ms linear infinite;
 }
 
 .marquee__ltr___slow {
-  animation: move-sideways 50000ms linear infinite reverse;
+  animation: move-sideways-right 50000ms linear infinite;
 }
 
-@keyframes move-sideways {
+@keyframes move-sideways-left {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes move-sideways-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(0% + var(--gap)));
   }
 }

@@ -28,22 +28,22 @@ export default function Experience(props) {
                 <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)]" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)]")
                     + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-['Montserrat'] uppercase"}>
                     <div className="flex marquee__content">
-                        {[...Array(10)].map((e, i) =>
+                        {[...Array(15)].map((e, i) =>
                             <h2 key={`header-ex-${i}`} className="marquee__rtl text-lg md:text-xl xl:text-2xl 2xl:text-3xl -my-2">{t('section_title')}</h2>
                         )}
                     </div>
                     <div className="flex marquee__content">
-                        {[...Array(6)].map((e, i) =>
+                        {[...Array(10)].map((e, i) =>
                             <h2 key={`header-ex-${i}`} className="marquee__ltr text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl -my-2">{t('section_title')}</h2>
                         )}
                     </div>
                     <div className="flex marquee__content">
-                        {[...Array(6)].map((e, i) =>
+                        {[...Array(15)].map((e, i) =>
                             <h2 key={`header-ex-${i}`} className="marquee__ltr___slow text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl -my-2">{t('section_title')}</h2>
                         )}
                     </div>
                     <div className="flex marquee__content">
-                        {[...Array(6)].map((e, i) =>
+                        {[...Array(10)].map((e, i) =>
                             <h2 key={`header-ex-${i}`} className="marquee__rtl text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl -m-2 lg:-my-4">{t('section_title')}</h2>
                         )}
                     </div>
