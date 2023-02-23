@@ -205,12 +205,12 @@ export default function Experience(props) {
                                             target="_newBrowserTab"
                                             rel="noopener"
                                             className={currentTheme === 'dark' ? "hover:text-cyan-600 profile-link-dark" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>linkedIn
-                                            <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                            <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                         </a> {professionalExperience.content[0].follow_link_part2} <a href="https://www.imdb.com/name/nm4456056/"
                                             target="_newBrowserTab"
                                             rel="noopener"
                                             className={currentTheme === 'dark' ? "hover:text-cyan-600 profile-link-dark" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>IMDB
-                                                <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                             </a> {professionalExperience.content[0].follow_link_part3}</span> : ""}
                                     </div>
                                 </div>
@@ -234,12 +234,12 @@ export default function Experience(props) {
                                                 target="_newBrowserTab"
                                                 rel="noopener"
                                                 className={currentTheme === 'dark' ? "hover:text-cyan-600" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>linkedIn
-                                                <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                             </a> {professionalExperience.content[0].follow_link_part2} <a href="https://www.imdb.com/name/nm4456056/"
                                                 target="_newBrowserTab"
                                                 rel="noopener"
                                                 className={currentTheme === 'dark' ? "hover:text-cyan-600" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] profile-link-light"}>IMDB
-                                                    <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                    <svg className="w-4 mb-1 ml-0.5 inline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                                 </a> {professionalExperience.content[0].follow_link_part3}</span> : ""}
                                         </div>
                                     </div>
