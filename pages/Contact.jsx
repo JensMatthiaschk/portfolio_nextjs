@@ -134,7 +134,7 @@ export default function Contact(props) {
                                 </li>
                                 <li><p className="md:hidden block text-xs pt-2">© {year}</p></li>
                             </ul>
-                            <div className={((currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation" : "fade-in") + "flex flex-col sm:text-sm text-[0.5rem] w-38 sm:ml-10 ml-3"}>
+                            <div className={((currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation" : "fade-in") + " flex flex-col sm:text-sm text-[0.5rem] w-38 sm:ml-10 ml-3"}>
                                 <p className="md:block hidden" translate="no">Jens Matthiaschk © {year}</p>
                                 <p className={(currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation" : "hidden"}>Drawing by ai-draw.tokyo</p>
                             </div>
