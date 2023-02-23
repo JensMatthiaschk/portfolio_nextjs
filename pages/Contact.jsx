@@ -63,9 +63,9 @@ export default function Contact(props) {
                     <div className={currentTheme === "dark" ? "badge font-extrabold 2xl:text-4xl md:text-2xl text-sm 2xl:p-5 md:p-4 p-2 md:m-2 m-1 sm:badge-lg badge-sm badge-outline w-fit uppercase text-[var(--dm-secondary-color)] hover:text-[var(--dm-third-color)] border-[var(--dm-secondary-color)] hover:border-[var(--dm-third-color)] ease-in-out delay-50 duration-300" : "badge font-extrabold 2xl:text-4xl md:text-2xl text-sm 2xl:p-5 md:p-4 p-2 md:m-2 m-1 sm:badge-lg badge-sm badge-outline w-fit uppercase text-[var(--lm-secondary-color)] hover:text-[var(--lm-third-color)] border-[var(--lm-secondary-color)] hover:border-[var(--lm-third-color)] ease-in-out delay-50 duration-300"}><p className="w-fit hover:line-through pr-2 ease-in-out delay-100 duration-300" translate="no"> Cocktail </p> {t('contact:topic-5')}</div>
                     <span className="mr-2 w-fit"> {t('contact:outro-2')}</span>
                 </div>
-                <div className="flex items-end justify-between lg:mx-12 xl:mx-32 2xl:mx-60">
+                <div className="flex items-end justify-between sm:mx-6 lg:mx-12 xl:mx-32 2xl:mx-60">
                     {drawingIsVisible &&
-                        <div className="flex flex-col h-[20rem] sm:h-[30rem] justify-between items-center pb-4 sm:pb-10 sm:pt-32">
+                        <div className="flex flex-col h-[20rem] sm:h-[30rem] justify-between items-center pb-4 sm:pb-10 sm:pt-20 md:pt-32">
                             <ul className={(currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation flex flex-col md:flex-row sm:flex-wrap gap-4 sm:gap-6 items-center sm:pl-16 pl-14 z-30" : "fade-in flex flex-col md:flex-row sm:flex-wrap gap-4 sm:gap-6 items-start sm:pl-16 pl-14 z-30"}>
                                 <li>
                                     <a href="https://github.com/JensMatthiaschk"
@@ -73,9 +73,7 @@ export default function Contact(props) {
                                         rel="noopener">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             fill="currentColor"
-                                            className={currentTheme === 'dark' ?
-                                                "bi bi-github w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74] transform-gpu" :
-                                                "bi bi-github w-12 sm:w-14 hover:sm:w-16 hover:w-14 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
+                                            className={(currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74]" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)]") + " bi bi-github w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-m-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}
                                             viewBox="0 0 16 16">
                                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                                         </svg>
@@ -85,9 +83,7 @@ export default function Contact(props) {
                                     <a href="https://www.linkedin.com/in/jensmatthiaschk"
                                         target="_newBrowserTab"
                                         rel="noopener">
-                                        <svg className={currentTheme === 'dark' ?
-                                            "bi bi-linkedin w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74]  transform-gpu" :
-                                            "bi bi-linkedin w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
+                                        <svg className={(currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74]" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)]") + " bi bi-linkedin w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-m-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}
                                             viewBox="0 0 48 48"
                                             fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -99,9 +95,7 @@ export default function Contact(props) {
                                     <label htmlFor="emailModal">
                                         <svg version="1.1"
                                             id="Capa_1"
-                                            className={currentTheme === 'dark' ?
-                                                "bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_10px_#275e74] transform-gpu" :
-                                                "bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}
+                                            className={(currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74]" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)]") + " bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-m-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlnsXlink="http://www.w3.org/1999/xlink"
                                             viewBox="0 0 64 64"
@@ -122,9 +116,7 @@ export default function Contact(props) {
                                         </svg>
                                     </label>
                                 </li>
-                                <li className={currentTheme === 'dark' ?
-                                    "hover:drop-shadow-[0_0_10px_#275e74] w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu" :
-                                    "hover:drop-shadow-[0_0_7px_var(--lm-third-color)] w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-mx-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}>
+                                <li className={(currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74]" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)]") + " w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-m-2 hover:-m-1 ease-in-out delay-100 duration-300 transform-gpu"}>
                                     <a href="https://www.imdb.com/name/nm4456056/" target="_newBrowserTab" rel="noopener">
                                         <svg
 
@@ -142,36 +134,36 @@ export default function Contact(props) {
                                 </li>
                                 <li><p className="md:hidden block text-xs pt-2">© {year}</p></li>
                             </ul>
-                            <div className={(currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation flex flex-col sm:text-sm text-[0.5rem] w-38 sm:ml-10 ml-3" : "fade-in flex flex-col sm:text-sm text-[0.5rem] w-38 sm:ml-10 ml-3"}>
+                            <div className={((currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation" : "fade-in") + "flex flex-col sm:text-sm text-[0.5rem] w-38 sm:ml-10 ml-3"}>
                                 <p className="md:block hidden" translate="no">Jens Matthiaschk © {year}</p>
                                 <p className={(currentTheme === 'dark' && contactVisitedDark === 0) || (currentTheme === 'light' && contactVisitedLight === 0) ? "linkButton-fade-in-animation" : "hidden"}>Drawing by ai-draw.tokyo</p>
                             </div>
                         </div>}
-                    <div ref={drawingRef} className="flex relative h-[20rem] sm:h-[30rem]">
-                        {(contactVisitedDark === 0 && currentTheme === 'dark' && drawingIsVisible && portraitSource) || (contactVisitedLight === 0 && currentTheme === 'light' && drawingIsVisible && portraitSource) ?
-                            <>
-                                <div
-                                    className={currentTheme === 'dark' ? 'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
-                                        'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[7rem] sm:right-[12rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--lm-glow-color)] sm:shadow-[0_0_140px_130px_var(--lm-glow-color)] shadow-[0_0_90px_70px_var(--lm-glow-color)] transform-gpu'}
-                                ></div>
-                                <Image priority={true} className={currentTheme === 'dark' ? "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 " : "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 "}
-                                    src={currentTheme === 'dark' ? PortraitDark : PortraitLight} alt="Portrait-image" />
-                            </>
-                            : drawingIsVisible && portraitSource &&
-                            <>
-                                <div
-                                    className={currentTheme === 'dark' ? 'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
-                                        'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[7rem] sm:right-[12rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--lm-glow-color)] sm:shadow-[0_0_140px_130px_var(--lm-glow-color)] shadow-[0_0_90px_70px_var(--lm-glow-color)] transform-gpu'}
-                                ></div>
-                                <Image priority={true} className={currentTheme === 'dark' ? "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2" : "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"}
-                                    src={currentTheme === 'dark' ? PortraitDark : PortraitLight} alt="Portrait-image" />
-                            </>
-                        }
-                        {currentTheme === 'dark' && drawingSource ? <Image priority={true} className={drawingIsVisible && contactVisitedDark === 0 ? "drawing-animation sm:h-[24.2rem] h-[12.2rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]" : "hidden sm:h-[24.2rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={drawingSource} alt="Drawing-Animation" unoptimized={true} />
-                            : drawingSource && <Image priority={true} className={drawingIsVisible && contactVisitedLight === 0 ? "drawing-animation sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]" : "hidden sm:h-[24.4rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={drawingSource} alt="Drawing-Animation" unoptimized={true} />}
-                    </div>
+                <div ref={drawingRef} className="flex relative h-[20rem] sm:h-[30rem]">
+                    {(contactVisitedDark === 0 && currentTheme === 'dark' && drawingIsVisible && portraitSource) || (contactVisitedLight === 0 && currentTheme === 'light' && drawingIsVisible && portraitSource) ?
+                        <>
+                            <div
+                                className={currentTheme === 'dark' ? 'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
+                                    'glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[7rem] sm:right-[12rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--lm-glow-color)] sm:shadow-[0_0_140px_130px_var(--lm-glow-color)] shadow-[0_0_90px_70px_var(--lm-glow-color)] transform-gpu'}
+                            ></div>
+                            <Image priority={true} className={currentTheme === 'dark' ? "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 " : "portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2 "}
+                                src={currentTheme === 'dark' ? PortraitDark : PortraitLight} alt="Portrait-image" />
+                        </>
+                        : drawingIsVisible && portraitSource &&
+                        <>
+                            <div
+                                className={currentTheme === 'dark' ? 'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--dm-glow-color)] sm:shadow-[0_0_140px_130px_var(--dm-glow-color)] shadow-[0_0_90px_70px_var(--dm-glow-color)] transform-gpu' :
+                                    'glow-fade-in absolute sm:bottom-[14rem] bottom-[8rem] right-[7rem] sm:right-[12rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full bg-[var(--lm-glow-color)] sm:shadow-[0_0_140px_130px_var(--lm-glow-color)] shadow-[0_0_90px_70px_var(--lm-glow-color)] transform-gpu'}
+                            ></div>
+                            <Image priority={true} className={currentTheme === 'dark' ? "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2" : "fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"}
+                                src={currentTheme === 'dark' ? PortraitDark : PortraitLight} alt="Portrait-image" />
+                        </>
+                    }
+                    {currentTheme === 'dark' && drawingSource ? <Image priority={true} className={drawingIsVisible && contactVisitedDark === 0 ? "drawing-animation sm:h-[24.2rem] h-[12.2rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]" : "hidden sm:h-[24.2rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={drawingSource} alt="Drawing-Animation" unoptimized={true} />
+                        : drawingSource && <Image priority={true} className={drawingIsVisible && contactVisitedLight === 0 ? "drawing-animation sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]" : "hidden sm:h-[24.4rem] h-[12rem] max-w-fit z-20 absolute bottom-0 sm:right-5 right-2"} src={drawingSource} alt="Drawing-Animation" unoptimized={true} />}
                 </div>
-            </section>
+            </div>
+        </section>
         </>
     )
 }
