@@ -16,7 +16,7 @@ export default function LinkButtons() {
                     sectionActive === t('contact:section_title') && contactVisitedLight === 0 && currentTheme === 'light' ? "linkButton-fade-out-animation sm:flex flex-col items-start justify-center h-screen fixed mx-5 sm:transition-all z-30 hidden" :
                         sectionActive === t('contact:section_title') && contactVisitedDark !== 0 && currentTheme === 'dark' ? "fade-out sm:flex flex-col items-start justify-center h-screen fixed mx-5 sm:transition-all z-30 hidden" :
                             sectionActive === t('contact:section_title') && contactVisitedLight !== 0 && currentTheme === 'light' ? "fade-out sm:flex flex-col items-start justify-center h-screen fixed mx-5 sm:transition-all z-30 hidden" :
-                                "sm:flex flex-col items-start justify-center h-screen fixed mx-5 pb-20 mt-10 sm:transition-all z-30 hidden"
+                                "fade-in sm:flex flex-col items-start justify-center h-screen fixed mx-5 pb-20 mt-10 sm:transition-all z-30 hidden"
             }>
                 <ul className={currentTheme === 'dark' ? "text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]"} >
                     <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300" : "w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
