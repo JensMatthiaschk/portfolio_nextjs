@@ -131,7 +131,7 @@ export default function Experience(props) {
                                         <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                             + " -skew-y-6 text-right flex flex-col w-full justify-center p-6 gap-y-3"}>
                                             <h3 className={(currentTheme === "light" && "text-[var(--lm-third-color)]") + " font-extrabold text-2xl sm:text-xl"}>{e.title}</h3>
-                                            <h4>{e.location ? `@ ${e.school}, ${e.location}` : `${e.school}`}</h4>
+                                            <h4>{e.location ? `@ ${e.school}, ${e.location}` : `@ ${e.school}`}</h4>
                                             <p>{e.time_period}</p>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@ export default function Experience(props) {
                                         <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                             + " -skew-y-6 text-right flex flex-col w-full justify-center p-6 gap-y-3"}>
                                             <h3 className={(currentTheme === "light" && "text-[var(--lm-third-color)]") + " font-extrabold text-2xl"}>{e.position}</h3>
-                                            <h4>{e.location ? `@ ${e.company}, ${e.location}` : `${e.company}`}</h4>
+                                            <h4>{e.location ? `@ ${e.company}, ${e.location}` : `@ ${e.company}`}</h4>
                                             <p>{e.time_period}</p>
                                         </div>
                                     </div>
@@ -223,7 +223,7 @@ export default function Experience(props) {
                                             <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                                 + " sm:-skew-x-6 text-right flex flex-col w-full justify-center py-6 pr-10 pl-6 gap-y-3"}>
                                                 <h3 className={(currentTheme === "light" && "text-[var(--lm-third-color)]") + " font-extrabold text-2xl break-words"}>{e.position}</h3>
-                                                <h4>{e.location ? `@ ${e.company}, ${e.location}` : `${e.company}`}</h4>
+                                                <h4>{e.location ? `@ ${e.company}, ${e.location}` : `@ ${e.company}`}</h4>
                                                 <p>{e.time_period}</p>
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@ export default function Experience(props) {
                                             <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
                                                 + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10"}>
                                                 <h3 className={currentTheme === "dark" ? "font-extrabold text-2xl" : "text-[var(--lm-third-color)] font-extrabold text-2xl sm:text-xl"}>{e.position}</h3>
-                                                <h4>{e.location ? `@ ${e.company}, ${e.location}` : `${e.company}`}</h4>
+                                                <h4>{e.location ? `@ ${e.company}, ${e.location}` : `@ ${e.company}`}</h4>
                                                 <p>{e.time_period}</p>
                                             </div>
                                         </div>
