@@ -148,7 +148,7 @@ export default function Experience(props) {
                                             <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                                 + " sm:-skew-x-6 text-right flex flex-col w-full justify-center py-6 pr-10 pl-6 gap-y-3"} >
                                                 <h3 className={(currentTheme === "light" && "text-[var(--lm-third-color)]") + " font-extrabold text-2xl break-words"}>{e.title}</h3>
-                                                <h4>{e.location ? `@ ${e.school}, ${e.location}` : `${e.school}`}</h4>
+                                                <h4>{e.location ? `@ ${e.school}, ${e.location}` : `@ ${e.school}`}</h4>
                                                 <p>{e.time_period}</p>
                                             </div>
                                         </div>
@@ -171,7 +171,7 @@ export default function Experience(props) {
                                                 + " sm:skew-x-6 text-left flex flex-col w-fit justify-center py-6 pl-10 pr-6 gap-y-3"}>
                                                 <h3 className={(currentTheme === "light" && "text-[var(--lm-third-color)]")
                                                     + " font-extrabold text-2xl"}>{e.title}</h3>
-                                                <h4>{e.location ? `@ ${e.school}, ${e.location}` : `${e.school}`}</h4>
+                                                <h4>{e.location ? `@ ${e.school}, ${e.location}` : `@ ${e.school}`}</h4>
                                                 <p>{e.time_period}</p>
                                             </div>
                                         </div>
