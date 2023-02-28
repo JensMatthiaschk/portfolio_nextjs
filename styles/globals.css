@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Sarala:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Sarala:wght@400;700&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,20 +39,18 @@ margin:0;
   --lm-third-color-alt2:#61FF7E;
   --lm-glow-color: #E7E7E8;
 
-  --text-main-header: 'Montserrat', 'sans-serif';
+  /* --text-main-header: 'Montserrat', Arial, 'sans-serif';
   --text-secondary-header: 'Puritan', 'sans-serif';
-  --text-main-body: 'Sarala', 'sans-serif';
+  --text-main-body: 'Sarala', 'sans-serif'; */
 }
 
 body {
   transition: background 0.5s, color 0.5s;
   background: var(--bkg-color);
   color: var(--text-color);
-  font-family: var(--text-main-body);
+  font-family: var(--font-sarala);
 }
-a {
-  color: var(--anchor-color);
-}
+
 
 /* Default colors */
 body {
@@ -100,12 +98,6 @@ color: var(--lm-third-color);
   border-color: var(--lm-third-color);
   background-color: var(--lm-third-color);;
 }
-
-/*
-NEEDED FOR TEXT WITH MOVING (GIF) BACKGROUND
-Add gif as div background, put text layer on top and add these css attributes to the text
--webkit-text-fill-colo:transparent;
--webkit-background-clip:text;*/
 
 /*Glow Fade-In*/
 
@@ -253,9 +245,6 @@ Add gif as div background, put text layer on top and add these css attributes to
     padding-bottom:0;
   }
 
-  
-
-  
 
 .skill::after {
   content: attr(data-content);

@@ -49,9 +49,9 @@ export default function Contact(props) {
     return (
         <>
             <section id={t('contact:section_title')} className="flex flex-col lg:mx-10 justify-between sm:h-full">
-                <div ref={contactRef} className={contactIsVisible ? "fade-in sm:mt-20 mb-12 sm:ml-10 px-10 lg:text-3xl 2xl:text-4xl sm:text-2xl text-md font-['Montserrat'] text-center font-medium lg:w-[70%] lg:mx-auto" : "sm:mt-20 mt-12 sm:ml-10 px-10 sm:text-2xl text-xl font-['Montserrat'] invisible text-right font-medium"}>
+                <div ref={contactRef} className={contactIsVisible ? "fade-in sm:mt-20 mb-12 sm:ml-10 px-10 lg:text-3xl 2xl:text-4xl sm:text-2xl text-md font-Montserrat text-center font-medium lg:w-[70%] lg:mx-auto" : "sm:mt-20 mt-12 sm:ml-10 px-10 sm:text-2xl text-xl font-Montserrat invisible text-right font-medium"}>
                     <h1 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
-                        + " text-5xl xl:text-7xl font-extrabold font-['Montserrat'] sm:mb-10 mb-4"} translate="no">
+                        + " text-5xl xl:text-7xl font-extrabold font-Montserrat sm:mb-10 mb-4"} translate="no">
                         {t('contact:header')}</h1>
                     <span className="mr-2 w-fit">{t('contact:outro-1')}</span>
                     <h2 className={currentTheme === "dark" ? "badge font-extrabold 2xl:text-4xl md:text-2xl text-sm 2xl:p-5 md:p-4 p-2 md:m-2 m-1 sm:badge-lg badge-sm badge-outline w-fit uppercase text-[var(--dm-secondary-color)] hover:text-[var(--dm-third-color)] border-[var(--dm-secondary-color)] hover:border-[var(--dm-third-color)] ease-in-out delay-50 duration-300" : "badge font-extrabold 2xl:text-4xl md:text-2xl text-sm 2xl:p-5 md:p-4 p-2 md:m-2 m-1 sm:badge-lg badge-sm badge-outline w-fit uppercase text-[var(--lm-secondary-color)] hover:text-[var(--lm-third-color)] border-[var(--lm-secondary-color)] hover:border-[var(--lm-third-color)] ease-in-out delay-50 duration-300"} translate="no">Full-Stack Development</h2>

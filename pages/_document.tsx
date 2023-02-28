@@ -15,6 +15,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#da532c"/>
         <meta name="msapplication-config" content="/images/browserconfig.xml"/>
         <meta name="theme-color" content="#ffffff"/>
+        
         <title>Jens Matthiaschk | web developer</title>
       <body>
       <script

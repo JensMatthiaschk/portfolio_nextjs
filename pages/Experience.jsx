@@ -26,7 +26,7 @@ export default function Experience(props) {
         <>
             <section id={t('experience:section_title')} ref={experienceRef} className="flex flex-col h-fit items-center mb-40 md:mb-60 sm:mx-16 mx-8">
                 <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)]" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)]")
-                    + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-['Montserrat'] uppercase"}>
+                    + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-Montserrat uppercase"}>
                     <div className="flex marquee__content">
                         {[...Array(15)].map((e, i) =>
                             <h2 key={`header-ex-${i}`} className="marquee__rtl text-lg md:text-xl xl:text-2xl 2xl:text-3xl -my-2">{t('section_title')}</h2>
@@ -51,7 +51,7 @@ export default function Experience(props) {
                 <div className="transition-all">
                     <div ref={skillsRef} id="Skills" className={skillsIsVisible ? "flex flex-col items-center fade-in mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit" : "flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit invisible"}>
                         <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
-                            + " text-5xl xl:text-7xl font-extrabold font-['Montserrat'] mb-10 mt-16 sm:mt-40 lowercase"}>Skills.</h3>
+                            + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 mt-16 sm:mt-40 lowercase"}>Skills.</h3>
                         <div className="flex h-fit sm:gap-x-4 gap-x-2 sm:gap-y-2 items-center justify-center flex-wrap transition-all px-3">
                             <div
                                 data-content="HTML5"
@@ -119,7 +119,7 @@ export default function Experience(props) {
                         className={(educationTrainingIsVisible ? "fade-in" : "invisible")
                             + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40"} >
                         <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
-                            + " text-5xl xl:text-7xl font-extrabold font-['Montserrat'] mb-10 lowercase"}>
+                            + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>
                             {educationAndTraining.title}</h3>
                         {educationAndTraining.content?.map((e, i) =>
                             // mobile size
@@ -184,7 +184,7 @@ export default function Experience(props) {
                     <div ref={professionalExperienceRef} className={(professionalExperienceIsVisible ? "fade-in" : "invisible")
                         + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40"}>
                         <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
-                            + " text-5xl xl:text-7xl font-extrabold font-['Montserrat'] mb-10 lowercase"}>{professionalExperience.title}</h3>
+                            + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>{professionalExperience.title}</h3>
                         {professionalExperience?.content?.map((e, i) =>
                             (currentScreenWidth < 640) ?
                                 <div key={`ex-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
