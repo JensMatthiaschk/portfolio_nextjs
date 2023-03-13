@@ -117,7 +117,7 @@ export default function Experience(props) {
                     </div>
                     <div ref={educationTrainingRef}
                         className={(educationTrainingIsVisible ? "fade-in" : "invisible")
-                            + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40"} >
+                            + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40 max-w-[1600px]"} >
                         <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
                             + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>
                             {educationAndTraining.title}</h3>
@@ -160,7 +160,7 @@ export default function Experience(props) {
                                     :
                                     (currentScreenWidth >= 640) && (i % 2 == 1) &&
                                     <div key={`ed-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
-                                            + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
+                                        + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
                                         <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
                                             + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10 "}>
                                             <p >{e.description}</p>
@@ -182,7 +182,7 @@ export default function Experience(props) {
                         </div>
                     </div>
                     <div ref={professionalExperienceRef} className={(professionalExperienceIsVisible ? "fade-in" : "invisible")
-                        + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40"}>
+                        + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40 max-w-[1600px]"}>
                         <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
                             + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>{professionalExperience.title}</h3>
                         {professionalExperience?.content?.map((e, i) =>
@@ -246,7 +246,7 @@ export default function Experience(props) {
                                     :
                                     (currentScreenWidth >= 640) && (i % 2 == 1) &&
                                     <div key={`ex-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
-                                            + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
+                                        + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
                                         <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
                                             + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10"}>
                                             <div className="py-2 align-middle">{e.description}</div>
