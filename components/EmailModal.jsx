@@ -18,7 +18,7 @@ export default function EmailModal() {
         message: false,
     });
 
-    const { t } = useTranslation('contact')
+    const { t } = useTranslation('common')
     const [postEmailResponse, setPostEmailResponse] = useState({})
     const [loading, setLoading] = useState(false)
 
@@ -71,7 +71,7 @@ export default function EmailModal() {
                 <label className={currentTheme === 'dark' ? "modal-box relative bg-base-100" : "modal-box relative bg-stone-200"} htmlFor="">
                     <label htmlFor="emailModal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <div className="formWrapper">
-                        <h3 className="mb-3">👋 Send me a message!</h3>
+                        <h3 className="mb-3">👋  {t("form.intro")}</h3>
                         <form className="flex flex-col gap-y-4" onSubmit={onSubmit} method="post"
                             encType='application/x-www-form-urlencoded'
                         >
@@ -85,10 +85,10 @@ export default function EmailModal() {
                                                         currentTheme === 'light' && touched.from_name === true && toSend.from_name === '' && "input input-bordered input-error relative w-full bg-stone-300 text-[var(--lm-secondary-color)] pl-2 p-1 rounded"}
                                 type='text'
                                 name='from_name'
-                                placeholder='Your name*'
+                                placeholder={t('form.name') + '*'}
                                 value={toSend.from_name}
                                 onChange={handleChange}
-                                onClick={handleChange}
+                                onBlur={handleChange}
                                 required
                             />
                             <input
@@ -101,10 +101,10 @@ export default function EmailModal() {
                                                         currentTheme === 'light' && touched.reply_to === true && toSend.reply_to === '' && "input input-bordered input-error relative w-full bg-stone-300 text-[var(--lm-secondary-color)] pl-2 p-1 rounded"}
                                 type='email'
                                 name='reply_to'
-                                placeholder='Your email*'
+                                placeholder={t('form.email') + '*'}
                                 value={toSend.reply_to}
                                 onChange={handleChange}
-                                onClick={handleChange}
+                                onBlur={handleChange}
                                 required
                             />
                             <textarea
@@ -118,13 +118,14 @@ export default function EmailModal() {
                                 }
                                 type='text'
                                 name='message'
-                                placeholder='Your message*'
+                                placeholder={t('form.message') + '*'}
                                 rows='10'
                                 value={toSend.message}
                                 onChange={handleChange}
-                                onClick={handleChange}
+                                onBlur={handleChange}
                                 required
                             />
+                            <p>{'*' + t('general.required')}</p>
                             <button className="emailFormButton btn btn-sm" type='submit'>{loading === true ? <TailSpin
                                 height="1.5rem"
                                 width="1.5rem"
@@ -134,7 +135,7 @@ export default function EmailModal() {
                                 wrapperStyle={{}}
                                 wrapperclassName=""
                                 visible={true}
-                            /> : 'Submit'}</ button >
+                            /> : t('general.submit')}</ button >
                         </form>
                     </div>
                     {postEmailResponse.ok === true ?

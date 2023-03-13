@@ -1,0 +1,16 @@
+        {
+            "form": {
+                "intro": "Sende mir gern eine Nachricht!",
+                "name": "Name*",
+                "email": "Email*",
+                "subject": "Betreff",
+                "message": "Deine Nachricht*"
+            },
+            "general": {
+                "site_notice": "Impressum",
+                "required": "benötigte Felder",
+                "submit": "Abschicken"
+            },
+            "email-success": "Danke für deine Nachricht!",
+            "email-error": "Oooh Neeein! Etwas ist schief gelaufen! Bitte lade die Seite neu und versuch es noch einmal oder kontaktiere mich über die Social Media Links"
+        }

@@ -1,0 +1,16 @@
+    {
+        "form": {
+            "intro": "Send me a message!",
+            "name": "your name*",
+            "email": "your email*",
+            "subject": "subject",
+            "message": "your message*"
+        },
+        "general": {
+            "site_notice": "site notice",
+            "required": "required",
+            "submit": "Submit"
+        },
+        "email-success": "Thank you for your message!",
+        "email-error": "Oooh noo! An Error occurred! Please reload the page and try again or reach out on my social media!"
+    }
