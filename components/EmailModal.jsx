@@ -125,7 +125,7 @@ export default function EmailModal() {
                                 onBlur={handleChange}
                                 required
                             />
-                            <p>{'*' + t('general.required')}</p>
+                            <p>{'* ' + t('general.required')}</p>
                             <button className="emailFormButton btn btn-sm" type='submit'>{loading === true ? <TailSpin
                                 height="1.5rem"
                                 width="1.5rem"

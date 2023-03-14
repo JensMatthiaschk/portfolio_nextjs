@@ -1,10 +1,10 @@
         {
             "form": {
                 "intro": "Sende mir gern eine Nachricht!",
-                "name": "Name*",
-                "email": "Email*",
+                "name": "Name",
+                "email": "Email",
                 "subject": "Betreff",
-                "message": "Deine Nachricht*"
+                "message": "Deine Nachricht"
             },
             "general": {
                 "site_notice": "Impressum",

@@ -1,10 +1,10 @@
     {
         "form": {
             "intro": "Send me a message!",
-            "name": "your name*",
-            "email": "your email*",
+            "name": "your name",
+            "email": "your email",
             "subject": "subject",
-            "message": "your message*"
+            "message": "your message"
         },
         "general": {
             "site_notice": "site notice",
