@@ -126,7 +126,7 @@ export default function Experience(props) {
                             (currentScreenWidth < 640) ?
                                 <div key={`ed-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                     + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly"}>
-                                    <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)]")
+                                    <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[0_4px_8px_var(--dm-main-bg-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[0_4px_8px_var(--lm-secondary-color)]")
                                         + " skewed-bottom skew-y-6 before:w-full before:h-[2rem] before:-skew-y-6 before:absolute before:top-0 w-full sm:w-4/12 items-center flex flex-col"}>
                                         <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                             + " -skew-y-6 text-right flex flex-col w-full justify-center p-6 gap-y-3"}>
@@ -143,7 +143,7 @@ export default function Experience(props) {
                                 (currentScreenWidth >= 640) && (i % 2 == 0) ?
                                     <div key={`ed-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                         + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
-                                        <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)]")
+                                        <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[6px_0_12px_var(--dm-main-bg-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[6px_0_12px_var(--lm-secondary-color)]")
                                             + " skewed-right skew-x-6 before:h-full before:w-[2rem] before:-skew-x-6 before:absolute before:left-0 w-full sm:w-4/12 items-center flex flex-row"}>
                                             <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                                 + " sm:-skew-x-6 text-right flex flex-col w-full justify-center py-6 pr-10 pl-6 gap-y-3"} >
@@ -165,7 +165,7 @@ export default function Experience(props) {
                                             + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10 "}>
                                             <p >{e.description}</p>
                                         </div>
-                                        <div className={(currentTheme === "dark" ? "bg-[var(--dm-secondary-color)] after:bg-[var(--dm-secondary-color)]" : "bg-[var(--lm-secondary-color)] after:bg-[var(--lm-secondary-color)]")
+                                        <div className={(currentTheme === "dark" ? "bg-[var(--dm-secondary-color)] after:bg-[var(--dm-secondary-color)] drop-shadow-[-6px_0_12px_var(--dm-main-bg-color)]" : "bg-[var(--lm-secondary-color)] after:bg-[var(--lm-secondary-color)] drop-shadow-[-6px_0_12px_var(--lm-secondary-color)]")
                                             + " skewed-left -skew-x-6 after:h-full after:w-[2rem] after:skew-x-6 after:absolute after:right-0 flex flex-row items-center sm:w-4/12 w-full"}>
                                             <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                                 + " sm:skew-x-6 text-left flex flex-col w-fit justify-center py-6 pl-10 pr-6 gap-y-3"}>
@@ -189,7 +189,7 @@ export default function Experience(props) {
                             (currentScreenWidth < 640) ?
                                 <div key={`ex-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                     + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly"}>
-                                    <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)]")
+                                    <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[0_4px_8px_var(--dm-main-bg-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[0_4px_8px_var(--lm-secondary-color)]")
                                         + " skewed-bottom before:w-full before:h-[2rem] before:-skew-y-6 before:absolute before:top-0 skew-y-6 w-full sm:w-4/12 items-center flex flex-col"}>
                                         <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                             + " -skew-y-6 text-right flex flex-col w-full justify-center p-6 gap-y-3"}>
@@ -218,7 +218,7 @@ export default function Experience(props) {
                                 (currentScreenWidth >= 640) && (i % 2 == 0) ?
                                     <div key={`ex-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                         + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
-                                        <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)]")
+                                        <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[6px_0_12px_var(--dm-main-bg-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[6px_0_12px_var(--lm-secondary-color)]")
                                             + " skewed-right skew-x-6 before:h-full before:w-[2rem] before:-skew-x-6 before:absolute before:left-0 w-full sm:w-4/12 items-center flex flex-row"}>
                                             <div className={(currentTheme === "dark" ? "text-[var(--dm-glow-color)]" : "text-stone-200")
                                                 + " sm:-skew-x-6 text-right flex flex-col w-full justify-center py-6 pr-10 pl-6 gap-y-3"}>
@@ -251,7 +251,7 @@ export default function Experience(props) {
                                             + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10"}>
                                             <div className="py-2 align-middle">{e.description}</div>
                                         </div>
-                                        <div className={(currentTheme === "dark" ? "after:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)]" : "after:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)]")
+                                        <div className={(currentTheme === "dark" ? "after:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[-6px_0_12px_var(--dm-main-bg-color)]" : "after:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[-6px_0_12px_var(--lm-secondary-color)]")
                                             + " skewed-left -skew-x-6 after:h-full after:w-[2rem] after:skew-x-6 after:absolute after:right-0 flex flex-row items-center sm:w-4/12 w-full"}>
                                             <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
                                                 + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10"}>
