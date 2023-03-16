@@ -31,7 +31,6 @@ margin:0;
   --dm-alt-color-9:#7B5E7B;
 
 /* ColorPalette Light */
-  /* --lm-main-bg-color: #B1B2B3; */
   --lm-main-bg-color: #AEB3B5;
   --lm-secondary-color: #212121;
   --lm-third-color:#DBFE87;
@@ -39,9 +38,6 @@ margin:0;
   --lm-third-color-alt2:#61FF7E;
   --lm-glow-color: #E7E7E8;
 
-  /* --text-main-header: 'Montserrat', Arial, 'sans-serif';
-  --text-secondary-header: 'Puritan', 'sans-serif';
-  --text-main-body: 'Sarala', 'sans-serif'; */
 }
 
 body {
@@ -59,7 +55,6 @@ body {
 }
 /* Dark theme colors */
 body.dark-theme {
-  /* --text-color: #347d99; */
   --bkg-color: var(--dm-main-bg-color);
   --text-color: var(--dm-secondary-color);
 }
@@ -79,7 +74,6 @@ body.dark-theme {
 }
 
 .btn-dark {
-/* color: #70d6ff; */
 color: var( --dm-third-color);
 }
 

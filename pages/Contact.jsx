@@ -154,13 +154,14 @@ export default function Contact(props) {
                                 <Image
                                     priority={true}
                                     className="portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"
-                                    src={currentTheme === "dark" ? PortraitDark : PortraitLight}
+                                    // src={currentTheme === "dark" ? PortraitDark : PortraitLight}
+                                    src={portraitSource} 
                                     alt="Portrait-image"
                                 />
                                 <Image
                                     priority={true}
                                     className="drawing-animation sm:h-[24.6rem] h-[12.4rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-[1rem] right-[0.2rem]"
-                                    src={currentTheme === "dark" ? DrawingDark : DrawingLight}
+                                    src={drawingSource} 
                                     alt="Drawing-Animation"
                                     unoptimized={true}
                                 />
@@ -176,30 +177,11 @@ export default function Contact(props) {
                                 <Image
                                     priority={true}
                                     className="fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"
-                                    src={currentTheme === "dark" ? PortraitDark : PortraitLight} alt="Portrait-image"
+                                    src={portraitSource} 
+                                    alt="Portrait-image"
                                 />
                             </>
                         }
-                        {/* {currentTheme === "dark" && drawingSource ?
-                            <Image
-                                priority={true}
-                                className={(drawingIsVisible && contactVisitedDark === 0 ?
-                                    "drawing-animation" : "hidden") +
-                                    " sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-5 right-[0.3rem]"}
-                                src={drawingSource}
-                                alt="Drawing-Animation"
-                                unoptimized={true}
-                            />
-                            : drawingSource &&
-                            <Image
-                                priority={true}
-                                className={(drawingIsVisible && contactVisitedLight === 0 ?
-                                    "drawing-animation" : "hidden") +
-                                    " sm:h-[24.6rem] h-[12.3rem] max-w-fit z-20 absolute bottom-0 sm:right-[0.9rem] right-[0.2rem]"}
-                                src={drawingSource}
-                                alt="Drawing-Animation"
-                                unoptimized={true}
-                            />} */}
                     </div>
                 </div>
             </section>
