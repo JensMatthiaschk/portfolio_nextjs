@@ -3,38 +3,30 @@ import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'next-i18next'
 import Image from "next/image";
-import PortraitDark from '../public/images/PortraitDarkmode.png';
-import PortraitLight from '../public/images/PortraitLightmode.png';
-import DrawingLight from '../public/images/Drawing_light.gif'
-import DrawingDark from '../public/images/Drawing_dark.gif'
+import PortraitDark from "../public/images/PortraitDarkmode.png";
+import PortraitLight from "../public/images/PortraitLightmode.png";
+import DrawingLight from "../public/images/Drawing_light.gif";
+import DrawingDark from "../public/images/Drawing_dark.gif";
 
 export default function Contact(props) {
 
     const { currentTheme, setSectionActive, contactVisitedLight, setContactVisitedLight, contactVisitedDark, setContactVisitedDark } = useContext(ThemeContext)
     const { ref: drawingRef, inView: drawingIsVisible } = useInView({ threshold: 0 });
     const { ref: contactRef, inView: contactIsVisible } = useInView({ threshold: 0.1 });
-    const [drawingSource, setDrawingSource] = useState('')
-    const [portraitSource, setPortraitSource] = useState('')
     const [counterLight, setCounterLight] = useState(0)
     const [counterDark, setCounterDark] = useState(0)
     const year = new Date().getFullYear()
     const { t } = useTranslation('contact')
 
     useEffect(() => {
-        setDrawingSource('')
         if (currentTheme === 'dark' && drawingIsVisible === true) {
             setSectionActive(t('contact:section_title'))
-            setDrawingSource(DrawingDark);
-            setPortraitSource(PortraitDark)
             setCounterDark(prev => prev + 1)
         }
         else if (currentTheme === 'light' && drawingIsVisible === true) {
             setSectionActive(t('contact:section_title'))
-            setDrawingSource(DrawingLight);
-            setPortraitSource(PortraitLight)
             setCounterLight(prev => prev + 1)
         }
-        else setDrawingSource('')
     }, [drawingIsVisible, currentTheme])
 
     useEffect(() => {
@@ -143,7 +135,7 @@ export default function Contact(props) {
                             </div>
                         </div>}
                     <div ref={drawingRef} className="flex relative h-[20rem] sm:h-[30rem]">
-                        {(contactVisitedDark === 0 && currentTheme === 'dark' && drawingIsVisible && portraitSource) || (contactVisitedLight === 0 && currentTheme === "light" && drawingIsVisible && portraitSource) ?
+                        {(contactVisitedDark === 0 && currentTheme === 'dark' && drawingIsVisible && PortraitDark) || (contactVisitedLight === 0 && currentTheme === "light" && drawingIsVisible && PortraitLight) ?
                             <>
                                 <div
                                     className={(currentTheme === "dark" ?
@@ -152,21 +144,20 @@ export default function Contact(props) {
                                         " glow-animation absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full transform-gpu"}
                                 ></div>
                                 <Image
-                                    priority={true}
+                                    priority
                                     className="portrait-animation sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"
-                                    // src={currentTheme === "dark" ? PortraitDark : PortraitLight}
-                                    src={portraitSource} 
+                                    src={currentTheme === "dark" ? PortraitDark : PortraitLight}
                                     alt="Portrait-image"
                                 />
                                 <Image
-                                    priority={true}
+                                    priority
                                     className="drawing-animation sm:h-[24.6rem] h-[12.4rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-[1rem] right-[0.2rem]"
-                                    src={drawingSource} 
+                                    src={currentTheme === "dark" ? DrawingDark : DrawingLight}
                                     alt="Drawing-Animation"
-                                    unoptimized={true}
+                                    unoptimized
                                 />
                             </>
-                            : drawingIsVisible && portraitSource &&
+                            : drawingIsVisible && (PortraitLight || PortraitDark) &&
                             <>
                                 <div
                                     className={(currentTheme === "dark" ?
@@ -175,9 +166,9 @@ export default function Contact(props) {
                                         " glow-fade-in transform-gpu absolute sm:bottom-[14rem] bottom-[8rem] right-[6rem] sm:right-[11rem] sm:w-[8rem] w-[3rem] sm:h-[8rem] h-[3rem] rounded-full"}
                                 ></div>
                                 <Image
-                                    priority={true}
+                                    priority
                                     className="fade-in sm:h-[24rem] h-[12rem] max-w-fit z-10 absolute bottom-0 sm:right-6 right-2"
-                                    src={portraitSource} 
+                                    src={currentTheme === "dark" ? PortraitDark : PortraitLight}
                                     alt="Portrait-image"
                                 />
                             </>
