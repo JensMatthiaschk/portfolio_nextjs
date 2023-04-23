@@ -71,11 +71,24 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                             return (
                                 <div key={`project-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                     + " card max-w-[20rem] h-fit rounded-md ease-in-out delay-50 duration-200 mb-10"}>
-                                    <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                        <div className="relative w-full h-full">
-                                            <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
-                                        </div>
-                                    </figure>
+                                    {p.page_url ?
+                                        <a href={p.page_url}
+                                            target="_newBrowserTab" rel="noopener">
+                                            <figure className="h-[11.1rem] m-[0.4rem] rounded">
+                                                <div className="relative w-full h-full">
+                                                    <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
+                                                </div>
+
+
+                                            </figure>
+                                        </a>
+                                        :
+                                        <figure className="h-[11.1rem] m-[0.4rem] rounded">
+                                            <div className="relative w-full h-full">
+                                                <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
+                                            </div>
+
+                                        </figure>}
                                     <div className="card-body flex flex-col justify-between p-5">
                                         <div onClick={toggleMoreText} className={`card-text-body-${i} card-text-cutoff`}>
                                             <h2 className="card-title mb-2">
@@ -173,7 +186,9 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                     + " card max-w-[20rem] h-full rounded-md ease-in-out delay-50 duration-200"}>
                                     {p.img_url ?
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                            <Image width="300" height="200" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
+                                            <div className="relative w-full h-full">
+                                                <Image fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
+                                            </div>
                                         </figure>
                                         :
                                         <div className="m-[0.4rem] h-[5rem] p-4">

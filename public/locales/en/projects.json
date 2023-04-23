@@ -5,7 +5,7 @@
             {
                 "img_url": "/images/cabrito-art.webp",
                 "title": "Cabrito Art",
-                "description": "Cabrito Art is a website for the unconventional marketing and sale of street art from the heart of Berlin. Developed with NEXT.js for SEO and image optimization, GCS as a cloud provider and MongoDB for the dynamic provision of metadata. My first client project.",
+                "description": "Cabrito Art is a website for the unconventional marketing and sale of street art originated art from the heart of Berlin. Developed with NEXT.js for SEO and image optimization, GCS as a cloud provider and MongoDB for the dynamic provision of metadata. My first client project.",
                 "techstack_front": [
                     "React",
                     "Next.js",
@@ -51,7 +51,7 @@
         "section_title": "Other Projects",
         "content": [
             {
-                "img_url": "/images/Bici_go.png",
+                "img_url": "/images/Bici_go.webp",
                 "title": "Bici Go!",
                 "description": "Final Group project of WBS Coding School: A full-stack application for cyclists. Users can register, upload profile images and most importantly pin bike related locations on the central component - the map. Other cyclists can comment and rate existing pins for feedback and a community feeling.",
                 "techstack_front": [
