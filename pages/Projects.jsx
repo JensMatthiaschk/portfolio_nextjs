@@ -5,12 +5,12 @@ import { useTranslation } from 'next-i18next'
 import Image from "next/image.js"
 
 
-export default function Projects(props) {
+export default function Projects({ otherProjectsVisible, setOtherProjectsVisible }) {
 
     const { currentTheme, setSectionActive } = useContext(ThemeContext);
     const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.5 });
     const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0 });
-    const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
+    // const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
     const { t } = useTranslation('projects');
     const projects = (t('projects', { returnObjects: true }));
     const otherProjects = (t('otherProjects', { returnObjects: true }))
@@ -26,9 +26,9 @@ export default function Projects(props) {
         setOtherProjectsVisible(!otherProjectsVisible)
     }
 
-    useEffect(() => {
-        setOtherProjectsVisible(false)
-    }, [cardIsVisible])
+    // useEffect(() => {
+    //     setOtherProjectsVisible(false)
+    // }, [cardIsVisible])
 
 
     return (
@@ -72,13 +72,15 @@ export default function Projects(props) {
                                 <div key={`project-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                     + " card max-w-[20rem] h-fit rounded-md ease-in-out delay-50 duration-200 mb-10"}>
                                     <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                        <Image unoptimized={true} width="300" height="200" priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
+                                        <div className="relative w-full h-full">
+                                            <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
+                                        </div>
                                     </figure>
                                     <div className="card-body flex flex-col justify-between p-5">
                                         <div onClick={toggleMoreText} className={`card-text-body-${i} card-text-cutoff`}>
                                             <h2 className="card-title mb-2">
                                                 {p.title}
-                                                <div className="badge badge-warning">NEW</div>
+                                                {i === 0 ? <div className="badge badge-warning">NEW</div> : null}
                                             </h2>
                                             <p>{p.description}</p>
                                             {p.contributors ?
@@ -140,18 +142,21 @@ export default function Projects(props) {
                     </div>
                     {otherProjectsVisible ?
                         <button
+                            id='otherProjectsButton'
                             onClick={openOtherProjects}
                             className={(currentTheme === "dark" ? "btn-dark hover:drop-shadow-[0_0_10px_var(--dm-third-color)]" : "btn-light hover:drop-shadow-[0_0_10px_var(--lm-third-color)]")
                                 + " badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline btn-dark w-fit transform-gpu"}>
                             {t('otherProjects_button_close')}</button> :
                         <button
+                            id='otherProjectsButton'
                             onClick={openOtherProjects}
                             className={(currentTheme === "dark" ? "btn-dark hover:drop-shadow-[0_0_10px_var(--dm-third-color)]" : "btn-light hover:drop-shadow-[0_0_10px_var(--lm-third-color)]")
                                 + " badge p-4 sm:badge-lg badge-md sm:p-6 sm:text-2xl font-semibold badge-outline w-fit transform-gpu"}>
                             {t('otherProjects_button_open')}</button>}
                 </div>
-                {otherProjectsVisible &&
-                    <div className="fade-in flex h-fit gap-6 flex-wrap justify-center mt-5 mb-10">
+                {
+                    otherProjectsVisible &&
+                    <div id={t('otherProjects.section_title')} className="fade-in flex h-fit gap-6 flex-wrap justify-center mt-5 mb-10">
                         <div className="text-center my-5 sm:text-xl mb-10 w-full">
                             <p className="sm:w-[60%] mx-auto">{t('otherProjects_disclaimer')}</p>
                         </div>
@@ -243,8 +248,9 @@ export default function Projects(props) {
                                 </div>
                             )
                         })}
-                    </div>}
-            </div>
-        </section>
+                    </div>
+                }
+            </div >
+        </section >
     )
 }

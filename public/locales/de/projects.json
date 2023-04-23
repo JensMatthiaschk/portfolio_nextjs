@@ -3,6 +3,25 @@
         "section_title": "Projekte",
         "content": [
             {
+                "img_url": "/images/cabrito-art.webp",
+                "title": "Cabrito Art",
+                "description": "Cabrito Art ist eine Webseite zur unkonventionellen Vermarktung und Vertrieb von Street Art Kunst aus dem Herzen Berlins. Entwickelt mit NEXT.js zur SEO und Bilder Optimierung, GCS als Cloud Provider und MongoDB zur dynamischen Bereitstellung der Metadaten. Mein erstes Kundenprojekt.",
+                "techstack_front": [
+                    "React",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "PayPalAPI"
+                ],
+                "techstack_back": [
+                    "Node.js",
+                    "MongoDB",
+                    "Google Cloud Storage",
+                    "Netlify"
+                ],
+                "page_url": "https://cabrito.art",
+                "repo_url": ""
+            },
+            {
                 "img_url": "/images/Screencast_PH_320.gif",
                 "title": "Portfolio Homepage",
                 "description": "Eine Single-Page-Anwendung, auf der du dich gerade befindest, hauptsächlich aus Frontend-Code, aber auch einer Backend-Komponente zur Handhabung des Kontaktformulars.",
@@ -32,7 +51,7 @@
         "section_title": "Andere Projekte",
         "content": [
             {
-                "img_url": "/images/Bici_go.png",
+                "img_url": "/images/Bici_go.webp",
                 "title": "Bici Go!",
                 "description": "Abschließendes Gruppenprojekt der WBS Coding School: Eine Full-Stack-Anwendung für Radfahrer. Nutzer können sich registrieren, Profilbilder hochladen und vor allem fahrradbezogene Orte auf der zentralen Komponente – der Karte – anpinnen. Andere Radfahrer können so vorhandene Pins für Feedback und ein Gemeinschaftsgefühl kommentieren und bewerten.",
                 "techstack_front": [

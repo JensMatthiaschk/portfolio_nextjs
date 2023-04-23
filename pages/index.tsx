@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar.jsx'
 import Experience from './Experience.jsx'
@@ -7,7 +8,10 @@ import Contact from './Contact.jsx'
 import ClientOnly from '../components/ClientOnly.jsx'
 
 
-export default function Home({props}:{ props:any }) {
+export default function Home({ props }: { props: any }) {
+
+  const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
+
   return (
     <>
       <Head>
@@ -16,8 +20,8 @@ export default function Home({props}:{ props:any }) {
         <ClientOnly>
           <Navbar />
           <About />
-          <Experience />
-          <Projects />
+          <Experience setOtherProjectsVisible={setOtherProjectsVisible} />
+          <Projects otherProjectsVisible={otherProjectsVisible} setOtherProjectsVisible={setOtherProjectsVisible} />
           <Contact />
         </ClientOnly>
       </main>

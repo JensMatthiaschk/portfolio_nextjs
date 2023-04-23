@@ -3,6 +3,25 @@
         "section_title": "Projects",
         "content": [
             {
+                "img_url": "/images/cabrito-art.webp",
+                "title": "Cabrito Art",
+                "description": "Cabrito Art is a website for the unconventional marketing and sale of street art from the heart of Berlin. Developed with NEXT.js for SEO and image optimization, GCS as a cloud provider and MongoDB for the dynamic provision of metadata. My first client project.",
+                "techstack_front": [
+                    "React",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "PayPalAPI"
+                ],
+                "techstack_back": [
+                    "Node.js",
+                    "MongoDB",
+                    "Google Cloud Storage",
+                    "Netlify"
+                ],
+                "page_url": "https://cabrito.art",
+                "repo_url": ""
+            },
+            {
                 "img_url": "/images/Screencast_PH_320.gif",
                 "title": "Portfolio Homepage",
                 "description": "A single-page-application which you're currently viewing. It mostly uses frontend code but also a backend component for handling the contact form.",
