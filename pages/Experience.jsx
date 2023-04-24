@@ -79,7 +79,7 @@ export default function Experience({ setOtherProjectsVisible }) {
                                         {e.school === "WBS Coding School" && (lng === "de" || lng === "de-DE") ?
                                             <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Einen Überblick über die gemeinsam realisierten Teamprojekte findest du hier
                                                 <Link
-                                                    className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-2"}
+                                                    className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-1"}
                                                     onClick={() => setOtherProjectsVisible(true)} to='otherProjectsButton' spy={true} smooth={true} offset={50} duration={500}>
                                                     <svg
                                                         className="w-[1.2em] inline mb-1 ml-1"
@@ -87,9 +87,9 @@ export default function Experience({ setOtherProjectsVisible }) {
                                                     </svg>
                                                 </Link>
                                             </span>
-                                            : e.school === "WBS Coding School" ? <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Check out some of our group projects which we realized together
+                                            : e.school === "WBS Coding School" ? <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Check out some of our group projects we realized together
                                                 <Link
-                                                    className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-2"}
+                                                    className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-1"}
                                                     onClick={() => setOtherProjectsVisible(true)} to='otherProjectsButton' spy={true} smooth={true} offset={50} duration={500}>
                                                     <svg
                                                         className="w-[1.2em] inline mb-1 ml-1"
@@ -114,21 +114,21 @@ export default function Experience({ setOtherProjectsVisible }) {
                                             </div>
                                         </div>
                                         <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "bg-stone-200 text-[var(--lm-secondary-color)]")
-                                            + " text-left flex flex-col sm:w-8/12 w-full justify-evenly p-6 pt-10"}>
+                                            + " text-left flex flex-col sm:w-8/12 w-full justify-evenly p-10 pt-10"}>
                                             <p >{e.description}</p>
                                             {e.school === "WBS Coding School" && (lng === "de" || lng === "de-DE") ?
                                                 <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Einen Überblick über die gemeinsam realisierten Teamprojekte findest du hier
                                                     <Link
-                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-2"}
+                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-1"}
                                                         onClick={() => setOtherProjectsVisible(true)} to='otherProjectsButton' spy={true} smooth={true} offset={50} duration={500}>
                                                         <svg
                                                             className="w-[1.2em] inline mb-1 ml-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                                         </svg>
                                                     </Link>
                                                 </span>
-                                                : e.school === "WBS Coding School" ? <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Check out some of our group projects which we realized together
+                                                : e.school === "WBS Coding School" ? <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Check out some of our group projects we realized together
                                                     <Link
-                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-2"}
+                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-1"}
                                                         onClick={() => setOtherProjectsVisible(true)} to='otherProjectsButton' spy={true} smooth={true} offset={50} duration={500}>
                                                         <svg
                                                             className="w-[1.2em] inline mb-1 ml-1"
@@ -145,21 +145,21 @@ export default function Experience({ setOtherProjectsVisible }) {
                                     <div key={`ed-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                         + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
                                         <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "bg-stone-200 text-[var(--lm-secondary-color)]")
-                                            + " text-left flex flex-col sm:w-8/12 w-full justify-evenly p-6 pt-10"}>
+                                            + " text-left flex flex-col sm:w-8/12 w-full justify-evenly p-10 pt-10"}>
                                             <p >{e.description}</p>
                                             {e.school === "WBS Coding School" && (lng === "de" || lng === "de-DE") ?
                                                 <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Einen Überblick über die gemeinsam realisierten Teamprojekte findest du hier
                                                     <Link
-                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-2"}
+                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-1"}
                                                         onClick={() => setOtherProjectsVisible(true)} to='otherProjectsButton' spy={true} smooth={true} offset={50} duration={500}>
                                                         <svg
                                                             className="w-[1.2em] inline mb-1 ml-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                                         </svg>
                                                     </Link>
                                                 </span>
-                                                : e.school === "WBS Coding School" ? <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Check out some of our group projects which we realized together
+                                                : e.school === "WBS Coding School" ? <span className="mt-4 inline-block"><span className="text-4xl align-middle leading-[1rem]">☞ </span>Check out some of our group projects we realized together
                                                     <Link
-                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-2"}
+                                                        className={currentTheme === 'dark' ? "hover:text-cyan-600 inline-block" : "hover:drop-shadow-[2px_2px_0_var(--lm-third-color)] inline-block -mb-1 pl-1"}
                                                         onClick={() => setOtherProjectsVisible(true)} to='otherProjectsButton' spy={true} smooth={true} offset={50} duration={500}>
                                                         <svg
                                                             className="w-[1.2em] inline mb-1 ml-1"
@@ -233,7 +233,7 @@ export default function Experience({ setOtherProjectsVisible }) {
                                             </div>
                                         </div>
                                         <div className={(currentTheme === 'dark' ? "text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
-                                            + " relative w-full text-left flex flex-col sm:w-8/12 justify-evenly p-6 pl-10"}>
+                                            + " relative w-full text-left flex flex-col sm:w-8/12 justify-evenly p-10 pl-10"}>
                                             <div className="py-2 align-middle">{e.description}</div>
                                             {i === 0 ? <span className="py-2 align-middle"><span className="text-4xl align-middle leading-[1rem]">☞ </span> {professionalExperience.content[0].follow_link_part1} <a href="https://www.linkedin.com/in/jensmatthiaschk"
                                                 target="_newBrowserTab"
@@ -253,7 +253,7 @@ export default function Experience({ setOtherProjectsVisible }) {
                                     <div key={`ex-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                                         + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
                                         <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
-                                            + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-6 pr-10"}>
+                                            + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-10 pr-10"}>
                                             <div className="py-2 align-middle">{e.description}</div>
                                         </div>
                                         <div className={(currentTheme === "dark" ? "after:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[-6px_0_12px_var(--dm-main-bg-color)]" : "after:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[-6px_0_12px_var(--lm-secondary-color)]")
