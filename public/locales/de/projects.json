@@ -5,7 +5,7 @@
             {
                 "img_url": "/images/cabrito-art.webp",
                 "title": "Cabrito Art",
-                "description": "Cabrito Art ist eine Webseite zur unkonventionellen Vermarktung und Vertrieb von Kunst mit Street Art Wurzeln aus dem Herzen Berlins. Entwickelt mit NEXT.js zur SEO und Bilder Optimierung, GCS als Cloud Provider und MongoDB zur dynamischen Bereitstellung der Metadaten. Mein erstes Kundenprojekt.",
+                "description": "Cabrito Art ist eine Webseite zur unkonventionellen Vermarktung von Kunst aller Art aus dem Herzen Berlins. Entwickelt mit NEXT.js zur SEO und Bilder Optimierung, GCS als Cloud Provider und MongoDB zur dynamischen Bereitstellung der Metadaten sowie der Intergration des PayPalAPIs als Bezahlmöglichkeit. Mein erstes Kundenprojekt.",
                 "techstack_front": [
                     "React",
                     "Next.js",
