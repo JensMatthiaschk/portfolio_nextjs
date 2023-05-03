@@ -8,7 +8,7 @@ export default function Skills() {
     const { ref: skillsRef, inView: skillsIsVisible } = useInView({ threshold: 0 });
 
     return (
-        <div ref={skillsRef} id="Skills" className={skillsIsVisible ? "flex flex-col items-center fade-in mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit" : "flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit invisible"}>
+        <div ref={skillsRef} id="Skills" className={skillsIsVisible ? "flex flex-col items-center fade-in mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit max-w-[1400px]" : "flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit invisible"}>
             <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
                 + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 mt-16 sm:mt-40 lowercase"}>Skills.</h3>
             <div className="flex h-fit sm:gap-x-4 gap-x-2 sm:gap-y-2 items-center justify-center flex-wrap transition-all px-3">
