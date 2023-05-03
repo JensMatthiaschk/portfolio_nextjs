@@ -14,7 +14,7 @@ margin:0;
 
 :root {
   /* ColorPalette Dark */
-  --dm-main-bg-color: hsl(208, 81%, 4%, 100%);
+  --dm-main-bg-color: #020b12;
   --dm-secondary-color:#b5a887;
   --dm-secondary-color-alt:#B3A394;
   --dm-secondary-color-alt-2:hsl(44, 16%, 42%);
