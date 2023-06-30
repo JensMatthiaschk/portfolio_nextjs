@@ -5,7 +5,7 @@ import { ThemeContext } from "./ThemeContext";
 
 export default function Skills() {
     const { currentTheme, setSectionActive, currentScreenWidth } = useContext(ThemeContext);
-    const { ref: skillsRef, inView: skillsIsVisible } = useInView({ threshold: 0 });
+    const { ref: skillsRef, inView: skillsIsVisible } = useInView({ threshold: 0, triggerOnce: true });
 
     return (
         <div ref={skillsRef} id="Skills" className={(skillsIsVisible ? "fade-in" : "invisible") + " flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit lg:w-[80%] max-w-[1400px]"}>

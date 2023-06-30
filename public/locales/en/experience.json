@@ -5,6 +5,13 @@
             "title": "Work.",
             "content": [
                 {
+                    "position": "Full Stack Developer",
+                    "company": "BillBlitz GmbH",
+                    "location": "Berlin",
+                    "time_period": "since 06/2023",
+                    "description": "I am currently working as a Full Stack Developer for BillBlitz GmbH, a Berlin based software solution company. BillBlitz mainly focuses on developing web applications for business to atomize and digitalize their accounting processes. I am part of a small team of developers and work on the frontend and backend of the web applications."
+                },
+                {
                     "position": "Junior Production Manager, Production Coordinator, Assistant - / Shipping Coordinator",
                     "company": "Various",
                     "location": "Berlin & Potsdam",

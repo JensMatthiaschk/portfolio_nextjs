@@ -12,7 +12,7 @@ export default function Contact(props) {
 
     const { currentTheme, setSectionActive, contactVisitedLight, setContactVisitedLight, contactVisitedDark, setContactVisitedDark } = useContext(ThemeContext)
     const { ref: drawingRef, inView: drawingIsVisible } = useInView({ threshold: 0 });
-    const { ref: contactRef, inView: contactIsVisible } = useInView({ threshold: 0.1 });
+    const { ref: contactRef, inView: contactIsVisible } = useInView({ threshold: 0.1  });
     const [counterLight, setCounterLight] = useState(0)
     const [counterDark, setCounterDark] = useState(0)
     const year = new Date().getFullYear()

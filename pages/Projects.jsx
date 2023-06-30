@@ -8,8 +8,8 @@ import Image from "next/image.js"
 export default function Projects({ otherProjectsVisible, setOtherProjectsVisible }) {
 
     const { currentTheme, setSectionActive } = useContext(ThemeContext);
-    const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.5 });
-    const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0 });
+    const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.5, triggerOnce: true });
+    const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0, triggerOnce: true });
     // const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
     const { t } = useTranslation('projects');
     const projects = (t('projects', { returnObjects: true }));

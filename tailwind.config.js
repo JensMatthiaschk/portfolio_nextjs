@@ -11,6 +11,9 @@ module.exports = {
         Montserrat: ['var(--font-montserrat)'],
         Sarala: ['var(--font-sarala)'],
       },
+      transitionProperty: {
+        'height': 'height'
+      }
     },
   },
   plugins: [require("daisyui")],
