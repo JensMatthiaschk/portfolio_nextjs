@@ -7,6 +7,7 @@ import LearnSection from "../components/LearnSection.jsx";
 import WorkSection from "../components/WorkSection.jsx";
 
 
+
 export default function Experience({ setOtherProjectsVisible }) {
 
     const { currentTheme, setSectionActive } = useContext(ThemeContext);
@@ -48,7 +49,7 @@ export default function Experience({ setOtherProjectsVisible }) {
                 </div>
                 <div className="transition-all">
                     <Skills />
-                    <WorkSection />
+                    <WorkSection setSectionActive={setSectionActive} />
                     <LearnSection setOtherProjectsVisible={setOtherProjectsVisible} />
                 </div>
             </section>

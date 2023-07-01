@@ -17,12 +17,18 @@ export const ThemeContextProvider = (props) => {
     };
 
     useEffect(() => {
-        setScreenwidth(window.innerWidth)
         let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
         const localTheme = localStorage.getItem("theme");
         if (localTheme === "dark" || localTheme === "light") {
             rawSetCurrentTheme(localTheme)
         } else if (prefersDarkScheme.matches) rawSetCurrentTheme("dark");
+    }, [])
+
+    //LISTEN ON RESIZING SCREEN
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setScreenwidth(window.innerWidth)
+        })
     }, [])
 
     // console.log(`${currentTheme}` + "-theme")
