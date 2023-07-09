@@ -19,7 +19,7 @@ export default function LinkButtons() {
                                 "fade-in sm:flex flex-col items-start justify-center h-screen fixed mx-5 pb-20 mt-10 sm:transition-all z-30 hidden"
             }>
                 <ul className={currentTheme === 'dark' ? "text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]"} >
-                    <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300" : "w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
+                    <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out duration-300" : "w-7 lg:w-9 my-3 ease-in-out duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
                         <a href="https://github.com/JensMatthiaschk"
                             target="_newBrowserTab"
                             rel="noopener">
@@ -31,7 +31,7 @@ export default function LinkButtons() {
                             </svg>
                         </a>
                     </li>
-                    <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300" : "w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
+                    <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out duration-300" : "w-7 lg:w-9 my-3 ease-in-out duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
                         <a href="https://www.linkedin.com/in/jensmatthiaschk"
                             target="_newBrowserTab"
                             rel="noopener">
@@ -44,7 +44,7 @@ export default function LinkButtons() {
                             </svg>
                         </a>
                     </li>
-                    <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300" : "w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
+                    <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out duration-300" : "w-7 lg:w-9 my-3 ease-in-out duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
                         <label htmlFor="emailModal">
                             <svg
                                 className="bi bi-envelope-fill"
@@ -69,7 +69,7 @@ export default function LinkButtons() {
                         </label>
                     </li>
                     <li
-                        className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out delay-100 duration-300" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)] w-7 lg:w-9 ease-in-out delay-100 duration-300 transform-gpu"}>
+                        className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out duration-300" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)] w-7 lg:w-9 ease-in-out duration-300 transform-gpu"}>
                         <a href="https://www.imdb.com/name/nm4456056/"
                             target="_newBrowserTab"
                             rel="noopener">

@@ -1,20 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from "framer-motion";
 import { MdOutlineUnfoldMore, MdOutlineUnfoldLess } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
 export default function MobileCards({ e, i, currentScreenWidth, currentTheme, professionalExperience, setOtherProjectsVisible, educationAndTraining }) {
 
     const [showMore, setShowMore] = useState(false);
     const { i18n } = useTranslation();
     const lng = i18n.language;
+    const { ref: mobilCardRef, inView: mobilCardIsVisible } = useInView({ threshold: 0 });
+
+    useEffect(() => {
+        if (!mobilCardIsVisible) setShowMore(false)
+    }), [mobilCardIsVisible]
 
     if (currentScreenWidth < 640)
         // mobile size
         return (
-            <div className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
-                + " w-full h-fit overflow-hidden rounded-md ease-in-out delay-50 duration-200 mt-6 flex flex-col sm:flex-row justify-evenly"}>
+            <div ref={mobilCardRef} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
+                + " w-full h-fit overflow-hidden rounded-md ease-in-out duration-200 mt-6 flex flex-col sm:flex-row justify-evenly"}>
 
                 <motion.div
                     onClick={() => setShowMore(!showMore)}
@@ -51,7 +57,7 @@ export default function MobileCards({ e, i, currentScreenWidth, currentTheme, pr
                 </motion.div>
                 <motion.div
                     initial={{ height: 0, marginTop: 0 }}
-                    animate={{ height: showMore ? "auto" : 0, marginTop: showMore ? "1rem" : 0 }}
+                    animate={{ height: showMore ? "auto" : 0, marginTop: showMore && mobilCardRef ? "1rem" : 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     exit={{ height: 0, marginTop: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
                 >

@@ -13,7 +13,7 @@ module.exports = {
       },
       transitionProperty: {
         'height': 'height'
-      }
+      },
     },
   },
   plugins: [require("daisyui")],

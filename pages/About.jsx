@@ -1,5 +1,5 @@
 import { ThemeContext } from "../components/ThemeContext.jsx"
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 import { useTranslation } from 'next-i18next'
@@ -7,19 +7,30 @@ import i18n from '../services/i18n.js' //initializing i18n
 
 export default function About(props) {
 
-    const { currentTheme, setSectionActive } = useContext(ThemeContext)
-    const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0.5, triggerOnce: true });
+    const { currentTheme, setSectionActive, counterDark, counterLight } = useContext(ThemeContext)
+    const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0.5 });
+    const [aboutVisitedDark, setAboutVisitedDark] = useState(0)
+    const [aboutVisitedLight, setAboutVisitedLight] = useState(0)
     const { t } = useTranslation();
 
     useEffect(() => {
         const sectionIdentifyer = t('about:section_title')
         if (aboutIsVisible === true) setSectionActive(sectionIdentifyer)
+        if (currentTheme === 'dark' && counterDark >= 1) {
+            setAboutVisitedDark(1)
+        }
+        else if (currentTheme === 'light' && counterLight >= 1) {
+            setAboutVisitedLight(1)
+        }
     }, [aboutIsVisible])
+
+
+
 
     return (
         <>
             <section id={t('about:section_title')} ref={aboutRef}
-                className="font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px]"
+                className={`font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px]`}
             >
                 <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
                 <h1 className="font-Montserrat text-left md:text-8xl sm:text-6xl text-4xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk</h1>

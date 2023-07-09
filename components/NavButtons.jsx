@@ -26,7 +26,7 @@ export default function NavButtons() {
                                 <div dot-description={dot.section} className={(sectionActive === dot.section ?
                                     "lg:w-[1rem] lg:h-[1rem] w-[0.8rem] h-[0.8rem] bg-[var(--dm-secondary-color)] -mr-[0.1rem] sm:-mr-[0.08rem] lg:-mr-[0.05rem]"
                                     : "lg:w-[0.9rem] lg:h-[0.9rem] hover:lg:w-[1rem] hover:lg:h-[1rem] w-[0.6rem] hover:w-[0.8rem] h-[0.6rem] hover:h-[0.8rem] hover:bg-[var(--dm-secondary-color)] bg-transparent hover:-mr-[0.1rem] hover:sm:-mr-[0.08rem] hover:lg:-mr-[0.05rem]")
-                                    + " dot-section text-xs rounded-full ease-in-out delay-100 duration-300 border-[1.5px] border-solid border-[var(--dm-secondary-color)]"
+                                    + " dot-section text-xs rounded-full ease-in-out duration-300 border-[1.5px] border-solid border-[var(--dm-secondary-color)]"
                                 }>
 
                                 </div>
@@ -41,7 +41,7 @@ export default function NavButtons() {
                                 <div dot-description={dot.section} className={(sectionActive === dot.section ?
                                     "lg:w-[1rem] lg:h-[1rem] w-[0.8rem] h-[0.8rem] bg-[var(--lm-secondary-color)] -mr-[0.1rem] sm:-mr-[0.08rem] lg:-mr-[0.05rem]"
                                     : "lg:w-[0.9rem] lg:h-[0.9rem] hover:lg:w-[1rem] hover:lg:h-[1rem] w-[0.6rem] hover:w-[0.8rem] h-[0.6rem] hover:h-[0.8rem] hover:bg-[var(--lm-secondary-color)] bg-transparent hover:-mr-[0.1rem] hover:sm:-mr-[0.08rem] hover:lg:-mr-[0.05rem]") +
-                                    " dot-section text-xs rounded-full ease-in-out delay-100 duration-300 border-[1.5px] border-solid border-[var(--lm-secondary-color)]"
+                                    " dot-section text-xs rounded-full ease-in-out duration-300 border-[1.5px] border-solid border-[var(--lm-secondary-color)]"
                                 }>
                                 </div>
                             </Link>

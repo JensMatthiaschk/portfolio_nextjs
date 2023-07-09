@@ -1,19 +1,20 @@
-import { ThemeContext } from "../components/ThemeContext.jsx"
-import { useContext, useEffect, useState } from "react"
-import { useInView } from "react-intersection-observer"
-import { useTranslation } from 'next-i18next'
-import Image from "next/image.js"
-
+import { ThemeContext } from "../components/ThemeContext.jsx";
+import { useContext, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { useTranslation } from 'next-i18next';
+import Image from "next/image.js";
+import { motion } from "framer-motion";
 
 export default function Projects({ otherProjectsVisible, setOtherProjectsVisible }) {
 
     const { currentTheme, setSectionActive } = useContext(ThemeContext);
-    const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.5, triggerOnce: true });
-    const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0, triggerOnce: true });
+    const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.5 });
+    const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0 });
     // const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
     const { t } = useTranslation('projects');
     const projects = (t('projects', { returnObjects: true }));
     const otherProjects = (t('otherProjects', { returnObjects: true }))
+    const [showMore, setShowMore] = useState(false);
 
     useEffect(() => {
         if (projectsIsVisible === true) {
@@ -63,6 +64,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                         {projects?.content?.map((p, i) => {
 
                             function toggleMoreText() {
+                                setShowMore(!showMore)
                                 document.querySelector(`.card-text-body-${i}`).classList.toggle("card-text-cutoff")
                                 document.querySelector(`.more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.less-button-${i}`).classList.toggle("hidden")
@@ -70,7 +72,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
 
                             return (
                                 <div key={`project-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
-                                    + " card max-w-[20rem] h-fit rounded-md ease-in-out delay-50 duration-200 mb-10"}>
+                                    + " card max-w-[20rem] h-fit rounded-md ease-in-out duration-200 mb-10"}>
                                     {p.page_url ?
                                         <a href={p.page_url}
                                             target="_newBrowserTab" rel="noopener">
@@ -90,7 +92,13 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
 
                                         </figure>}
                                     <div className="card-body flex flex-col justify-between p-5">
-                                        <div onClick={toggleMoreText} className={`card-text-body-${i} card-text-cutoff`}>
+                                        <motion.div
+                                            // initial={{ overflow: "hidden", textOverflow: "ellipsis", lineClamp: "3" }}
+                                            // animate={{ lineClamp: showMore ? "initial" : "3", textOverflow: showMore ? "" : "ellipsis", transition: { duration: 1 } }}
+                                            // exit={{ overflow: "hidden", textOverflow: "ellipsis", lineClamp: "3", transition: { duration: 1 } }}
+                                            onClick={toggleMoreText}
+                                            className={`card-text-body-${i} card-text-cutoff`}
+                                        >
                                             <h2 className="card-title mb-2">
                                                 {p.title}
                                                 {i === 0 ? <div className="badge badge-warning">NEW</div> : null}
@@ -111,7 +119,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                                     )}
                                                 </div>
                                                 : ""}
-                                        </div>
+                                        </motion.div>
                                         <button className={`more-button-${i} badge text-xs btn-outline text-current w-fit place-self-end`} onClick={toggleMoreText}>{t('project_button_more')}</button>
                                         <button className={`less-button-${i} badge text-xs btn-outline text-current w-fit place-self-end hidden`} onClick={toggleMoreText}>{t('project_button_less')}</button>
                                         <div className="card-actions flex place-content-start justify-end h-16 p-0 mt-6">
@@ -126,7 +134,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             {p.page_url ? <a href={p.page_url ? p.page_url : ""}
                                                 target="_newBrowserTab"
                                                 rel="noopener">
-                                                <svg className="w-6 hover:w-7 h-6 hover:h-7 hover:-mt-1 hover:-mr-1 ease-in-out delay-100 duration-300"
+                                                <svg className="w-6 hover:w-7 h-6 hover:h-7 hover:-mt-1 hover:-mr-1 ease-in-out duration-300"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -138,7 +146,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             {p.repo_url ? <a href={p.repo_url ? p.repo_url : ""}
                                                 target="_newBrowserTab"
                                                 rel="noopener">
-                                                <svg className="w-5 hover:w-6 h-5 hover:h-6 ease-in-out delay-100 duration-300"
+                                                <svg className="w-5 hover:w-6 h-5 hover:h-6 ease-in-out duration-300"
                                                     fill="currentColor"
                                                     viewBox="0 0 1024 1024"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +191,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
 
                             return (
                                 <div key={`otherProject-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
-                                    + " card max-w-[20rem] h-full rounded-md ease-in-out delay-50 duration-200"}>
+                                    + " card max-w-[20rem] h-full rounded-md ease-in-out duration-200"}>
                                     {p.img_url ?
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
                                             <div className="relative w-full h-full">
@@ -237,7 +245,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                         <div className="flex gap-x-1 items-center mt-1 h-4">
                                             {p.page_url ? <a href={p.page_url ? p.page_url : ""}
                                                 target="_newBrowserTab" rel="noopener">
-                                                <svg className="w-6 hover:w-7 h-6 hover:h-7 hover:-mt-1 hover:-mr-1 ease-in-out delay-100 duration-300"
+                                                <svg className="w-6 hover:w-7 h-6 hover:h-7 hover:-mt-1 hover:-mr-1 ease-in-out duration-300"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
@@ -250,7 +258,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             {p.repo_url ? <a href={p.repo_url ? p.repo_url : ""}
                                                 target="_newBrowserTab"
                                                 rel="noopener">
-                                                <svg className="w-5 hover:w-6 h-5 hover:h-6 ease-in-out delay-100 duration-300"
+                                                <svg className="w-5 hover:w-6 h-5 hover:h-6 ease-in-out duration-300"
                                                     fill="currentColor"
                                                     viewBox="0 0 1024 1024"
                                                     xmlns="http://www.w3.org/2000/svg">

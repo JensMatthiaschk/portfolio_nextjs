@@ -11,7 +11,7 @@ import WorkSection from "../components/WorkSection.jsx";
 export default function Experience({ setOtherProjectsVisible }) {
 
     const { currentTheme, setSectionActive } = useContext(ThemeContext);
-    const { ref: experienceRef, inView: experienceIsVisible } = useInView({ threshold: 0.15, triggerOnce: true });
+    const { ref: experienceRef, inView: experienceIsVisible } = useInView({ threshold: 0.15});
     const { t } = useTranslation();
 
 

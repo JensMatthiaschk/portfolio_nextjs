@@ -9,6 +9,8 @@ export const ThemeContextProvider = (props) => {
     const [contactVisitedDark, setContactVisitedDark] = useState(0)
     const [loading, setLoading] = useState(false)
     const [currentScreenWidth, setScreenwidth] = useState()
+    const [counterLight, setCounterLight] = useState(0)
+    const [counterDark, setCounterDark] = useState(0)
 
     const setCurrentTheme = (value) => {
         rawSetCurrentTheme(value);
@@ -40,7 +42,9 @@ export const ThemeContextProvider = (props) => {
             contactVisitedLight, setContactVisitedLight,
             contactVisitedDark, setContactVisitedDark,
             loading, setLoading,
-            currentScreenWidth, setScreenwidth
+            currentScreenWidth, setScreenwidth,
+            counterLight, setCounterLight,
+            counterDark, setCounterDark
         }}>
             {props.children}
         </ThemeContext.Provider>
