@@ -19,6 +19,7 @@ export const ThemeContextProvider = (props) => {
     };
 
     useEffect(() => {
+        setScreenwidth(window.innerWidth)
         let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
         const localTheme = localStorage.getItem("theme");
         if (localTheme === "dark" || localTheme === "light") {

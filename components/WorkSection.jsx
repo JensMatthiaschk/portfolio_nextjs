@@ -20,10 +20,10 @@ export default function WorkSection() {
                 + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>{professionalExperience.title}</h3>
             {professionalExperience?.content?.map((e, i) =>
 
-                <>
-                    <MobileCards key={`ex-mobile-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} professionalExperience={professionalExperience} />
-                    <DesktopCards key={`ex-desktop-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} professionalExperience={professionalExperience} />
-                </>
+                <div key={`card-ex-${i}`}>
+                    <MobileCards id={`mobile-ex-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} professionalExperience={professionalExperience} />
+                    <DesktopCards id={`desktop-ex-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} professionalExperience={professionalExperience} />
+                </div>
 
             )
             }

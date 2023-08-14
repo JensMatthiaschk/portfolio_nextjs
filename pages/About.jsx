@@ -30,7 +30,7 @@ export default function About(props) {
     return (
         <>
             <section id={t('about:section_title')} ref={aboutRef}
-                className={`font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px]`}
+                className={`font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px] animate-fade-in`}
             >
                 <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
                 <h1 className="font-Montserrat text-left md:text-8xl sm:text-6xl text-4xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk</h1>

@@ -20,10 +20,10 @@ export default function LearnSection({ setOtherProjectsVisible }) {
                 + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>
                 {educationAndTraining.title}</h3>
             {educationAndTraining.content?.map((e, i) =>
-                <>
-                    <MobileCards key={`ed-mobile-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} educationAndTraining={educationAndTraining} setOtherProjectsVisible={setOtherProjectsVisible} />
-                    <DesktopCards key={`ed-desktop-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} educationAndTraining={educationAndTraining} setOtherProjectsVisible={setOtherProjectsVisible} />
-                </>
+                <div key={`card-ed-${i}`}>
+                    <MobileCards id={`mobile-ed-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} educationAndTraining={educationAndTraining} setOtherProjectsVisible={setOtherProjectsVisible} />
+                    <DesktopCards id={`desktop-ed-${i}`} e={e} i={i} currentScreenWidth={currentScreenWidth} currentTheme={currentTheme} educationAndTraining={educationAndTraining} setOtherProjectsVisible={setOtherProjectsVisible} />
+                </div>
 
             )}
             <div>

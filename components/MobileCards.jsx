@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 
-export default function MobileCards({ e, i, currentScreenWidth, currentTheme, professionalExperience, setOtherProjectsVisible, educationAndTraining }) {
+export default function MobileCards({ e, i, id, currentScreenWidth, currentTheme, professionalExperience, setOtherProjectsVisible }) {
 
     const [showMore, setShowMore] = useState(false);
     const { i18n } = useTranslation();
@@ -19,7 +19,7 @@ export default function MobileCards({ e, i, currentScreenWidth, currentTheme, pr
     if (currentScreenWidth < 640)
         // mobile size
         return (
-            <div ref={mobilCardRef} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
+            <div ref={mobilCardRef} id={id} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                 + " w-full h-fit overflow-hidden rounded-md ease-in-out duration-200 mt-6 flex flex-col sm:flex-row justify-evenly"}>
 
                 <motion.div

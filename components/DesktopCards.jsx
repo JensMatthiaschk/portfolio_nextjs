@@ -2,15 +2,16 @@ import React from 'react'
 import { Link } from 'react-scroll';
 import { useTranslation } from 'next-i18next';
 
-export default function DesktopCards({ e, i, currentScreenWidth, currentTheme, professionalExperience, setOtherProjectsVisible }) {
+export default function DesktopCards({ e, i, id, currentScreenWidth, currentTheme, professionalExperience, setOtherProjectsVisible }) {
     const { i18n } = useTranslation();
     const lng = i18n.language;
+
 
     if (currentScreenWidth >= 640 && i % 2 == 0) {
 
         return (
 
-            <div className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
+            <div id={id} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                 + " w-full h-fit overflow-hidden rounded-md ease-in-out duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
                 <div className={(currentTheme === "dark" ? "before:bg-[var(--dm-secondary-color)] bg-[var(--dm-secondary-color)] drop-shadow-[6px_0_12px_var(--dm-main-bg-color)]" : "before:bg-[var(--lm-secondary-color)] bg-[var(--lm-secondary-color)] drop-shadow-[6px_0_12px_var(--lm-secondary-color)]")
                     + " skewed-right skew-x-6 before:h-full before:w-[2rem] before:-skew-x-6 before:absolute before:left-0 before:-z-10 w-full sm:w-4/12 items-center flex flex-row"}>
@@ -67,7 +68,7 @@ export default function DesktopCards({ e, i, currentScreenWidth, currentTheme, p
         // desktop size odd
 
         return (
-            <div key={`ex-${i}`} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
+            <div id={id} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
                 + " w-full h-fit overflow-hidden rounded-md ease-in-out duration-200 mt-6 flex flex-col sm:flex-row justify-evenly sm:text-lg"}>
                 <div className={(currentTheme === 'dark' ? "bg-[var(--dm-glow-color)] text-[var(--dm-secondary-color)]" : "text-[var(--lm-secondary-color)]")
                     + " text-right flex flex-col sm:w-8/12 w-full justify-evenly p-10 pr-10"}>
