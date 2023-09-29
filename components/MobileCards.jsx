@@ -20,7 +20,7 @@ export default function MobileCards({ e, i, id, currentScreenWidth, currentTheme
         // mobile size
         return (
             <div ref={mobilCardRef} id={id} className={(currentTheme === "dark" ? "bg-[var(--dm-glow-color)] hover:shadow-[0_5px_8px_2px_var(--dm-third-color)]" : "bg-stone-200 hover:shadow-[0_2px_10px_1px_DimGrey]")
-                + " w-full h-fit overflow-hidden rounded-md ease-in-out duration-200 mt-6 flex flex-col sm:flex-row justify-evenly"}>
+                + " w-full h-fit overflow-hidden rounded-md ease-in-out duration-200 mt-6 flex flex-col sm:flex-row justify-evenly select-none"}>
 
                 <motion.div
                     onClick={() => setShowMore(!showMore)}

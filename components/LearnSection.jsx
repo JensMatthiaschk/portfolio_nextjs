@@ -15,7 +15,7 @@ export default function LearnSection({ setOtherProjectsVisible }) {
     return (
         <div id='Education' ref={educationTrainingRef}
             className={(educationTrainingIsVisible ? "fade-in" : "invisible")
-                + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40 max-w-[1400px]"} >
+                + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40 max-w-[1400px] select-none"} >
             <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
                 + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>
                 {educationAndTraining.title}</h3>
