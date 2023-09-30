@@ -10,7 +10,7 @@ export default function Skills() {
     return (
         <div ref={skillsRef} id="Skills" className={(skillsIsVisible ? "fade-in" : "invisible") + " flex flex-col items-center mx-auto mt-4 sm:mt-28 md:mt-40 mb-10 h-fit lg:w-[80%] max-w-[1400px]"}>
             <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
-                + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 mt-16 sm:mt-40 lowercase"}>Skills.</h3>
+                + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 mt-16 sm:mt-40 lowercase select-none cursor-default"}>Skills.</h3>
             <div className="flex h-fit sm:gap-x-4 gap-x-2 sm:gap-y-2 items-center justify-center flex-wrap transition-all px-3">
                 <div
                     data-content="HTML5"

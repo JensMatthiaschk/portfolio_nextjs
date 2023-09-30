@@ -15,7 +15,7 @@ export default function WorkSection() {
 
     return (
         <div id='Profession' ref={professionalExperienceRef} className={(professionalExperienceIsVisible ? "fade-in" : "invisible")
-            + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40 max-w-[1600px] select-none"}>
+            + " flex flex-col text-center mx-auto lg:w-[80%] mt-16 sm:mt-40 max-w-[1600px] select-none cursor-default"}>
             <h3 className={(currentTheme === 'dark' ? "text-[var(--dm-third-color)]" : "text-[var(--lm-third-color)]")
                 + " text-5xl xl:text-7xl font-extrabold font-Montserrat mb-10 lowercase"}>{professionalExperience.title}</h3>
             {professionalExperience?.content?.map((e, i) =>
