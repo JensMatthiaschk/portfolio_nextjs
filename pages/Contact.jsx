@@ -38,7 +38,7 @@ export default function Contact(props) {
 
     return (
         <>
-            <section id={t('contact:section_title')} className="flex flex-col justify-between text-center sm:h-full select-none">
+            <section id={t('contact:section_title')} className="flex flex-col justify-between text-center sm:h-full select-none cursor-default">
                 <div ref={contactRef} className={contactIsVisible ?
                     `sm:mt-20 mb-12 lg:text-3xl 2xl:text-4xl sm:text-2xl text-md font-Montserrat text-center font-medium lg:w-[70%] w-[85%] mx-auto z-0 fade-in` :
                     "sm:mt-20 mt-12 sm:ml-10 mx-10 sm:text-2xl text-xl font-Montserrat invisible text-right font-medium"}>

@@ -35,7 +35,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
     return (
         <section id={t('projects:projects.section_title')} ref={projectsRef} className="flex flex-col h-fit transition-all items-center sm:mx-20 mx-8 mb-40 md:mb-60 justify-center">
             <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)]" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)]")
-                + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-Montserrat uppercase"}>
+                + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-Montserrat uppercase select-none cursor-default"}>
                 <div className="flex marquee__content">
                     {[...Array(15)].map((e, i) =>
                         <h2 key={`header-ex-${i}`} className="marquee__rtl text-lg md:text-xl xl:text-2xl 2xl:text-3xl -my-2">{t('projects:projects.section_title')}</h2>

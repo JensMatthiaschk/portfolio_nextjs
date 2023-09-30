@@ -25,7 +25,7 @@ export default function Experience({ setOtherProjectsVisible }) {
         <>
             <section id={t('experience:section_title')} ref={experienceRef} className="flex flex-col h-fit items-center mb-40 md:mb-60 sm:mx-16 mx-8">
                 <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)]" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)]")
-                    + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-Montserrat uppercase"}>
+                    + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-Montserrat uppercase select-none cursor-default"}>
                     <div className="flex marquee__content">
                         {[...Array(15)].map((e, i) =>
                             <h2 key={`header-ex-${i}`} className="marquee__rtl text-lg md:text-xl xl:text-2xl 2xl:text-3xl -my-2">{t('experience:section_title')}</h2>
