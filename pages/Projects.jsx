@@ -101,7 +101,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                         >
                                             <h2 className="card-title mb-2">
                                                 {p.title}
-                                                {i === 0 ? <div className="badge badge-warning">NEW</div> : null}
+                                                {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null}
                                             </h2>
                                             <p>{p.description}</p>
                                             {p.contributors ?
@@ -110,7 +110,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                                     {p.contributors.map((e, i) =>
                                                         <>
                                                             <a key={`contributor-${i}`} className={(currentTheme === 'dark' ? "hover:bg-cyan-900 text-[var(--dm-secondary-color)] border-[var(--dm-secondary-color)]" : "hover:text-[var(--lm-third-color)]")
-                                                                + " text-xs font-extralight badge mx-2"} href={e.github_url} target="_newBrowserTab"
+                                                                + " text-xs font-extralight badge mx-2 cursor-default"} href={e.github_url} target="_newBrowserTab"
                                                                 rel="noopener" translate="no">{e.name}
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-3 w-3" fill="currentColor" viewBox="0 0 16 16">
                                                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
@@ -124,10 +124,10 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                         <button className={`less-button-${i} badge text-xs btn-outline text-current w-fit place-self-end hidden`} onClick={toggleMoreText}>{t('project_button_less')}</button>
                                         <div className="card-actions flex place-content-start justify-end h-16 p-0 mt-6">
                                             {p.techstack_front.map((e, i) =>
-                                                <div key={`frontend-badge-${i}`} className="badge badge-sm badge-outline badge-info relative" translate="no">{e}</div>
+                                                <div key={`frontend-badge-${i}`} className="badge badge-sm badge-outline badge-info relative cursor-default" translate="no">{e}</div>
                                             )}
                                             {p.techstack_back.map((e, i) =>
-                                                <div key={`backend-badge-${i}`} className="badge badge-sm badge-outline badge-success" translate="no">{e}</div>
+                                                <div key={`backend-badge-${i}`} className="badge badge-sm badge-outline badge-success cursor-default" translate="no">{e}</div>
                                             )}
                                         </div>
                                         <div className="flex gap-x-1 items-center mt-1 h-4">
@@ -219,7 +219,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                                         Contributors:
                                                         {p.contributors.map((e, i) =>
                                                             <a key={`contributor-${i}`} className={(currentTheme === 'dark' ? "hover:bg-cyan-900 text-[var(--dm-secondary-color)] border-[var(--dm-secondary-color)]" : "hover:text-[var(--lm-third-color)]")
-                                                                + " font-extralight text-xs badge mx-2"} href={e.github_url} target="_newBrowserTab"
+                                                                + " font-extralight text-xs badge mx-2 cursor-default"} href={e.github_url} target="_newBrowserTab"
                                                                 rel="noopener" translate="no">{e.name}
                                                                 <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-3 w-3" fill="currentColor" viewBox="0 0 16 16">
                                                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
@@ -233,12 +233,12 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                         <button className={`op-less-button-${i} badge text-xs text-current btn-outline w-fit place-self-end hidden`} onClick={toggleMoreText}>{t('project_button_less')}</button>
                                         <div className="card-actions flex place-content-start justify-end h-10 mt-2">
                                             {p.techstack_front.map((e, i) =>
-                                                <div key={`frontend-badge-${i}`} className="badge badge-sm badge-outline badge-info relative" translate="no">
+                                                <div key={`frontend-badge-${i}`} className="badge badge-sm badge-outline badge-info relative cursor-default" translate="no">
                                                     {e}</div>
                                             )}
                                             {p.techstack_back.map((e, i) =>
                                                 <div key={`backend-badge-${i}`}
-                                                    className="badge badge-sm badge-outline badge-success" translate="no">
+                                                    className="badge badge-sm badge-outline badge-success cursor-default" translate="no">
                                                     {e}</div>
                                             )}
                                         </div>
