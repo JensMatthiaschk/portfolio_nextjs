@@ -65,7 +65,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
 
                             function toggleMoreText() {
                                 setShowMore(!showMore)
-                                document.querySelector(`.card-text-body-${i}`).classList.toggle("card-text-cutoff")
+                                document.querySelector(`.card-text-body-${i} .card-description`).classList.toggle("line-clamp-3")
                                 document.querySelector(`.more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.less-button-${i}`).classList.toggle("hidden")
                             }
@@ -80,8 +80,6 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                                 <div className="relative w-full h-full">
                                                     <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
                                                 </div>
-
-
                                             </figure>
                                         </a>
                                         :
@@ -97,15 +95,15 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             // animate={{ lineClamp: showMore ? "initial" : "3", textOverflow: showMore ? "" : "ellipsis", transition: { duration: 1 } }}
                                             // exit={{ overflow: "hidden", textOverflow: "ellipsis", lineClamp: "3", transition: { duration: 1 } }}
                                             onClick={toggleMoreText}
-                                            className={`card-text-body-${i} card-text-cutoff`}
+                                            className={`card-text-body-${i}`}
                                         >
                                             <h2 className="card-title mb-2">
                                                 {p.title}
-                                                {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null}
+                                                {/* {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null} */}
                                             </h2>
-                                            <p>{p.description}</p>
+                                            <p className="card-description line-clamp-3">{p.description}</p>
                                             {p.contributors ?
-                                                <div className="my-2">
+                                                <div className="my-4">
                                                     Contributors:
                                                     {p.contributors.map((e, i) =>
                                                         <>
@@ -184,7 +182,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                         {otherProjects?.content?.map((p, i) => {
 
                             function toggleMoreText(p) {
-                                document.querySelector(`.op-card-text-body-${i}`).classList.toggle("card-text-cutoff")
+                                document.querySelector(`.op-card-text-body-${i} .card-description`).classList.toggle("line-clamp-3")
                                 document.querySelector(`.op-more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.op-less-button-${i}`).classList.toggle("hidden")
                             }
@@ -208,12 +206,12 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             </svg>
                                         </div>}
                                     <div className="card-body flex flex-col justify-between p-5">
-                                        <div onClick={toggleMoreText} className={`op-card-text-body-${i} card-text-cutoff`}>
+                                        <div onClick={toggleMoreText} className={`op-card-text-body-${i}`}>
                                             <h2 className="card-title mb-2">
                                                 {p.title}
                                             </h2>
-                                            <p>{p.description}</p>
-                                            <div className="my-2">
+                                            <p className="card-description line-clamp-3">{p.description}</p>
+                                            <div className="my-4">
                                                 {p.contributors &&
                                                     <>
                                                         Contributors:

@@ -93,12 +93,13 @@ color: var(--lm-third-color);
   background-color: var(--lm-third-color);;
 }
 
-.card-text-cutoff {
-    display: -webkit-box;
+/* .card-text-cutoff {
+    display: -webkit-inline-box;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
+    
     height: 6.8rem;
   }
 
@@ -106,7 +107,7 @@ color: var(--lm-third-color);
 .card-text-cutoff > p {
     margin-bottom: 0;
     padding-bottom:0;
-  }
+  } */
 
 
 .skill::after {
