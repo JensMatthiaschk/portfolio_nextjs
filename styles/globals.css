@@ -10,6 +10,12 @@ outline: none;
 box-sizing: border-box;
 padding:0;
 margin:0;
+-ms-overflow-style: none; /* IE and Edge */
+scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 
 :root {
@@ -41,6 +47,9 @@ margin:0;
 }
 
 body {
+  /* height: 100%; */
+  width: 100dvw;
+  overflow-x: hidden;
   transition: background 0.5s, color 0.5s;
   background: var(--bkg-color);
   color: var(--text-color);

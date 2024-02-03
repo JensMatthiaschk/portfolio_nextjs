@@ -1,23 +1,27 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+import Backend from 'i18next-http-backend';
 
-i18n
+const i18next = i18n.createInstance();
+i18next
+// .use(HttpApi)
+.use(Backend)
     .use(LanguageDetector)
     .use(initReactI18next)
-    .use(HttpApi)
     .init({
         debug: false,
+        lng: ['de', 'en'],
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false,
         },
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: 'locales/{{lng}}/{{ns}}.json',
         },
-        ns: ['about', 'experience', 'projects', 'contact'],
-        defaultNS: ['about', 'experience', 'projects', 'contact']
+        ns: ['about', 'experience', 'projects', 'contact', 'common'],
+        defaultNS: ['about']
     });
 
-export default i18n;
+
+export default i18next;

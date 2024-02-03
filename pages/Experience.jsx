@@ -24,7 +24,7 @@ export default function Experience({ setOtherProjectsVisible }) {
     return (
         <>
             <section id={t('experience:section_title')} ref={experienceRef} className="flex flex-col h-fit items-center mb-40 md:mb-60 sm:mx-16 mx-8">
-                <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)]" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)]")
+                <div className={(currentTheme === 'dark' ? "bg-[var(--dm-third-color)] text-[var(--dm-main-bg-color)] animate-fade-in" : "bg-[var(--lm-third-color)] text-[var(--lm-main-bg-color)] animate-fade-in")
                     + " h-fit w-screen -skew-y-12 overflow-hidden flex flex-col justify-center font-black font-Montserrat uppercase select-none cursor-default"}>
                     <div className="flex marquee__content">
                         {[...Array(15)].map((e, i) =>

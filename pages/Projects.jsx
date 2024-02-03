@@ -206,11 +206,11 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             </svg>
                                         </div>}
                                     <div className="card-body flex flex-col justify-between p-5">
-                                        <div onClick={toggleMoreText} className={`op-card-text-body-${i}`}>
+                                        <div onClick={toggleMoreText} className={`op-card-text-body-${i} line-clamp-3`}>
                                             <h2 className="card-title mb-2">
                                                 {p.title}
                                             </h2>
-                                            <p className="card-description line-clamp-3">{p.description}</p>
+                                            <p className="card-description">{p.description}</p>
                                             <div className="my-4">
                                                 {p.contributors &&
                                                     <>

@@ -30,8 +30,8 @@ export default function Navbar() {
         <>
             <LinkButtons />
             <NavButtons />
-            <div className="navbar bg-transparent z-40">
-                <div className="navbar-start">
+            <div className="navbar bg-transparent z-40 absolute w-full justify-end">
+                <div className="navbar-start w-fit">
                     <div className="dropdown">
                         <label tabIndex="0"
                             className={(currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]') + " btn btn-ghost lg:hidden"}>
@@ -47,7 +47,7 @@ export default function Navbar() {
                             </svg>
                         </label>
                         <ul tabIndex="0"
-                            className={currentTheme === 'dark' ? "menu menu-compact dropdown-content mt-3 p-2 bg-base-200 shadow rounded-box w-52" : "menu menu-compact dropdown-content mt-3 p-2 bg-stone-300 shadow rounded-box w-52"}>
+                            className={currentTheme === 'dark' ? "menu menu-compact dropdown-content mt-3 p-2 bg-base-200 shadow rounded-box w-52 right-2" : "menu menu-compact dropdown-content mt-3 p-2 bg-stone-300 shadow rounded-box w-52 right-2"}>
                             <li className={currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]'}><Link to={t('about:section_title')} spy={true} smooth={true} offset={50} duration={500}>{t('about:section_title')}</Link></li>
                             <li className={currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]'}><Link to={t('experience:section_title')} spy={true} smooth={true} offset={0} duration={500}>{t('experience:section_title')}</Link></li>
                             <li className={currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]'}><Link to={t('projects:projects.section_title')} spy={true} smooth={true} offset={0} duration={500}>{t('projects:projects.section_title')}</Link></li>
@@ -106,7 +106,7 @@ export default function Navbar() {
                         <li className={currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]'}><Link to={t('projects:projects.section_title')} spy={true} smooth={true} offset={0} duration={500}>{t('projects:projects.section_title')}</Link></li>
                         <li className={currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]'}><Link to={t('contact:section_title')} spy={true} smooth={true} offset={0} duration={500}>{t('contact:section_title')}</Link></li>
                         {currentTheme === "dark" &&
-                            <li classNAme="flex items-center">
+                            <li className="flex items-center">
                                 <button className={currentTheme === 'dark' ? 'hover:text-[var(--dm-third-color)]' : 'hover:text-[var(--lm-third-color)]' + " btn-toggle"} onClick={handleToggle}>
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
