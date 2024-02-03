@@ -51,7 +51,7 @@
         "section_title": "Andere Projekte",
         "content": [
             {
-                "img_url": "/images/Bici_go.webp",
+                "img_url": "/images/Bici_go.jpg",
                 "title": "Bici Go!",
                 "description": "Abschließendes Gruppenprojekt der WBS Coding School: Eine Full-Stack-Anwendung für Radfahrer. Nutzer können sich registrieren, Profilbilder hochladen und vor allem fahrradbezogene Orte auf der zentralen Komponente – der Karte – anpinnen. Andere Radfahrer können so vorhandene Pins für Feedback und ein Gemeinschaftsgefühl kommentieren und bewerten.",
                 "techstack_front": [
