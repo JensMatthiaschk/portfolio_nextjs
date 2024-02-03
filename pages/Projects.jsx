@@ -182,7 +182,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                         {otherProjects?.content?.map((p, i) => {
 
                             function toggleMoreText(p) {
-                                document.querySelector(`.op-card-text-body-${i} .card-description`).classList.toggle("line-clamp-3")
+                                document.querySelector(`.op-card-text-body-${i}`).classList.toggle("line-clamp-3")
                                 document.querySelector(`.op-more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.op-less-button-${i}`).classList.toggle("hidden")
                             }
