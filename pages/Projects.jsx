@@ -63,9 +63,15 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                     <div className="gap-6 flex flex-wrap justify-center">
                         {projects?.content?.map((p, i) => {
 
+
+
                             function toggleMoreText() {
                                 setShowMore(!showMore)
-                                document.querySelector(`.card-text-body-${i} .card-description`).classList.toggle("line-clamp-3")
+                                document.querySelector(`.card-text-body-${i}`).classList.toggle("line-clamp-3")
+                                let contributors = document.querySelector(`.card-text-body-${i} .card-contributors`)
+                                if (contributors !== null) {
+                                    contributors.classList.toggle("hidden")
+                                }
                                 document.querySelector(`.more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.less-button-${i}`).classList.toggle("hidden")
                             }
@@ -90,20 +96,17 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
 
                                         </figure>}
                                     <div className="card-body flex flex-col justify-between p-5">
-                                        <motion.div
-                                            // initial={{ overflow: "hidden", textOverflow: "ellipsis", lineClamp: "3" }}
-                                            // animate={{ lineClamp: showMore ? "initial" : "3", textOverflow: showMore ? "" : "ellipsis", transition: { duration: 1 } }}
-                                            // exit={{ overflow: "hidden", textOverflow: "ellipsis", lineClamp: "3", transition: { duration: 1 } }}
+                                        <h2 className="card-title mb-2">
+                                            {p.title}
+                                            {/* {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null} */}
+                                        </h2>
+                                        <div
                                             onClick={toggleMoreText}
-                                            className={`card-text-body-${i}`}
-                                        >
-                                            <h2 className="card-title mb-2">
-                                                {p.title}
-                                                {/* {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null} */}
-                                            </h2>
-                                            <p className="card-description line-clamp-3">{p.description}</p>
+                                            className={`card-text-body-${i} line-clamp-3`}>
+
+                                            <p className="card-description">{p.description}</p>
                                             {p.contributors ?
-                                                <div className="my-4">
+                                                <div className="my-4 card-contributors hidden">
                                                     Contributors:
                                                     {p.contributors.map((e, i) =>
                                                         <>
@@ -117,7 +120,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                                     )}
                                                 </div>
                                                 : ""}
-                                        </motion.div>
+                                        </div>
                                         <button className={`more-button-${i} badge text-xs btn-outline text-current w-fit place-self-end`} onClick={toggleMoreText}>{t('project_button_more')}</button>
                                         <button className={`less-button-${i} badge text-xs btn-outline text-current w-fit place-self-end hidden`} onClick={toggleMoreText}>{t('project_button_less')}</button>
                                         <div className="card-actions flex place-content-start justify-end h-16 p-0 mt-6">
@@ -183,6 +186,10 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
 
                             function toggleMoreText(p) {
                                 document.querySelector(`.op-card-text-body-${i}`).classList.toggle("line-clamp-3")
+                                let contributors = document.querySelector(`.op-card-text-body-${i} .card-contributors`)
+                                if (contributors !== null) {
+                                    contributors.classList.toggle("hidden")
+                                }
                                 document.querySelector(`.op-more-button-${i}`).classList.toggle("hidden")
                                 document.querySelector(`.op-less-button-${i}`).classList.toggle("hidden")
                             }
@@ -193,7 +200,7 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                     {p.img_url ?
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
                                             <div className="relative w-full h-full">
-                                                <Image fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
+                                                <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
                                             </div>
                                         </figure>
                                         :
@@ -206,12 +213,12 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                             </svg>
                                         </div>}
                                     <div className="card-body flex flex-col justify-between p-5">
+                                        <h2 className="card-title mb-2">
+                                            {p.title}
+                                        </h2>
                                         <div onClick={toggleMoreText} className={`op-card-text-body-${i} line-clamp-3`}>
-                                            <h2 className="card-title mb-2">
-                                                {p.title}
-                                            </h2>
                                             <p className="card-description">{p.description}</p>
-                                            <div className="my-4">
+                                            <div className="my-4 card-contributors hidden">
                                                 {p.contributors &&
                                                     <>
                                                         Contributors:

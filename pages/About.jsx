@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next'
 export default function About(props) {
 
     const { currentTheme, setSectionActive, counterDark, counterLight } = useContext(ThemeContext)
-    const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0.5 });
+    const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0 });
     const [aboutVisitedDark, setAboutVisitedDark] = useState(0)
     const [aboutVisitedLight, setAboutVisitedLight] = useState(0)
     const { t } = useTranslation();
