@@ -3,11 +3,31 @@
         "section_title": "Projekte",
         "content": [
             {
+                "img_url": "/images/aisqueeze.gif",
+                "title": "Squeeze",
+                "description": "Squeeze ist eine Webanwendung zur Zusammenfassung von Texten aus PDF-Dokumenten oder Bildern. Die Anwendung nutzt PDF.js zur Darstellung von PDFs und Tesseract.js zur OCR-Texterkennung von bspw. gescannten Texten in PDFs oder Bildern. Die Zusammenfassungen werden durch Mistral AI's neuester LLM's mittels des OCTOAI API erstellt.",
+                "techstack_front": [
+                    "Next.js",
+                    "Typescript",
+                    "Tailwind CSS",
+                    "PDF.js",
+                    "Tesseract.js"
+                ],
+                "techstack_back": [
+                    "Deno",
+                    "Typescript",
+                    "Netlify Edge-Functions",
+                    "OctoAi Api",
+                    "Mistral AI"
+                ],
+                "page_url": "https://aisqueeze.netlify.app",
+                "repo_url": "https://github.com/JensMatthiaschk/squeeze"
+            },
+            {
                 "img_url": "/images/cabrito-art.webp",
                 "title": "Cabrito Art",
                 "description": "Cabrito Art ist eine Webseite zur unkonventionellen Vermarktung von Kunst aller Art aus dem Herzen Berlins. Entwickelt mit NEXT.js zur SEO und Bilder Optimierung, GCS als Cloud Provider und MongoDB zur dynamischen Bereitstellung der Metadaten sowie der Intergration des PayPalAPIs als Bezahlmöglichkeit. Mein erstes Kundenprojekt.",
                 "techstack_front": [
-                    "React",
                     "Next.js",
                     "Tailwind CSS",
                     "PayPalAPI"

@@ -2,7 +2,7 @@ import { ThemeContext } from "../components/ThemeContext.jsx";
 import { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from 'next-i18next';
-import Image from "next/image.js";
+// import Image from "next/image.js";
 import { motion } from "framer-motion";
 
 export default function Projects({ otherProjectsVisible, setOtherProjectsVisible }) {
@@ -83,22 +83,22 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                         <a href={p.page_url}
                                             target="_newBrowserTab" rel="noopener">
                                             <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                                <div className="relative w-full h-full">
-                                                    <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
+                                                <div className="relative w-full h-full" style={{ backgroundImage: `url(${p.img_url})`, backgroundSize: 'cover' }}>
+                                                    {/* <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" /> */}
                                                 </div>
                                             </figure>
                                         </a>
                                         :
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                            <div className="relative w-full h-full">
-                                                <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" />
+                                            <div className="relative w-full h-full" style={{ backgroundImage: `url(${p.img_url})`, backgroundSize: 'cover' }}>
+                                                {/* <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="h-auto w-full" /> */}
                                             </div>
 
                                         </figure>}
                                     <div className="card-body flex flex-col justify-between p-5">
                                         <h2 className="card-title mb-2">
                                             {p.title}
-                                            {/* {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null} */}
+                                            {i === 0 ? <div className="badge badge-warning cursor-default">NEW</div> : null}
                                         </h2>
                                         <div
                                             onClick={toggleMoreText}
@@ -199,8 +199,8 @@ export default function Projects({ otherProjectsVisible, setOtherProjectsVisible
                                     + " card max-w-[20rem] h-full rounded-md ease-in-out duration-200"}>
                                     {p.img_url ?
                                         <figure className="h-[11.1rem] m-[0.4rem] rounded">
-                                            <div className="relative w-full h-full">
-                                                <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" />
+                                            <div className="relative w-full h-full" style={{ backgroundImage: `url(${p.img_url})`, backgroundSize: 'cover' }}>
+                                                {/* <Image unoptimized={true} fill priority={true} src={p.img_url} alt={`Project-${i + 1}`} className="w-full h-auto" /> */}
                                             </div>
                                         </figure>
                                         :

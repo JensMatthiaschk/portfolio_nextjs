@@ -1,8 +1,8 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import ThemeContextProvider from "@/components/ThemeContext.jsx"
-import { appWithTranslation } from 'next-i18next'
-import { Montserrat, Puritan, Sarala } from "@next/font/google"
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import ThemeContextProvider from "@/components/ThemeContext.jsx";
+import { appWithTranslation } from 'next-i18next';
+import { Montserrat, Sarala } from "next/font/google";
 import Head from 'next/head'
 
 const montserrat = Montserrat({

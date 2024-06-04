@@ -3,6 +3,27 @@
         "section_title": "Projects",
         "content": [
             {
+                "img_url": "/images/aisqueeze.gif",
+                "title": "Squeeze",
+                "description": "Squeeze is a web application for summarizing text from PDF documents or images. The application uses PDF.js for displaying PDFs and Tesseract.js for OCR text recognition of scanned texts in PDFs or images. The summaries are created by Mistral AI's latest LLM's using the OCTOAI API.",
+                "techstack_front": [
+                    "Next.js",
+                    "Typescript",
+                    "Tailwind CSS",
+                    "PDF.js",
+                    "Tesseract.js"
+                ],
+                "techstack_back": [
+                    "Deno",
+                    "Typescript",
+                    "Netlify Edge-Functions",
+                    "OctoAi Api",
+                    "Mistral AI"
+                ],
+                "page_url": "https://aisqueeze.netlify.app",
+                "repo_url": "https://github.com/JensMatthiaschk/squeeze"
+            },
+            {
                 "img_url": "/images/cabrito-art.webp",
                 "title": "Cabrito Art",
                 "description": "Cabrito Art is a website for the unconventional marketing and sale of all kinds of art from the heart of Berlin, Germany. Developed with NEXT.js for SEO and image optimization, GCS as a cloud provider and MongoDB for the dynamic provision of metadata as well as intergration of the PayPalAPI for an easy payment option. My first client project.",
