@@ -5,17 +5,17 @@ import { Link } from "react-scroll";
 import { useTranslation } from 'next-i18next'
 
 const carouselTextEN = [
-    { text: "Web Developer", color: "#FD1C03" },
-    { text: "Programmer", color: "orange" },
-    { text: "Fullstack Developer", color: "#16E2F5" },
-    { text: "Coder", color: "#32CD32" },
+    { text: "[Web Developer]", color: "#FD1C03" },
+    { text: "{Programmer}", color: "orange" },
+    { text: "*/Fullstack Developer/*", color: "#16E2F5" },
+    { text: "//Coder", color: "#32CD32" },
 ]
 
 const carouselTextDE = [
-    { text: "Webentwickler", color: "#FD1C03" },
-    { text: "Programmierer", color: "orange" },
-    { text: "Fullstack Entwickler", color: "#16E2F5" },
-    { text: "Coder", color: "#32CD32" },
+    { text: "[Webentwickler]", color: "#FD1C03" },
+    { text: "{Programmierer}", color: "orange" },
+    { text: "*/Fullstack Entwickler/*", color: "#16E2F5" },
+    { text: "//Coder", color: "#32CD32" },
 ]
 
 async function typeSentence(sentence, eleRef, delay = 100) {
@@ -40,9 +40,11 @@ async function deleteSentence(eleRef) {
     }
 }
 
-async function carousel(carouselList, eleRef) {
+async function carousel(eleRef) {
     var i = 0;
     while (true) {
+        const lng = localStorage.getItem('i18nextLng');
+        const carouselList = lng === 'en' ? carouselTextEN : carouselTextDE;
         updateFontColor(eleRef, carouselList[i].color)
         await typeSentence(carouselList[i].text, eleRef);
         await waitForMs(1500);
@@ -87,7 +89,7 @@ export default function About(props) {
 
     useEffect(() => {
         if (!mounted) {
-            carousel(lng === 'en' ? carouselTextEN : carouselTextDE, profRef.current)
+            carousel(profRef.current)
         }
         setMounted(true)
         return () => {}
