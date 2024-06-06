@@ -1,16 +1,78 @@
 import { ThemeContext } from "../components/ThemeContext.jsx"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState, useRef } from "react"
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
 import { useTranslation } from 'next-i18next'
+
+const carouselTextEN = [
+    { text: "Web Developer", color: "#FD1C03" },
+    { text: "Programmer", color: "orange" },
+    { text: "Fullstack Developer", color: "#16E2F5" },
+    { text: "Coder", color: "#32CD32" },
+]
+
+const carouselTextDE = [
+    { text: "Webentwickler", color: "#FD1C03" },
+    { text: "Programmierer", color: "orange" },
+    { text: "Fullstack Entwickler", color: "#16E2F5" },
+    { text: "Coder", color: "#32CD32" },
+]
+
+async function typeSentence(sentence, eleRef, delay = 100) {
+    const letters = sentence.split("");
+    let i = 0;
+    while (i < letters.length) {
+        await waitForMs(delay);
+        eleRef.append(letters[i]);
+        i++
+    }
+    return;
+}
+
+async function deleteSentence(eleRef) {
+    const sentence = eleRef.innerHTML;
+    const letters = sentence.split("");
+    let i = 0;
+    while (letters.length > 0) {
+        await waitForMs(100);
+        letters.pop();
+        eleRef.innerHTML = letters.join("");
+    }
+}
+
+async function carousel(carouselList, eleRef) {
+    var i = 0;
+    while (true) {
+        updateFontColor(eleRef, carouselList[i].color)
+        await typeSentence(carouselList[i].text, eleRef);
+        await waitForMs(1500);
+        await deleteSentence(eleRef);
+        await waitForMs(500);
+        i++
+        if (i >= carouselList.length) { i = 0; }
+    }
+}
+
+function updateFontColor(eleRef, color) {
+    eleRef.style.color = color
+}
+
+function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 
 export default function About(props) {
 
     const { currentTheme, setSectionActive, counterDark, counterLight } = useContext(ThemeContext)
     const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0 });
-    const [aboutVisitedDark, setAboutVisitedDark] = useState(0)
-    const [aboutVisitedLight, setAboutVisitedLight] = useState(0)
-    const { t } = useTranslation();
+    const profRef = useRef(null);
+    const [mounted, setMounted] = useState(false);
+    const [aboutVisitedDark, setAboutVisitedDark] = useState(0);
+    const [aboutVisitedLight, setAboutVisitedLight] = useState(0);
+    const { t, i18n } = useTranslation();
+    const lng = i18n.language;
+
 
     useEffect(() => {
         const sectionIdentifyer = t('about:section_title')
@@ -23,7 +85,13 @@ export default function About(props) {
         }
     }, [aboutIsVisible])
 
-
+    useEffect(() => {
+        if (!mounted) {
+            carousel(lng === 'en' ? carouselTextEN : carouselTextDE, profRef.current)
+        }
+        setMounted(true)
+        return () => {}
+    }, []);
 
 
     return (
@@ -33,7 +101,10 @@ export default function About(props) {
             >
                 <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
                 <h1 className="font-Montserrat text-left md:text-8xl sm:text-6xl text-4xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk</h1>
-                <h2 className="font-Montserrat text-left md:text-5xl sm:text-4xl text-2xl md:mt-3 mt-1">{t("about:profession")}</h2>
+                {/* <h2 className="font-Montserrat text-left md:text-5xl sm:text-4xl text-2xl md:mt-3 mt-1">{t("about:profession")}</h2> */}
+                <div className="w-full">
+                    <p className="font-Montserrat text-left md:text-4xl sm:text-3xl text-xl md:mt-3 mt-1 typeEffect" ref={profRef}></p>
+                </div>
                 <p className="text-sm sm:text-lg text-left my-4 sm:my-8 font-medium w-[90%]">{t("about:description")}</p>
                 <div className="md:mt-10 sm:mt-8 mt-0 mb-32 flex sm:flex-row flex-col gap-y-3">
                     <Link to={t('projects:projects.section_title')} spy={true} smooth={true} offset={0} duration={500} className="w-fit">
