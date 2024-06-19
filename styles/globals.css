@@ -335,3 +335,13 @@ color: var(--lm-third-color);
       opacity: 0;
     }
   }
+
+  #NameAnimation svg [id^="Animation-Path"] {
+    animation: line-anim 10s linear forwards;
+  }
+
+  @keyframes line-anim {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

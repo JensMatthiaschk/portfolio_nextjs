@@ -2,20 +2,21 @@ import { ThemeContext } from "../components/ThemeContext.jsx"
 import { useContext, useEffect, useState, useRef } from "react"
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next';
+import NameAnimation from "../components/NameAnimation.jsx";
 
 const carouselTextEN = [
-    { text: "[Web Developer]", color: "#FD1C03" },
-    { text: "{Programmer}", color: "orange" },
-    { text: "*/Fullstack Developer/*", color: "#16E2F5" },
-    { text: "//Coder", color: "#32CD32" },
+    { text: "[Web Developer]", colorLight: "#FD1C03", colorDark: "#FD1C0330" },
+    { text: "{Programmer}", colorLight: "orange", colorDark: "orange" },
+    { text: "*/Fullstack Developer/*", colorLight: "#16E2F5", colorDark: "#16E2F530" },
+    { text: "//Coder", colorLight: "#32CD32", colorDark: "#32CD3230" },
 ]
 
 const carouselTextDE = [
-    { text: "[Webentwickler]", color: "#FD1C03" },
-    { text: "{Programmierer}", color: "orange" },
-    { text: "*/Fullstack Entwickler/*", color: "#16E2F5" },
-    { text: "//Coder", color: "#32CD32" },
+    { text: "[Webentwickler]", colorDark: "#FD1C03", colorLight: "#c81501" },
+    { text: "{Programmierer}", colorDark: "#ffa500", colorLight: "#d08701" },
+    { text: "*/Fullstack Entwickler/*", colorDark: "#16E2F5", colorLight: "#16a9e3" },
+    { text: "//Coder", colorDark: "#32CD32", colorLight: "#249524" },
 ]
 
 async function typeSentence(sentence, eleRef, delay = 100) {
@@ -44,8 +45,9 @@ async function carousel(eleRef) {
     var i = 0;
     while (true) {
         const lng = localStorage.getItem('i18nextLng');
+        const theme = localStorage.getItem('theme');
         const carouselList = lng === 'en' ? carouselTextEN : carouselTextDE;
-        updateFontColor(eleRef, carouselList[i].color)
+        updateFontColor(eleRef, theme === 'dark' ? carouselList[i].colorDark : carouselList[i].colorLight);
         await typeSentence(carouselList[i].text, eleRef);
         await waitForMs(1500);
         await deleteSentence(eleRef);
@@ -92,7 +94,7 @@ export default function About(props) {
             carousel(profRef.current)
         }
         setMounted(true)
-        return () => {}
+        return () => { }
     }, []);
 
 
@@ -102,7 +104,9 @@ export default function About(props) {
                 className={`font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto pt-6 sm:pt-12 z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px] animate-fade-in select-none cursor-default`}
             >
                 <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
-                <h1 className="font-Montserrat text-left md:text-8xl sm:text-6xl text-4xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk</h1>
+                <h1 className="font-Montserrat text-left md:text-7xl sm:text-5xl text-3xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk
+                </h1>
+                {/* <NameAnimation width={'300px'} theme={currentTheme} /> */}
                 {/* <h2 className="font-Montserrat text-left md:text-5xl sm:text-4xl text-2xl md:mt-3 mt-1">{t("about:profession")}</h2> */}
                 <div className="w-full">
                     <p className="font-Montserrat text-left md:text-4xl sm:text-3xl text-xl md:mt-3 mt-1 typeEffect" ref={profRef}></p>
