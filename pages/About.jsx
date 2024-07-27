@@ -6,10 +6,10 @@ import { useTranslation } from 'next-i18next';
 import NameAnimation from "../components/NameAnimation.jsx";
 
 const carouselTextEN = [
-    { text: "[Web Developer]", colorLight: "#FD1C03", colorDark: "#FD1C0330" },
-    { text: "{Programmer}", colorLight: "orange", colorDark: "orange" },
-    { text: "*/Fullstack Developer/*", colorLight: "#16E2F5", colorDark: "#16E2F530" },
-    { text: "//Coder", colorLight: "#32CD32", colorDark: "#32CD3230" },
+    { text: "[Web Developer]", colorLight: "#c81501", colorDark: "#FD1C03" },
+    { text: "{Programmer}", colorLight: "#d08701", colorDark: "#ffa500" },
+    { text: "*/Fullstack Developer/*", colorLight: "#16a9e3", colorDark: "#16E2F5" },
+    { text: "//Coder", colorLight: "#249524", colorDark: "#32CD32" },
 ]
 
 const carouselTextDE = [

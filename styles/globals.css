@@ -337,7 +337,7 @@ color: var(--lm-third-color);
   }
 
   #NameAnimation svg [id^="Animation-Path"] {
-    animation: line-anim 10s linear forwards;
+    animation: line-anim 10s linear forwards infinite;
   }
 
   @keyframes line-anim {
