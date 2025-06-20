@@ -104,9 +104,9 @@ export default function About(props) {
                 className={`font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto pt-6 sm:pt-12 z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px] animate-fade-in select-none cursor-default`}
             >
                 <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
-                <h1 className="font-Montserrat text-left md:text-7xl sm:text-5xl text-3xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk
-                </h1>
-                {/* <NameAnimation width={'300px'} theme={currentTheme} /> */}
+                {/* <h1 className="font-Montserrat text-left md:text-7xl sm:text-5xl text-3xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk
+                </h1> */}
+                <NameAnimation width={'300px'} theme={currentTheme} />
                 {/* <h2 className="font-Montserrat text-left md:text-5xl sm:text-4xl text-2xl md:mt-3 mt-1">{t("about:profession")}</h2> */}
                 <div className="w-full">
                     <p className="font-Montserrat text-left md:text-4xl sm:text-3xl text-xl md:mt-3 mt-1 typeEffect" ref={profRef}></p>

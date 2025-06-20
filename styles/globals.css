@@ -336,7 +336,7 @@ color: var(--lm-third-color);
     }
   }
 
-  #NameAnimation svg [id^="Animation-Path"] {
+  /* #NameAnimation svg [id^="Animation-Path"] {
     animation: line-anim 10s linear forwards infinite;
   }
 
@@ -344,4 +344,55 @@ color: var(--lm-third-color);
     to {
       stroke-dashoffset: 0;
     }
+  } */
+
+
+
+
+.mask {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+  
+  
+@keyframes strokeOffset {
+  to {
+    stroke-dashoffset: 0;
   }
+}
+
+
+#mask_J_1 {
+  animation: strokeOffset 0.2s linear forwards;
+}
+#mask_J_2 {
+  animation: strokeOffset 0.2s linear forwards 0.2s;
+}
+#mask_J_3 {
+  animation: strokeOffset 0.3s linear forwards 0.4s;
+}
+#mask_J_4 {
+  animation: strokeOffset 0.3s linear forwards 1s;
+}
+#mask_e {
+  animation: strokeOffset 0.5s linear forwards 1.5s;
+}
+#mask_n {
+  animation: strokeOffset 0.5s linear forwards 2.0s;
+}
+#mask_s_1 {
+  animation: strokeOffset 0.2s linear forwards 2.5s;
+}
+#mask_s_2 {
+  animation: strokeOffset 0.2s linear forwards 2.7s;
+}
+#mask_s_3 {
+  animation: strokeOffset 0.2s linear forwards 2.9s;
+}
+#mask_rest_1 {
+  animation: strokeOffset 0.1s linear forwards 3s;
+}
+#mask_rest_2 {
+  animation: strokeOffset 0.1s linear forwards 3s;
+}
