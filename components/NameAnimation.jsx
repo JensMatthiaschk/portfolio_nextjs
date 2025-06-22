@@ -33,9 +33,9 @@ export default function NameAnimation({ width, theme }) {
   }, []);
 
   return (
-    <div id="NameAnimation" className="position-relative w-[100%]">
+    <div id="NameAnimation" className="position-relative w-[100%] h-[100%] flex justify-center items-center my-4">
       <svg
-         className="position-absolute top-0 left-0 cursor-pointer lg:w-[40%] w-[60%] lg:h-[80%] h-[100%] lg:ml-12 mx-auto my-6 lg:my-12"
+         className="lg:w-[40%] w-[70%] lg:ml-12 h-full mx-auto"
         width="423"
         height="303"
         viewBox="0 0 141 101"

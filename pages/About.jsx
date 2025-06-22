@@ -74,6 +74,7 @@ export default function About(props) {
     const [mounted, setMounted] = useState(false);
     const [aboutVisitedDark, setAboutVisitedDark] = useState(0);
     const [aboutVisitedLight, setAboutVisitedLight] = useState(0);
+    const [animationVisible, setAnimationVisible] = useState(false);
     const { t, i18n } = useTranslation();
     const lng = i18n.language;
 
@@ -91,7 +92,10 @@ export default function About(props) {
 
     useEffect(() => {
         if (!mounted) {
-            carousel(profRef.current)
+            setTimeout(()=>{
+                carousel(profRef.current)
+                setAnimationVisible(true);
+            }, 4000);
         }
         setMounted(true)
         return () => { }
@@ -101,15 +105,15 @@ export default function About(props) {
     return (
         <>
             <section id={t('about:section_title')} ref={aboutRef}
-                className={`font-Sarala flex h-fit sm:h-screen lg:w-[70%] w-[80%] mx-auto pt-6 sm:pt-12 z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px] animate-fade-in select-none cursor-default`}
+                className={`font-Sarala flex h-fit lg:w-[70%] w-[80%] mx-auto pt-6 z-0 flex-col justify-center items-start overflow-hidden max-w-[1600px] animate-fade-in select-none cursor-default`}
             >
-                <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-20 mt-2">{t("about:intro")}</h2>
+                <h2 className="font-Montserrat text-left md:text-3xl sm:text-2xl text-xl sm:mt-8 mt-2">{t("about:intro")}</h2>
                 {/* <h1 className="font-Montserrat text-left md:text-7xl sm:text-5xl text-3xl md:mt-2 mt-1 font-black w-auto" translate="no">Jens Matthiaschk
                 </h1> */}
                 <NameAnimation width={'300px'} theme={currentTheme} />
                 {/* <h2 className="font-Montserrat text-left md:text-5xl sm:text-4xl text-2xl md:mt-3 mt-1">{t("about:profession")}</h2> */}
                 <div className="w-full">
-                    <p className="font-Montserrat text-left md:text-4xl sm:text-3xl text-xl md:mt-3 mt-1 typeEffect" ref={profRef}></p>
+                    <p className={animationVisible ? "font-Montserrat text-left md:text-4xl sm:text-3xl text-xl md:mt-3 mt-1 typeEffect" : "font-Montserrat text-left md:text-4xl sm:text-3xl text-xl md:mt-3 mt-1 typeEffect invisible" } ref={profRef}></p>
                 </div>
                 <p className="text-sm sm:text-lg text-left my-4 sm:my-8 font-medium w-[90%]">{t("about:description")}</p>
                 <div className="md:mt-10 sm:mt-8 mt-0 mb-32 flex sm:flex-row flex-col gap-y-3">
