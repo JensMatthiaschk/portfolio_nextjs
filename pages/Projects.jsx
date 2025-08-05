@@ -3,12 +3,12 @@ import { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from 'next-i18next';
 // import Image from "next/image.js";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 export default function Projects({ otherProjectsVisible, setOtherProjectsVisible }) {
 
     const { currentTheme, setSectionActive } = useContext(ThemeContext);
-    const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.5 });
+    const { ref: projectsRef, inView: projectsIsVisible } = useInView({ threshold: 0.1 });
     const { ref: cardRef, inView: cardIsVisible } = useInView({ threshold: 0 });
     // const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
     const { t } = useTranslation('projects');

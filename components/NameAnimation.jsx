@@ -19,7 +19,6 @@ export default function NameAnimation({ width, theme }) {
      masks.forEach((mask, index, el) => {
       const id = `#mask_${mask}`;
       let path = document.querySelector(id);
-      console.log(path);
       const length = path.getTotalLength();
       path.style.strokeDasharray = length;
       path.style.strokeDashoffset = length;
