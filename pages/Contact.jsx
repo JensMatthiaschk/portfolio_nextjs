@@ -87,7 +87,7 @@ export default function Contact(props) {
                                     <label htmlFor="emailModal">
                                         <svg version="1.1"
                                             id="Capa_1"
-                                            className={(currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74]" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)]") + " bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-m-2 hover:-m-1 ease-in-out duration-300 transform-gpu"}
+                                            className={(currentTheme === 'dark' ? "hover:drop-shadow-[0_0_10px_#275e74]" : "hover:drop-shadow-[0_0_7px_var(--lm-third-color)]") + " cursor-pointer bi bi-envelope-fill w-12 hover:w-14 sm:w-14 hover:sm:w-16 lg:w-16 hover:lg:w-20 hover:lg:-m-2 hover:-m-1 ease-in-out duration-300 transform-gpu"}
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlnsXlink="http://www.w3.org/1999/xlink"
                                             viewBox="0 0 64 64"
@@ -154,7 +154,7 @@ export default function Contact(props) {
                                     className="drawing-animation sm:h-[24.6rem] h-[12.4rem] max-w-fit z-20 absolute -bottom-[0.1rem] sm:right-[1rem] right-[0.2rem]"
                                     src={currentTheme === "dark" ? DrawingDark : DrawingLight}
                                     alt="Drawing-Animation"
-                                    unoptimized
+                                    unoptimized={true}
                                 />
                             </>
                             : drawingIsVisible && (PortraitLight || PortraitDark) &&

@@ -35,16 +35,20 @@ export default function EmailModal() {
             const sendEmail = await postEmail(data)
 
             setPostEmailResponse(sendEmail)
-            setToSend({
-                from_name: '',
-                reply_to: '',
-                message: '',
-            });
-            setTouched({
-                from_name: false,
-                reply_to: false,
-                message: false,
-            });
+            if (postEmailResponse.ok) {
+                setToSend({
+                    from_name: '',
+                    reply_to: '',
+                    message: '',
+                });
+                setTouched({
+                    from_name: false,
+                    reply_to: false,
+                    message: false,
+                });
+            } else {
+                setLoading(false)
+            }
             // location.reload()
         } catch (error) {
             console.error(error);

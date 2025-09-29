@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer'
-// import "dotenv/config";
+import '../envConfig.ts'
+
+console.log("emailservice", process.env.EMAIL_USER)
 
 let transport = {
     service: process.env.EMAIL_SERVICE,

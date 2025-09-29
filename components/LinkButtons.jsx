@@ -47,7 +47,7 @@ export default function LinkButtons() {
                     <li className={currentTheme === 'dark' ? "hover:text-[var(--dm-third-color)] w-7 lg:w-9 my-3 ease-in-out duration-300" : "w-7 lg:w-9 my-3 ease-in-out duration-300 hover:drop-shadow-[0_0_7px_var(--lm-third-color)] transform-gpu"}>
                         <label htmlFor="emailModal">
                             <svg
-                                className="bi bi-envelope-fill"
+                                className="bi bi-envelope-fill cursor-pointer"
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 64 64"
